@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 연습6</title>
+    <title>레이아웃 연습7</title>
     <style>
         @font-face {
             font-family: 'twaysky';
@@ -28,9 +28,9 @@
         }
 
         #header {
-            height: 110px;
+            height: 100px;
             background-color: #e3f2fd;
-            line-height: 110px;
+            line-height: 100px;
         }
 
         #banner {
@@ -63,53 +63,73 @@
             line-height: 270px;
         }
 
+        .title {
+            width: 1200px;
+            height: 200px;
+            background-color: #5e35b1;
+            line-height: 200px;
+        }
+
+        .box1 {
+            width: 600px;
+            height: 300px;
+            background-color: #00796b;
+            line-height: 300px;
+            float: left;
+        }
+
+        .box2 {
+            width: 600px;
+            height: 300px;
+            background-color: #004d40;
+            line-height: 300px;
+            float: left;
+        }
+
         .container {
             width: 1200px;
             height: inherit;
-            background-color: rgb(0, 0, 0, 0.5);
             margin: 0 auto;
+            background-color: rgb(0, 0, 0, 0.3);
         }
     </style>
 </head>
 
 <body>
-
-    <!-- 
-        id 와 class차이점 
-        id : 1번만 사용 / class : 여러번 사용 가능
-        id : "#" 으로 표현 / class : "."으로 표현
-        id : 전체적인 구조에서 사용 / class : 반복적으로 사용되는 부분
-    -->
-
     <div id="warp">
         <div id="header">
             <div class="container">header</div>
         </div>
-        <!-- //header -->
-
+        <!-- header -->
         <div id="banner">
             <div class="container">banner</div>
         </div>
-        <!-- //banner -->
+        <!-- banner -->
         <div id="contents">
             <div id="content1">
-                <div class="container">content1</div>
+                <div class="container">
+                    <div class="title">title</div>
+                    content1
+                </div>
             </div>
             <div id="content2">
-                <div class="container">content2</div>
+                <div class="container">
+                    <div class="box1">box1</div>
+                    <div class="box2">box2</div>
+                    content2
+                </div>
             </div>
             <div id="content3">
                 <div class="container">content3</div>
             </div>
         </div>
-        <!-- //contents -->
-
+        <!-- contents -->
         <div id="footer">
             <div class="container">footer</div>
         </div>
-        <!-- //footer -->
+        <!-- footer -->
     </div>
-    <!-- //wrap -->
+    <!-- wrap -->
 </body>
 
 </html>

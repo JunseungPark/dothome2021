@@ -212,21 +212,36 @@
             border: 1px solid #989898;
             padding: 5px;
         }
+        .ol1::before {
+            content: "데이터 저장하기 : ";
+        }
+        .ol2::before {
+            content: "데이터 불러오기 : ";
+        }
+        .ol3::before {
+            content: "데이터 실행하기 : ";
+        }
+        .ol4::before {
+            content: "데이터 제어하기 : ";
+        }
     </style>
 </head>
 
 <body>
     <h1>Javascript 문법 정리</h1>
-    <ol>
+    <ol class="ol1">
         <li><a href="javascript100.html">변수</a></li>
         <li><a href="javascript100.html">상수</a></li>
         <li><a href="javascript100.html">배열(Array)</a></li>
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
-    <ol>
+    <ol class="ol2">
+        <li><a href="javascript500.html">데이터</a></li>
+    </ol>
+    <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
     </ol>
-    <ol>
+    <ol class="ol4">
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
     </ol>
@@ -237,17 +252,16 @@
     <h2 class="mt20">알고리즘</h2>
     <ul>
 
-        <li>01. 1부터 100까지 출력하기</li>
-        <li>02. 1부터 100까지 출력하기 : 짝수만</li>
-        <li>03. 1부터 100까지 출력하기 : 5의 배수</li>
-        <li>04. 1부터 100까지 출력하기 : 짝수 -> RED, 홀수 -> BLUE</li>
-        <li>05. 1부터 100까지 합 출력하기</li>
-    
-        <li>06. 구구단 출력하기</li>
-        <li>07. 테이블 만들기1</li>
-        <li>08. 테이블 만들기2</li>
-        <li>09. 테이블 만들기3 - 짝수</li>
-    </ul>
+        <li><a href="#sample1">01. 1부터 100까지 출력하기</a></li>
+        <li><a href="#sample2">02. 1부터 100까지 출력하기 : 짝수만</a></li>
+        <li><a href="#sample3">03. 1부터 100까지 출력하기 : 5의 배수</a></li>
+        <li><a href="#sample4">04. 1부터 100까지 출력하기 : 짝수 -> RED, 홀수 -> BLUE</a></li>
+        <li><a href="#sample5">05. 1부터 100까지 합 출력하기</li>
+        <li><a href="#sample6">06. 구구단 출력하기</a></li>
+        <li><a href="#sample7">07. 테이블 만들기1</a></li>
+        <li><a href="#sample8">08. 테이블 만들기2</a></li>
+        <li><a href="#sample9">09. 테이블 만들기3 - 짝수</a></li>
+    <
     <hr>
     <!-- sample1-->
     <div id="sample1" class="sample">
@@ -586,7 +600,7 @@
      // sample9 : 테이블만들기3
     {
         document.write("*** 09. 테이블 만들기3 ***<br>");
-        let num = 0;
+        let num = 2;
         let table = "<table>";
         
         for (let i = 1; i <= 10; i++) {
@@ -595,7 +609,7 @@
                 if (num % 2 == 0) {
                     table += "<td>" + num + "</td>";
                 }
-                num++;
+                num += 2;
             }
             table += "</tr>";
         };

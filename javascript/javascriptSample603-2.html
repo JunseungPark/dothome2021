@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 속성 검색하기</title>
+    <title>HTML 속성 검색하기</title>
     <style>
         @font-face {
             font-family: 'GyeonggiBatang';
@@ -31,7 +31,7 @@
         }
 
         body {
-            background-image: url(img/search_bg.jpg);
+            background-image: url(img/search_bg2.jpg);
             background-size: cover;
             background-position: center bottom;
             background-attachment: fixed;
@@ -77,7 +77,7 @@
 
         .board .search label {
             font-family: 'GyeonggiBatang';
-            background-color: #BFE6FE;
+            background-color: #FF4552;
             font-size: 26px;
             padding: 10px 30px;
             border: 1px solid #000;
@@ -94,22 +94,22 @@
             outline: none;
         }
 
-        .board .search-result {
+        .board .list {
             text-align: left;
             margin-top: 40px;
         }
 
-        .board .search-result li {
+        .board .list ul li {
             font-family: 'GyeonggiBatang';
             line-height: 1.6;
             list-style: none;
-            background-color: #BDD6E6;
+            background-color: #FF4552;
             margin: 5px;
             padding: 5px 10px;
             border-radius: 4px;
         }
 
-        .board .search-result li.hide {
+        .board .list ul li.hide {
             display: none;
         }
 
@@ -136,7 +136,7 @@
             }
 
             .board .list {
-                margin-top: 20px;
+               margin-top: 20px; 
             }
 
             .girl {
@@ -147,77 +147,40 @@
                 width: 100px;
             }
         }
-
-        button {
-            padding: 10px 20px;
-            font-family: 'GyeonggiBatang';
-        }
     </style>
 </head>
 
 <body>
     <div id="wrap">
         <div class="board">
-            <span>CSS 속성을 순서대로 정리하기!</span>
-            <h1>CSS 속성 정리</h1>
-            <div class="button-wrap">
-                <button class="asce">오름차순</button>
-                <button class="desc">내림차순</button>
+            <span>HTML 속성을 넣어 넣어주세요!</span>
+            <h1>HTML 속성 검색하기</h1>
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input id="search-box" type="text">
             </div>
-            <div class="search-result">
+            <div class="list">
                 <ul>
                 </ul>
             </div>
         </div>
         <div class="girl">
-            <img src="img/search_girl.png" alt="">
+            <img src="img/search_man.png" alt="">
         </div>
         <div class="dog">
-            <img src="img/search_dog.png" alt="">
+            <img src="img/search_deer.png" alt="">
         </div>
     </div>
 
     <script>
-        const cssProp = [{
-                id: 1,
-                name: "align-content"
+        const htmlProp = [
+            { 
+                name : "",
+                desc : ""
             },
-            {
-                id: 4,
-                name: "align-selfdd"
-            },
-            {
-                id: 2,
-                name: "align-items"
-            },
-            {
-                id: 3,
-                name: "align-self"
-            },
-            {
-                id: 5,
-                name: "align-sedd"
-            },
-        ];
-        const searchResult = document.querySelector(".search-result");
-        const asceButton = document.querySelector(".asce");
+        ]
 
-        function updataList() {
-            let listHTML = '';
-
-            // document.write(cssProp[0].name)
-            // document.write(cssProp[1].name)
-            // document.write(cssProp[2].name)
-            
-            // searchResult.innerHTML = "<li>"+cssProp[0].name+"</li>";
-            // searchResult.innerHTML += "<li>"+cssProp[1].name+"</li>";
-            // searchResult.innerHTML += "<li>"+cssProp[2].name+"</li>";
-            
-            for (let prop of cssProp) {
-                searchResult.innerHTML += "<li>" + prop.id + " : " + prop.name + "</li>";
-            }
-        }
-        updataList();
+        
     </script>
 </body>
 

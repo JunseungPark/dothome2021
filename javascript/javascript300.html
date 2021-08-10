@@ -258,6 +258,9 @@
         <li><a href="javascript604.html">날짜 메서드</a></li>
         <li><a href="javascript605.html">이벤트 메서드</a></li>
     </ol>
+    <ol class="ol7">
+        <li><a href="javascript606.html">샘플</a></li>
+    </ol>
 
     <h2 class="mt20">데이터 실행 : 함수</h2>
     <ul>
@@ -319,10 +322,10 @@
         <h2>03. 매개변수 함수 <span class="dot"></span></h2>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    function func(str) {
-        document.write(str);   
+    function func(str, str2) {
+        document.write(str, str2);   
     };
-    func("함수가 실행되었습니다.");
+    func("함수가", "실행되었습니다.");
 }
 </code></pre>
         </div>
@@ -691,11 +694,11 @@
         // sample03
         // 03. 매개변수 함수
         {
-            function func(str) {
+            function func(str, str2) {
                 document.write("*** 03. 매개변수 함수 ***<br>");
-                document.write(str);   
+                document.write(str, str2);   
             };
-            func("함수가 실행되었습니다.<br><br>");
+            func("함수가", " 실행되었습니다.<br><br>");
         }
 
         // sample04

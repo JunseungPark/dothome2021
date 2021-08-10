@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 속성 검색하기</title>
+    <style>
+        @font-face {
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            background-image: url(img/search_bg2.jpg);
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed;
+        }
+
+        .girl {
+            width: 250px;
+            position: fixed;
+            bottom: -60px;
+            right: 5%;
+        }
+
+        .dog {
+            width: 150px;
+            position: fixed;
+            bottom: -40px;
+            left: 5%;
+        }
+
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background-color: #F1F3F6;
+            border: 2px solid #000;
+            padding: 3%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .board h1 {
+            font-family: 'TmonMonsori';
+            color: #223547;
+            font-size: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .board span {
+            font-family: 'GyeonggiBatang';
+            color: #223547;
+            font-size: 20px;
+        }
+
+        .board .search label {
+            font-family: 'GyeonggiBatang';
+            background-color: #FF4552;
+            font-size: 26px;
+            padding: 10px 30px;
+            border: 1px solid #000;
+            border-radius: 40px;
+            display: none;
+        }
+
+        .board .search input {
+            font-family: 'GyeonggiBatang';
+            font-size: 24px;
+            border: 1px solid #000;
+            padding: 10px 10px 10px 20px;
+            border-radius: 40px;
+            outline: none;
+        }
+
+        .board .list {
+            text-align: left;
+            margin-top: 40px;
+        }
+
+        .board .list ul li {
+            font-family: 'GyeonggiBatang';
+            line-height: 1.6;
+            list-style: none;
+            background-color: #FF4552;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .board .list ul li.hide {
+            display: none;
+        }
+
+        @media (max-width: 800px) {
+            .board {
+                width: 92vw;
+                padding: 6% 3% 3% 3%;
+                margin: 4vw;
+            }
+
+            .board h1 {
+                font-size: 30px;
+                margin-top: 5px;
+            }
+
+            .board span {
+                font-size: 12px;
+            }
+
+            .board .search input {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+
+            .board .list {
+               margin-top: 20px; 
+            }
+
+            .girl {
+                width: 200px;
+            }
+
+            .dog {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="board">
+            <span>속성 중에 첫 글자만 넣어주세요!</span>
+            <h1>HTML 속성 검색하기</h1>
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input id="search-box" type="text">
+            </div>
+            <div class="list">
+                <ul>
+                    <li data-name="a" data-topic="">&lt;a&gt;</li>
+                    <li data-name="abbr" data-topic="">&lt;abbr&gt;</li>
+                    <li data-name="acronym" data-topic="">&lt;acronym&gt;</li>
+                    <li data-name="address" data-topic="">&lt;address&gt;</li>
+                    <li data-name="applet" data-topic="">&lt;applet&gt;</li>
+                    <li data-name="area" data-topic="">&lt;area&gt;</li>
+                    <li data-name="article" data-topic="">&lt;article&gt;</li>
+                    <li data-name="aside" data-topic="">&lt;aside&gt;</li>
+                    <li data-name="audio" data-topic="">&lt;audio&gt;</li>
+                    <li data-name="b" data-topic="">&lt;b&gt;</li>
+                    <li data-name="base" data-topic="">&lt;base&gt;</li>
+                    <li data-name="basefont" data-topic="">&lt;basefont&gt;</li>
+                    <li data-name="bdi" data-topic="">&lt;bdi&gt;</li>
+                    <li data-name="bdo" data-topic="">&lt;bdo&gt;</li>
+                    <li data-name="big" data-topic="">&lt;big&gt;</li>
+                    <li data-name="blockquote" data-topic="">&lt;blockquote&gt;</li>
+                    <li data-name="blink" data-topic="">&lt;blink&gt;</li>
+                    <li data-name="body" data-topic="">&lt;body&gt;</li>
+                    <li data-name="br" data-topic="">&lt;br&gt;</li>
+                    <li data-name="button" data-topic="">&lt;button&gt;</li>
+                    <li data-name="canvas" data-topic="">&lt;canvas&gt;</li>
+                    <li data-name="caption" data-topic="">&lt;caption&gt;</li>
+                    <li data-name="center" data-topic="">&lt;center&gt;</li>
+                    <li data-name="cite" data-topic="">&lt;cite&gt;</li>
+                    <li data-name="code" data-topic="">&lt;code&gt;</li>
+                    <li data-name="col" data-topic="">&lt;col&gt;</li>
+                    <li data-name="colgroup" data-topic="">&lt;colgroup&gt;</li>
+                    <li data-name="data" data-topic="">&lt;data&gt;</li>
+                    <li data-name="datalist" data-topic="">&lt;datalist&gt;</li>
+                    <li data-name="dd" data-topic="">&lt;dd&gt;</li>
+                    <li data-name="del" data-topic="">&lt;del&gt;</li>
+                    <li data-name="details" data-topic="">&lt;details&gt;</li>
+                    <li data-name="dfn" data-topic="">&lt;dfn&gt;</li>
+                    <li data-name="dialog" data-topic="">&lt;dialog&gt;</li>
+                    <li data-name="dir" data-topic="">&lt;dir&gt;</li>
+                    <li data-name="div" data-topic="">&lt;div&gt;</li>
+                    <li data-name="dl" data-topic="">&lt;dl&gt;</li>
+                    <li data-name="dt" data-topic="">&lt;dt&gt;</li>
+                    <li data-name="em" data-topic="">&lt;em&gt;</li>
+                    <li data-name="embed" data-topic="">&lt;embed&gt;</li>
+                    <li data-name="fieldset" data-topic="">&lt;fieldset&gt;</li>
+                    <li data-name="figcaption" data-topic="">&lt;figcaption&gt;</li>
+                    <li data-name="figure" data-topic="">&lt;figure&gt;</li>
+                    <li data-name="font" data-topic="">&lt;font&gt;</li>
+                    <li data-name="footer" data-topic="">&lt;footer&gt;</li>
+                    <li data-name="form" data-topic="">&lt;form&gt;</li>
+                    <li data-name="frame" data-topic="">&lt;frame&gt;</li>
+                    <li data-name="frameset" data-topic="">&lt;frameset&gt;</li>
+                    <li data-name="h1" data-topic="">&lt;h1&gt;</li>
+                    <li data-name="h6" data-topic="">&lt;h6&gt;</li>
+                    <li data-name="head" data-topic="">&lt;head&gt;</li>
+                    <li data-name="header" data-topic="">&lt;header&gt;</li>
+                    <li data-name="hgroup" data-topic="">&lt;hgroup&gt;</li>
+                    <li data-name="hr" data-topic="">&lt;hr&gt;</li>
+                    <li data-name="html" data-topic="">&lt;html&gt;</li>
+                    <li data-name="i" data-topic="">&lt;i&gt;</li>
+                    <li data-name="iframe" data-topic="">&lt;iframe&gt;</li>
+                    <li data-name="img" data-topic="">&lt;img&gt;</li>
+                    <li data-name="input" data-topic="">&lt;input&gt;</li>
+                    <li data-name="ins" data-topic="">&lt;ins&gt;</li>
+                    <li data-name="kbd" data-topic="">&lt;kbd&gt;</li>
+                    <li data-name="keygen" data-topic="">&lt;keygen&gt;</li>
+                    <li data-name="label" data-topic="">&lt;label&gt;</li>
+                    <li data-name="legend" data-topic="">&lt;legend&gt;</li>
+                    <li data-name="li" data-topic="">&lt;li&gt;</li>
+                    <li data-name="link" data-topic="">&lt;link&gt;</li>
+                    <li data-name="main" data-topic="">&lt;main&gt;</li>
+                    <li data-name="map" data-topic="">&lt;map&gt;</li>
+                    <li data-name="mark" data-topic="">&lt;mark&gt;</li>
+                    <li data-name="marquee" data-topic="">&lt;marquee&gt;</li>
+                    <li data-name="menu" data-topic="">&lt;menu&gt;</li>
+                    <li data-name="menuitem" data-topic="">&lt;menuitem&gt;</li>
+                    <li data-name="meta" data-topic="">&lt;meta&gt;</li>
+                    <li data-name="meter" data-topic="">&lt;meter&gt;</li>
+                    <li data-name="nav" data-topic="">&lt;nav&gt;</li>
+                    <li data-name="noframes" data-topic="">&lt;noframes&gt;</li>
+                    <li data-name="noscript" data-topic="">&lt;noscript&gt;</li>
+                    <li data-name="object" data-topic="">&lt;object&gt;</li>
+                    <li data-name="ol" data-topic="">&lt;ol&gt;</li>
+                    <li data-name="optgroup" data-topic="">&lt;optgroup&gt;</li>
+                    <li data-name="option" data-topic="">&lt;option&gt;</li>
+                    <li data-name="output" data-topic="">&lt;output&gt;</li>
+                    <li data-name="p" data-topic="">&lt;p&gt;</li>
+                    <li data-name="param" data-topic="">&lt;param&gt;</li>
+                    <li data-name="picture" data-topic="">&lt;picture&gt;</li>
+                    <li data-name="pre" data-topic="">&lt;pre&gt;</li>
+                    <li data-name="pregress" data-topic="">&lt;pregress&gt;</li>
+                    <li data-name="q" data-topic="">&lt;q&gt;</li>
+                    <li data-name="rp" data-topic="">&lt;rp&gt;</li>
+                    <li data-name="rt" data-topic="">&lt;rt&gt;</li>
+                    <li data-name="rtc" data-topic="">&lt;rtc&gt;</li>
+                    <li data-name="ruby" data-topic="">&lt;ruby&gt;</li>
+                    <li data-name="s" data-topic="">&lt;s&gt;</li>
+                    <li data-name="samp" data-topic="">&lt;samp&gt;</li>
+                    <li data-name="script" data-topic="">&lt;script&gt;</li>
+                    <li data-name="section" data-topic="">&lt;section&gt;</li>
+                    <li data-name="select" data-topic="">&lt;select&gt;</li>
+                    <li data-name="small" data-topic="">&lt;small&gt;</li>
+                    <li data-name="source" data-topic="">&lt;source&gt;</li>
+                    <li data-name="span" data-topic="">&lt;span&gt;</li>
+                    <li data-name="strike" data-topic="">&lt;strike&gt;</li>
+                    <li data-name="strong" data-topic="">&lt;strong&gt;</li>
+                    <li data-name="style" data-topic="">&lt;style&gt;</li>
+                    <li data-name="sub" data-topic="">&lt;sub&gt;</li>
+                    <li data-name="summary" data-topic="">&lt;summary&gt;</li>
+                    <li data-name="sup" data-topic="">&lt;sup&gt;</li>
+                    <li data-name="svg" data-topic="">&lt;svg&gt;</li>
+                    <li data-name="table" data-topic="">&lt;table&gt;</li>
+                    <li data-name="tbody" data-topic="">&lt;tbody&gt;</li>
+                    <li data-name="td" data-topic="">&lt;td&gt;</li>
+                    <li data-name="template" data-topic="">&lt;template&gt;</li>
+                    <li data-name="textarea" data-topic="">&lt;textarea&gt;</li>
+                    <li data-name="tfoot" data-topic="">&lt;tfoot&gt;</li>
+                    <li data-name="th" data-topic="">&lt;th&gt;</li>
+                    <li data-name="thead" data-topic="">&lt;thead&gt;</li>
+                    <li data-name="time" data-topic="">&lt;time&gt;</li>
+                    <li data-name="title" data-topic="">&lt;title&gt;</li>
+                    <li data-name="tr" data-topic="">&lt;tr&gt;</li>
+                    <li data-name="track" data-topic="">&lt;track&gt;</li>
+                    <li data-name="tt" data-topic="">&lt;tt&gt;</li>
+                    <li data-name="u" data-topic="">&lt;u&gt;</li>
+                    <li data-name="ul" data-topic="">&lt;ul&gt;</li>
+                    <li data-name="var" data-topic="">&lt;var&gt;</li>
+                    <li data-name="video" data-topic="">&lt;video&gt;</li>
+                    <li data-name="wbr" data-topic="">&lt;wbr&gt;</li>
+                </ul>
+            </div>
+        </div>
+        <div class="girl">
+            <img src="img/search_man.png" alt="">
+        </div>
+        <div class="dog">
+            <img src="img/search_deer.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        const searchBox = document.querySelector("#search-box");
+        const cssList = document.querySelectorAll(".list ul li");
+        
+        searchBox.addEventListener("keyup", () => {         //키보드 이벤트
+            const searchWord = searchBox.value;            // input태그에 글씨를 쓰면 : 변수에 저장
+            
+            // console.log(searchWord);
+
+            cssList.forEach((el) => {
+
+                const cssName = el.dataset.name;
+                const cssTopic = el.dataset.topic;
+
+                // console.log(cssName);
+                // console.log(cssTopic);
+
+                if( searchWord.charAt(0) === cssName.charAt(0) || searchWord.charAt(0) === cssTopic.charAt(0)) {
+                    el.classList.remove("hide");
+                } else {
+                    el.classList.add("hide");
+                };
+            }) 
+        });
+    </script>
+</body>
+
+</html>

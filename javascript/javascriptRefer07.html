@@ -283,25 +283,34 @@
             }
             .sample h2 {
                 padding: 7px 5px 5px;
-                font-size: 14px;
-                font-weight: normal;
+                font-size: 13px;
             }
             .sample h2 .dot {
                 display: none;
             }
             .sample pre {
-                font-size: 14px;
+                line-height: 1.2;
+            }
+            .sample code {
+                font-size: 13px;
             }
             .view {
-                padding: 5px;
-                width: 800px;
-                overflow-x: auto;
+                border-right: 1px solid #E6E6E6;
+                border-left: 1px solid #E6E6E6;
+                overflow: auto;
             }
-            .view th {
-                font-weight: normal;
+            .view table {
+                border-left: 0px;
+                border-right: 0px;
+            }
+            .view table th,
+            .view table td {
+                white-space: nowrap;
+                font-size: 13px;
             }
             .view table td.result {
-                color: #000;
+                color: #BDBDBD;
+                background: #F1F1F1;
             }
         }
     </style>

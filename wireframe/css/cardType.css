@@ -98,12 +98,12 @@ body {
     margin: 40px;
 }
 
-.cardType02 .card2-wrap {
+.cardType02 .card-wrap {
     display: flex;
     justify-content: space-between;
 }
 
-.cardType02 .card2-wrap .card2 {
+.cardType02 .card-wrap .card {
     width: 285px;
     height: 356px;
     margin: 40px 20px 0 0;
@@ -112,7 +112,7 @@ body {
     border: solid 1px #e6e6e6;
 }
 
-.cardType02 .card2 .card2-title {
+.cardType02 .card .card-title {
     margin: 10px 34px 10px 0;
     font-size: 24px;
     font-weight: 500;
@@ -123,7 +123,7 @@ body {
     text-overflow: ellipsis;
 }
 
-.cardType02 .card2 .card2-desc {
+.cardType02 .card .card-desc {
     display: block;
     overflow: hidden;
     margin: 10px 0 6px 1px;
@@ -136,7 +136,7 @@ body {
     -webkit-box-orient: vertical;
 }
 
-.cardType02 .card2 .card2-keyword {
+.cardType02 .card .card-keyword {
     display: inline-block;
     float: left;
     margin: 6px 0px 1px 5px;
@@ -146,9 +146,134 @@ body {
     background-color: #000;
 }
 
-.cardType02 .card2-keyword span {
+.cardType02 .card-keyword span {
     font-weight: 100;
     font-size: 10px;
     line-height: 1.4;
     color: #fff;
+}
+
+/* cardType03 */
+
+.cardType03 {
+    font-family: 'S-CoreDream';
+    padding: 150px 0;
+}
+.cardType03 h2 {
+    font-weight: 800;
+    font-size: 50px;
+    margin: 0 0 22px 0;
+}
+.cardType03 p {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+.cardType03 .check{
+    width: 6.4px;
+    height: 1px;
+    flex-grow: 0;
+    margin: 0 8.2px 4px 0;
+    transform: rotate(51deg);
+}
+
+.cardType03 .order_r {
+    float:right;
+    font-size: 16px;
+    line-height: 1.28;
+}
+.cardType03 .order_p {
+    padding-right: 30px;
+    float:right;
+    font-size: 16px;
+    line-height: 1.28;
+    color: #ff5151;
+}
+
+.cardType03 .card-wrap {
+    overflow: hidden;
+}
+
+.cardType03 .card{
+}
+.cardType03 .card .card-img{
+    float: left;
+    width: 285px;
+    height: 185px;
+    border-radius: 10px;
+}
+
+.cardType03 .card .card-keyword1{
+    width: 68px;
+    color: #fff;
+    float: left;
+    margin: 2px 691px 9px 20px;
+    width: auto ;
+    padding: 4px 16px 4px;
+    border-radius: 20px;
+    background-color: #ff5151;
+}
+.cardType03 .card .card-keyword2{
+    width: 68px;
+    color: #fff;
+    float: left;
+    margin: 2px 691px 9px 20px;
+    width: auto ;
+    padding: 4px 16px 4px;
+    border-radius: 20px;
+    background-color: #5465ff;
+}
+.cardType03 .card .card-keyword3{
+    width: 68px;
+    color: #fff;
+    float: left;
+    margin: 2px 691px 9px 20px;
+    width: auto ;
+    padding: 4px 16px 4px;
+    border-radius: 20px;
+    background-color: #ff5151;
+}
+.cardType03 .card .card-keyword4{
+    width: 68px;
+    color: #fff;
+    float: left;
+    margin: 2px 691px 9px 20px;
+    width: auto ;
+    padding: 4px 16px 4px;
+    border-radius: 20px;
+    background-color: #11c865;
+}
+.cardType03 .card .card-keyword span {
+    font-weight: 100;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #fff;
+}
+.cardType03 .card .card-title{
+    height: 30px;
+    margin: 0 169px 10px 19px;
+    font-weight: 500;
+    float: left;
+    font-size: 20px;
+}
+.cardType03 .card .card-desc{
+    width: 895px;
+    height: 75px;
+    float: left;
+    margin-left: 19px;
+    font-size: 16px;
+    line-height: 1.53;
+    color: #555;
+}
+.cardType03 .card .card-date{
+    float: left;
+    height: 20px;
+    flex-grow: 0;
+    margin: 10px 707px 27px 19px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #555;
+    text-decoration: underline
 }

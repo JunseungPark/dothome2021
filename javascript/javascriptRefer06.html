@@ -533,18 +533,14 @@
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
-    const text1 = arr.join("*");
-    const text2 = arr.join("-");
-    const text3 = arr.join("");
-    const text4 = arr.join(" ");
+    const text1 = arr.push(600);
 
-    document.querySelector(".sample02_R1").innerHTML = text1;
+    document.querySelector(".sample03_R1").innerHTML = arr;
+
+    const arr2 = [100, 200, 300, 400, 500];
+    const text2 = arr2.unshift(600);
     
-    document.querySelector(".sample02_R2").innerHTML = text2;
-
-    document.querySelector(".sample02_R3").innerHTML = text3;
-
-    document.querySelector(".sample02_R4").innerHTML = text4;
+    document.querySelector(".sample03_R2").innerHTML = arr2;
 }
 </code></pre>
     </div>
@@ -593,16 +589,14 @@
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
-    const text1 = arr.push(600);
+    const text1 = arr.shift();
 
-    document.querySelector(".sample03_P1").innerHTML = text1;
-    document.querySelector(".sample03_R1").innerHTML = arr;
+    document.querySelector(".sample04_R1").innerHTML = arr;
 
     const arr2 = [100, 200, 300, 400, 500];
-    const text2 = arr2.unshift(600);
+    const text2 = arr2.pop();
     
-    document.querySelector(".sample03_P2").innerHTML = text2;
-    document.querySelector(".sample03_R2").innerHTML = arr2;
+    document.querySelector(".sample04_R2").innerHTML = arr2;
 }
 </code></pre>
     </div>
@@ -1426,7 +1420,7 @@
             
             document.querySelector(".sample03_N2").innerHTML = "2";
             document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample03_M2").innerHTML = "unshift(500)";
+            document.querySelector(".sample03_M2").innerHTML = "unshift(600)";
             document.querySelector(".sample03_P2").innerHTML = text2;
             document.querySelector(".sample03_R2").innerHTML = arr2;
         }
@@ -1462,7 +1456,7 @@
 
             document.querySelector(".sample05_N1").innerHTML = "1";
             document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-            document.querySelector(".sample05_M1").innerHTML = "indexOf(100)";
+            document.querySelector(".sample05_M1").innerHTML = "indexOf(200)";
             document.querySelector(".sample05_R1").innerHTML = text1;
         
             const arr2 = [100, 200, 300, 400, 500];
@@ -1477,7 +1471,7 @@
             const text3 = arr3.lastIndexOf(200);
 
             document.querySelector(".sample05_N3").innerHTML = "3";
-            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 200, 500]";
             document.querySelector(".sample05_M3").innerHTML = "lastIndexOf(200)";
             document.querySelector(".sample05_R3").innerHTML = text3;
 

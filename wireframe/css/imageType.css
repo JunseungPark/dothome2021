@@ -68,3 +68,61 @@ body {
     font-weight: 200;
     color: #fff;
 }
+
+/* imageType02*/
+
+.imageType02 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+
+.imageType02 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 37px;
+}
+
+.imageType02 .image-wrap {
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.imageType02 .image {
+    position: relative;
+}
+.imageType02 .image-wrap .image .image-img{
+}
+.imageType02 .image-wrap .image .inner-wrap{ 
+    text-align: center;
+    white-space: nowrap;
+    position: absolute;
+    width: 285px;
+    top: 138px;
+    left: 44px;
+}
+
+.imageType02 .image-wrap .image .inner-wrap.red{
+    background-color: rgba(185, 1, 1, 0.6);
+}
+.imageType02 .image-wrap .image .inner-wrap.blue{
+    background-color: rgba(26, 34, 70, 0.7);
+}
+.imageType02 .image-wrap .image .inner-wrap.black{
+    background-color: rgba(1, 1, 1, 0.7);
+}
+    
+.imageType02 .image-wrap .image .inner-wrap .image-title{
+    
+    padding: 15px 15px 0px 15px;
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.imageType02 .image-wrap .image .inner-wrap .image-info{
+    padding: 10px 15px 15px 15px;
+    display: block;
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+}

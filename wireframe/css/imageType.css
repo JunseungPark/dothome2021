@@ -1,0 +1,70 @@
+/* 이미지 타입 유형 */
+body {
+    background-color: #f3f3f3;
+}
+
+/* imageType01*/
+
+.imageType{
+    margin: 100px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+
+.imageType01 h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 37px;
+}
+
+.imageType01 .image-wrap {
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.imageType01 .image {
+    position: relative;
+}
+.imageType01 .image-wrap .image .image-img{
+}
+.imageType01 .image-wrap .image .inner-wrap{ 
+    position: absolute;
+    width: 458px;
+    bottom: 30px;
+    left: 30px;
+}
+
+.imageType01 .image-wrap .image .inner-wrap.mu{
+    background-color: rgba(128, 28, 16, 0.7);
+}
+.imageType01 .image-wrap .image .inner-wrap.mc{
+    background-color: rgba(83, 129, 147, 0.7);
+}
+    
+.imageType01 .image-wrap .image .inner-wrap .image-title{
+    padding: 15px 15px 0px 15px;
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+.imageType01 .image-wrap .image .inner-wrap .image-desc{
+    padding: 10px 15px 0px 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.4;
+    color: #fff;    
+}
+.imageType01 .image-wrap .image .inner-wrap .image-info{
+    padding: 10px 15px 15px 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+    color: #fff;
+}

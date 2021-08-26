@@ -315,6 +315,22 @@ a {
     }
 }
 
+/* result box option */
+.reusltBtn {
+    margin-top: 10px;
+    padding: 5px;
+}
+.resultBox {
+    padding: 15px;
+    background: #272822;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.result .display{
+        display: none;
+}
+
 /* Jqueryoption */
 .view {
     padding: 20px;

@@ -12,23 +12,6 @@
         integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-
-    <style>
-    .reusltBtn1 {
-        margin-top: 10px;
-        padding: 5px;
-    }
-    .result-box1 {
-        padding: 15px;
-        background: #272822;
-        color: #fff;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-    }
-    .display{
-            display: none;
-    }
-    </style>
 </head>
 
 <body>
@@ -105,26 +88,20 @@
         </div>
     </div>
     <div class="result">
-        <input type="button" name="button" value="결과보기" class="reusltBtn1">
-        <div class="result-box1 display">
-            <script>
-                var x = 100; // 변수 x에 숫자 100을 저장
-                var y = 200; // 변수 y에 숫자 200을 저장
-                var z = "javascript"; // 변수 z에 문자 javascript를 저장
-
-                //document.write("*** 01. 변수 ***<br>");
-                document.write(x + " " + y + " " + z);
-            </script>
+        <input type="button" name="button" value="결과보기" class="reusltBtn">
+        <div class="resultBox result-box1 display">
+            <span class="text text1"></span>
         </div>
     </div>
-    <hr>
     <script>
-        resultBtn = document.querySelector(".reusltBtn1");
+        resultBtn = document.querySelector(".reusltBtn");
 
         resultBtn.addEventListener("click", () => {
             document.querySelector(".result-box1").classList.toggle("display");
+            document.querySelector(".text1").innerHTML = "100 200 javascript";
         })
     </script>
+    <hr>
 
     <div id="sample2" class="sample">
         <h2>02. 변수 : 데이터 저장 + 데이터 변경 <span class="dot"></span></h2>
@@ -144,7 +121,20 @@
 </code></pre>
         </div>
     </div>
+    <div class="result">
+        <input type="button" name="button" value="결과보기" class="reusltBtn">
+        <div class="resultBox result-box2 display">
+            <span class="text text2"></span>
+        </div>
+    </div>
+    <script>
+        resultBtn = document.querySelector(".reusltBtn");
 
+        resultBtn.addEventListener("click", () => {
+            document.querySelector(".result-box2").classList.toggle("display");
+            document.querySelector(".text2").innerHTML = "100 200 javascript";
+        })
+    </script>
     <hr>
 
     <div id="sample3" class="sample">

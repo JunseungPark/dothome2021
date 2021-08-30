@@ -13,7 +13,7 @@ body {
 
 .sliderType01 {
     font-family: 'GmarketSans';
-    color: #fff;
+    
 }
 .sliderType01 .slider {
     position: relative;
@@ -28,6 +28,7 @@ body {
 .sliderType01 .slider .slider-inner {
     width: 1400px;
     margin: 0 auto;
+    color: #fff;
 }
 .sliderType01 .slider .slider-inner em {
     font-family: 'NEXONLv1Gothic';

@@ -257,6 +257,55 @@ body {
     margin-top: 15px;
 }
 
+/* cardType05*/
+.cardType05 {
+    font-family: 'NEXONLv2Gothic';
+    padding: 100px 0;
+    text-align: center;
+}
+
+.cardType05 h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 37px;  
+}
+.cardType05 .card-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.cardType05 .card-wrap .card {
+    position: relative;
+}
+.cardType05 .card-wrap .card .card-img {
+    border-radius: 15px;
+}
+.cardType05 .card-wrap .card .inner-wrap {
+    width: 300px;
+    font-family: 'NEXONLv1Gothic';
+    text-align: left;
+    position: absolute;
+    left: 48px;
+    top: 65px;
+}
+.cardType05 .card-wrap .card .inner-wrap .card-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #c4c4c4;
+    margin-bottom: 13px;
+}
+.cardType05 .card-wrap .card .inner-wrap .card-desc {
+    line-height: 1.4;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000
+}
+
+
+
+/* imageType100*/
+
 /* cardType04 */
 .cardType04 {
     font-family: 'NanumSquare';

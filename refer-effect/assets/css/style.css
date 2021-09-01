@@ -251,7 +251,13 @@ figcaption {
 }
 
 @media screen and (max-width: 800px) {
-  #nav li a {
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 7px;
+  }
+  #nav ul li a {
     width: 40px;
     height: 25px;
     font-size: 8px;

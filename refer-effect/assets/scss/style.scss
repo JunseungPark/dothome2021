@@ -489,7 +489,6 @@ $phone: "screen and (max-width : 800px)";
     // menu01 -------------------
 
     .info {
-        padding: 15px;
         h1 {
             font-size: 15px;
             line-height: 1.4;
@@ -524,7 +523,7 @@ $phone: "screen and (max-width : 800px)";
     }
 
     .code-view {
-        width: 80vw;
+        width: 90vw;
         .view-header {
 
         }
@@ -542,6 +541,13 @@ $phone: "screen and (max-width : 800px)";
             font-size: 8px;
             height: 400px;
         }
+    }
+
+    #tab-menu {
+        width: 90vw;
+    }
+    #tab-menu .tab-btn li a {
+        font-size: 10px;
     }
     // menu01 -------------------
     

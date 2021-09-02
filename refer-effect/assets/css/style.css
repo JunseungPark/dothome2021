@@ -598,9 +598,6 @@ figcaption {
     line-height: 30px;
     font-size: 12px;
   }
-  .info {
-    padding: 15px;
-  }
   .info h1 {
     font-size: 15px;
     line-height: 1.4;
@@ -629,7 +626,7 @@ figcaption {
     line-height: 1.4;
   }
   .code-view {
-    width: 80vw;
+    width: 90vw;
   }
   .code-view .view-title {
     padding: 0 7px;
@@ -641,5 +638,11 @@ figcaption {
   .code-view .view-cont {
     font-size: 8px;
     height: 400px;
+  }
+  #tab-menu {
+    width: 90vw;
+  }
+  #tab-menu .tab-btn li a {
+    font-size: 10px;
   }
 }

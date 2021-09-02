@@ -599,7 +599,7 @@ figcaption {
     font-size: 12px;
   }
   .info h1 {
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.4;
   }
   .info p {
@@ -621,6 +621,13 @@ figcaption {
   .code-view {
     width: 70vw;
   }
+  .code-view .view-header .dot {
+    padding: 10px 8px 8px 13px;
+  }
+  .code-view .view-header .dot span {
+    width: 9px;
+    height: 9px;
+  }
   .code-view .view-title {
     padding: 0 7px;
   }
@@ -630,12 +637,18 @@ figcaption {
   }
   .code-view .view-cont {
     font-size: 8px;
-    height: 400px;
   }
   #tab-menu {
-    width: 60vw;
+    width: 80%;
   }
   #tab-menu .tab-btn li a {
-    font-size: 10px;
+    padding: 13px 10px 10px 10px;
+    font-size: 14px;
+  }
+  .tab-cont > div h2 {
+    font-size: 16px;
+  }
+  .tab-cont > div p {
+    font-size: 14px;
   }
 }

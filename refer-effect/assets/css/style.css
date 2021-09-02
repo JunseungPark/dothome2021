@@ -620,22 +620,29 @@ figcaption {
     line-height: 1.4;
   }
   .info p {
-    font-size: 8px;
+    font-size: 10px;
   }
   .info li a {
-    width: 10px;
-    height: 10px;
-    line-height: 10px;
-    font-size: 6px;
+    width: 15px;
+    height: 15px;
+    line-height: 12px;
+    font-size: 8px;
   }
   #modal .modal-bg .modal-cont h2 {
-    font-size: 15px;
+    font-size: 10px;
     margin-bottom: 5px;
   }
   #modal .modal-bg .modal-cont p {
     line-height: 1.4;
   }
+  .code-view .view-title {
+    padding: 0 7px;
+  }
+  .code-view .view-title li a {
+    padding: 5px 5px 6px;
+    margin: 0 3px;
+  }
   .code-view .view-cont {
-    height: 300px;
+    height: 400px;
   }
 }

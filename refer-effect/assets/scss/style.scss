@@ -521,15 +521,15 @@ $phone: "screen and (max-width : 800px)";
             line-height: 1.4;
         }
         p {
-            font-size: 8px;
+            font-size: 10px;
         }
 
         li {
             a {
-                width: 10px;
-                height: 10px;
-                line-height: 10px;
-                font-size: 6px;
+                width: 15px;
+                height: 15px;
+                line-height: 12px;
+                font-size: 8px;
             }
         }
     }
@@ -538,7 +538,7 @@ $phone: "screen and (max-width : 800px)";
         .modal-bg {
             .modal-cont {
                 h2 {
-                    font-size: 15px;
+                    font-size: 10px;
                     margin-bottom: 5px;
                 }
                 p {
@@ -553,15 +553,17 @@ $phone: "screen and (max-width : 800px)";
 
         }
         .view-title {
+            padding: 0 7px;
             li {
                 a {
-                    
+                    padding: 5px 5px 6px;
+                    margin: 0 3px;
                 }
             }
         }
 
         .view-cont {
-            height: 300px;
+            height: 400px;
         }
     }
     // menu01 -------------------

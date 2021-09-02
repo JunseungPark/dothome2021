@@ -626,7 +626,7 @@ figcaption {
     line-height: 1.4;
   }
   .code-view {
-    width: 80vw;
+    width: 70vw;
   }
   .code-view .view-title {
     padding: 0 7px;
@@ -640,7 +640,7 @@ figcaption {
     height: 400px;
   }
   #tab-menu {
-    width: 90vw;
+    width: 60vw;
   }
   #tab-menu .tab-btn li a {
     font-size: 10px;

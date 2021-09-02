@@ -508,7 +508,6 @@ $phone: "screen and (max-width : 800px)";
     }
 
     #modal {
-        @include positionCenter;
         .modal-bg {
             .modal-cont {
                 h2 {

@@ -611,13 +611,6 @@ figcaption {
     line-height: 12px;
     font-size: 8px;
   }
-  #modal {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
   #modal .modal-bg .modal-cont h2 {
     font-size: 10px;
     margin-bottom: 5px;

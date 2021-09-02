@@ -635,6 +635,9 @@ figcaption {
   #modal .modal-bg .modal-cont p {
     line-height: 1.4;
   }
+  .code-view {
+    width: 80vw;
+  }
   .code-view .view-title {
     padding: 0 7px;
   }
@@ -643,6 +646,7 @@ figcaption {
     margin: 0 3px;
   }
   .code-view .view-cont {
+    font-size: 8px;
     height: 400px;
   }
 }

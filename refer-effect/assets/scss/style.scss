@@ -474,11 +474,11 @@ $phone: "screen and (max-width : 800px)";
     }
     #nav ul {
         display: flex;
-        gap: 10px;
+        gap: 8px;
         li {
             a {
-                width: 70px;
-                height: 35px;
+                width: 65px;
+                height: 30px;
                 line-height: 30px;
                 font-size: 12px;
             }
@@ -514,6 +514,56 @@ $phone: "screen and (max-width : 800px)";
     }
 
     // menu01 -------------------
+
+    .info {
+        h1 {
+            font-size: 15px;
+            line-height: 1.4;
+        }
+        p {
+            font-size: 8px;
+        }
+
+        li {
+            a {
+                width: 10px;
+                height: 10px;
+                line-height: 10px;
+                font-size: 6px;
+            }
+        }
+    }
+
+    #modal {
+        .modal-bg {
+            .modal-cont {
+                h2 {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+                p {
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+
+    .code-view {
+        .view-header {
+
+        }
+        .view-title {
+            li {
+                a {
+                    
+                }
+            }
+        }
+
+        .view-cont {
+            height: 300px;
+        }
+    }
     // menu01 -------------------
     
 }

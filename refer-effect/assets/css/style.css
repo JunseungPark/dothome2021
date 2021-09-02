@@ -587,6 +587,9 @@ figcaption {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 8px;
   }
   #nav ul li a {
@@ -595,25 +598,8 @@ figcaption {
     line-height: 30px;
     font-size: 12px;
   }
-  .info h1 {
-    font-size: 18px;
-  }
-  .info p {
-    font-size: 14px;
-  }
-  .info li a {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 12px;
-    margin-bottom: 5px;
-    margin-left: -1px;
-  }
-  .info button {
-    width: 90px;
-    height: 30px;
-    font-size: 12px;
-    line-height: 13px;
+  .info {
+    padding: 10px;
   }
   .info h1 {
     font-size: 15px;

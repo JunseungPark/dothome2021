@@ -474,6 +474,7 @@ $phone: "screen and (max-width : 800px)";
     }
     #nav ul {
         display: flex;
+        justify-content: space-between;
         gap: 8px;
         li {
             a {
@@ -485,37 +486,10 @@ $phone: "screen and (max-width : 800px)";
         }
     }
 
-    .info {
-        h1 {
-            font-size: 18px;
-        }
-
-        p {
-            font-size: 14px;
-        }
-
-        li {
-            a {
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
-                font-size: 12px;
-                margin-bottom: 5px;
-                margin-left: -1px;
-            }
-        }
-
-        button {
-            width: 90px;
-            height: 30px;
-            font-size: 12px;
-            line-height: 13px;
-        }
-    }
-
     // menu01 -------------------
 
     .info {
+        padding: 10px;
         h1 {
             font-size: 15px;
             line-height: 1.4;

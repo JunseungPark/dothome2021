@@ -242,79 +242,30 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
     }
 }
 
-// Media Query -----
-$phone: "screen and (max-width : 800px)";
-
-@media #{$phone} {
-    #contents {
-        h1 {
-            font-size: 70px;
-        }
-    }
-    #nav ul {
-        display: flex;
-        gap: 7px;
-        li {
-            a {
-                width: 60px;
-                height: 30px;
-                line-height: 30px;
-                font-size: 12px;
-            }
-        }
-    }
-
-    .info {
-        h1 {
-            font-size: 18px;
-        }
-
-        p {
-            font-size: 14px;
-        }
-
-        li {
-            a {
-                width: 20px;
-                height: 20px;
-                line-height: 20px;
-                font-size: 12px;
-                margin-bottom: 5px;
-                margin-left: -1px;
-            }
-        }
-
-        button {
-            width: 90px;
-            height: 30px;
-            font-size: 12px;
-            line-height: 13px;
-        }
-    }
-    
-}
-// Media Query ------
 .info {
     color: #fff;
     font-family: $font-NEXON1;
     padding: 20px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
     &.right {
-        position: absolute;
+        left: auto;
         right: 0px;
-        top: 0px;
     }
 
     &.bottom {
-        position: absolute;
         right: 0px;
         bottom: 0px;
+        top:auto;
+        left: auto;
     }
 
     h1 {
-        font-weight: 300;
-        font-size: 20px;
+        font-weight: 500;
+        font-size: 40px;
         line-height: 1.6;
-        border-bottom: 1px dashed #fff;
+        text-transform: uppercase;
         display: inline-block;
         margin-bottom: 10px;
     }
@@ -379,9 +330,6 @@ $phone: "screen and (max-width : 800px)";
       justify-content: center;
       
       .modal-cont {
-        background: #fff;
-        padding: 3vw;
-        max-width: 50vw;
         h2 {
           font-weight: 400;
           font-size: 30px;
@@ -400,50 +348,173 @@ $phone: "screen and (max-width : 800px)";
           padding:5px 10px;
           cursor: pointer;
           font-family: 'NEXONLv2Gothic';
+          margin-top: 10px;
         }
       }
     }
-  }
+}
   
   
-  //modal
-  #modal.show {
-    transform: scaley(0.0005) scalex(1);
-    animation: unfoldIn 1s ease forwards;
-  }
-  
-  @keyframes unfoldIn {
-    0% {transform:scaley(0.005) scalex(0);}
-    50% {transform:scaley(0.005) scalex(1);}
-    100% {transform:scaley(1) scalex(1);}
-  }
-  
-  #modal.show.hide {
-      animation: unfoldOut 1s ease forwards;
-  }
-  
-  @keyframes unfoldOut {
-    0% {transform:scaley(1) scalex(1);}
-    50% {transform:scaley(0.005) scalex(1);}
-    100% {transform:scaley(0.005) scalex(0);}
-  }
-  
-  #modal.show .modal-bg .modal-cont {
-    transform : scale(0);
-    animation: zoomIn 0.5s 0.8s ease forwards;
-  }
-  #modal.show.hide .modal-bg .modal-cont {
-    transform : scale(0);
-    animation: zoomOut 0.5s ease forwards;
-  }
-  
-  @keyframes zoomIn {
-    0% { transform : scale(0);}
-    100% { transform : scale(1);}
-  }
-  
-  @keyframes zoomOut {
-    0% { transform : scale(1);}
-    100% { transform : scale(0);}
-  }
+//modal
+#modal.show {
+transform: scaley(0.0005) scalex(1);
+animation: unfoldIn 1s ease forwards;
+}
 
+@keyframes unfoldIn {
+0% {transform:scaley(0.005) scalex(0);}
+50% {transform:scaley(0.005) scalex(1);}
+100% {transform:scaley(1) scalex(1);}
+}
+
+#modal.show.hide {
+    animation: unfoldOut 1s ease forwards;
+}
+
+@keyframes unfoldOut {
+0% {transform:scaley(1) scalex(1);}
+50% {transform:scaley(0.005) scalex(1);}
+100% {transform:scaley(0.005) scalex(0);}
+}
+
+#modal.show .modal-bg .modal-cont {
+transform : scale(0);
+animation: zoomIn 0.5s 0.8s ease forwards;
+}
+#modal.show.hide .modal-bg .modal-cont {
+transform : scale(0);
+animation: zoomOut 0.5s ease forwards;
+}
+
+@keyframes zoomIn {
+0% { transform : scale(0);}
+100% { transform : scale(1);}
+}
+
+@keyframes zoomOut {
+0% { transform : scale(1);}
+100% { transform : scale(0);}
+}
+
+
+//code-view
+.code-view {
+    background: #f2f2f2;
+    width: 70vw;
+    border-radius: 10px;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+
+    .view-header {
+        border-bottom: 1px solid #f2f2f2;
+
+        .dot {
+            padding: 12px 10px 10px 15px;
+            span {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 0 2px;
+            }
+            span:nth-child(1) {
+                background-color: #f56565;
+            }
+            span:nth-child(2) {
+                background-color: #f6e05e;
+            }
+            span:nth-child(3) {
+                background-color: #48bb78;
+            }
+        }
+    }
+    .view-title {
+        font-family: 'NEXONLv2Gothic';
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+        li {
+            display: inline-block;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: #cccccc;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+            }
+
+            &.active a {
+                border-top: 2px solid #667EEA;
+                color: #4a5568
+            }
+        }
+    }
+    .view-cont {
+        height: 500px;
+        overflow-y: scroll;
+
+        > div{
+            display: none;
+        }
+
+        > div:first-child {
+            display: block;
+        }
+    }
+}
+
+// Media Query -----
+$phone: "screen and (max-width : 800px)";
+
+@media #{$phone} {
+    #contents {
+        h1 {
+            font-size: 70px;
+        }
+    }
+    #nav ul {
+        display: flex;
+        gap: 10px;
+        li {
+            a {
+                width: 70px;
+                height: 35px;
+                line-height: 30px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .info {
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        li {
+            a {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 12px;
+                margin-bottom: 5px;
+                margin-left: -1px;
+            }
+        }
+
+        button {
+            width: 90px;
+            height: 30px;
+            font-size: 12px;
+            line-height: 13px;
+        }
+    }
+
+    // menu01 -------------------
+    // menu01 -------------------
+    
+}
+// Media Query ------

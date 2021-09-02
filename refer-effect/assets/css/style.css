@@ -620,6 +620,7 @@ figcaption {
   }
   .code-view {
     width: 70vw;
+    height: 500px;
   }
   .code-view .view-header .dot {
     padding: 10px 8px 8px 13px;
@@ -636,7 +637,6 @@ figcaption {
     margin: 0 3px;
   }
   .code-view .view-cont {
-    height: 300px;
     font-size: 8px;
   }
   #tab-menu {

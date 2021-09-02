@@ -523,7 +523,6 @@ $phone: "screen and (max-width : 800px)";
 
     .code-view {
         width: 70vw;
-        height: 70vw;
         .view-header {
             .dot {
                 padding: 10px 8px 8px 13px;
@@ -547,6 +546,7 @@ $phone: "screen and (max-width : 800px)";
         }
 
         .view-cont {
+            height: 50vw;
             font-size: 8px;
         }
     }

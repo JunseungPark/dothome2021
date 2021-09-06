@@ -116,6 +116,10 @@ figcaption {
   background-image: url(../img/bg10.jpg);
 }
 
+.android main {
+  display: none;
+}
+
 .bg {
   position: relative;
   height: 100vh;

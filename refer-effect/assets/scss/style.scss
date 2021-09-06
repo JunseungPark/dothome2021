@@ -114,6 +114,11 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
         background-image: url(../img/bg#{$i}.jpg);
     }
 }
+
+// agent 
+.android main{
+    display: none;
+}
 // bg
 .bg {
     position: relative;

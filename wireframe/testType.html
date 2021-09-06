@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naver InFuncer Cneter</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Slider Type CSS -->
+    <link rel="stylesheet" href="css/testType.css">
+
+    <!-- 나눔스퀘어 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        .sliderType01 {
+            width: 1024px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .swiper-container {
+            width: 1024px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            overflow: hidden;
+        }
+
+        .swiper-container .swiper-wrapper {
+            width: 1024px;
+            height: 410px;
+            margin: 0 auto;
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
+            background-image: url(testimage/test-img01-1.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide:nth-child(2) {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            background-image: url(testimage/test-img01-2.png);
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide:nth-child(3) {
+            background-image: url(testimage/test-img01-3.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide:nth-child(4) {
+            background-image: url(testimage/test-img01-4.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide:nth-child(5) {
+            background-image: url(testimage/test-img01-5.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .swiper-container .swiper-wrapper .swiper-slide:nth-child(6) {
+            background-image: url(testimage/test-img01-6.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        /* .testType .testType01 .swiper .swiper-wrapper .swiper-slide{
+            width: 1024px;
+            position: relative;
+        }
+        .testType .testType01 .swiper .swiper-wrapper .swiper-slide img{
+            width: 1024px;
+            height: 410px;
+            
+        } */
+        .swiper-slide {
+            width: 1024px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .swiper-slide .slider-inner {
+            width: 330px;
+            margin-top: 50px;
+            margin-left: 70px;
+        }
+
+        .swiper-slide .slider-inner em {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 19px;
+        }
+
+        .swiper-slide .slider-inner p {
+            font-size: 35px;
+            line-height: 50px;
+            letter-spacing: -.6px;
+            margin-bottom: 17px;
+        }
+
+        .swiper-slide .slider-inner span {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 26px;
+            letter-spacing: -.2px;
+        }
+
+        .button-cover-left {
+            display: block;
+            position: absolute;
+            top: 40%;
+            left: -4%;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            background: #000;
+            z-index: 10000;
+            padding: 10px;
+        }
+
+        .swiper-button-prev {
+            --swiper-navigation-size: 25px;
+            color: #fff;
+            margin-left: 22px;
+        }
+
+        .button-cover-right {
+            display: block;
+            position: absolute;
+            top: 40%;
+            right: -4%;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            background: #000;
+            transform: translateY(-50%, -50%);
+            z-index: 10000;
+            padding: 10px;
+        }
+
+        .swiper-button-next {
+            --swiper-navigation-size: 25px;
+            color: #fff;
+            margin-right: 22px;
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            left: 15% !important;
+            top: 86%;
+            transform: translateX(-50%);
+        }
+
+        .swiper-pagination .swiper-pagination-bullet {
+            width: 7px;
+            height: 7px;
+            display: inline-block;
+            border-radius: 50%;
+            margin: 0 10px;
+            box-sizing: border-box;
+            opacity: 1;
+            background-color: hsla(0, 0%, 100%, .18);
+        }
+
+        .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="log">
+            <img class="log-img" src="testimage/logo-image.gif" alt="로고이미지">
+            <div class="log-title">naver<br>influencer center</div>
+        </div>
+        <nav class="main-nav no2">
+            <div class="main-menu">인플루언서 안내</div>
+            <div class="main-menu">광고 수익 혜택</div>
+            <div class="main-menu">성장 지원 프로그램</div>
+            <div class="main-menu">브랜드 커넥트</div>
+            <div class="main-menu">공지</div>
+        </nav>
+        <div class="login">
+            인플루언서 로그인
+        </div>
+        <div class="sub-nav no0">
+            <div class="sub-inner">
+                <div class="sub-menu">인플루언서로 성상</div>
+                <div class="sub-menu">인플루언서로 홈</div>
+                <div class="sub-menu">검색 참여</div>
+            </div>
+        </div>
+        <div class="sub-nav no2">
+            <div class="sub-inner">
+                <div class="sub-menu">크리에터 워크숍</div>
+                <div class="sub-menu">슈퍼에드</div>
+                <div class="sub-menu">엑스퍼트 컨설팅</div>
+                <div class="sub-menu">멤버쉽 혜택</div>
+                <div class="sub-menu">어워드</div>
+            </div>
+        </div>
+    </header>
+    <section class="testType">
+        <div class="container">
+            <div class="testType01">
+                <h2 class="title">naver<br>influencer center</h2>
+                <h3 class="title-s">인풀루언서에게 필요한 모든 것</h3>
+                <p>네이버 인플루언서 센터는 여러분들에게 다양한 지원 프로그램을 운영하고 있습니다.
+                    더 큰 수익과 성장을 위한 다양한 혜택과 지원 프로그램을 지금 경험해보세요.</p>
+            </div>
+            <div class="sliderType01">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>로고 전문가 최은빈과 함께하는</em>
+                                <p>세상에서 제일 쉬운<br>로고 만들기 심화편</p>
+                                <span>지금만나보세요 ⟶</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>로고 전문가 최은빈과 함께하는</em>
+                                <p>세상에서 제일 쉬운<br>나만의 로고 만들기</p>
+                                <span>지금만나보세요 ⟶</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>광고 표시, 어떻게 하지?</em>
+                                <p>정정당당하게 광고하자!<br>추천 보증광고 표시법</p>
+                                <span>지금만나보세요 ⟶</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>@여행작가 박은하의</em>
+                                <p>클릭을 부르는 포스팅 방법</p>
+                                <span>지금만나보세요 ⟶</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>세남자와 해결해요!</em>
+                                <p>세금신고의 꽃<br>절세 노하우</p>
+                                <span>지금만나보세요 ⟶</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-inner">
+                                <em>세남자와 해결해요!</em>
+                                <p>세금 신고<br>FAQ</p>
+                                <span>지금만나보세요 ⟶</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="button-cover-left">
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="button-cover-right">
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div class="cardType01">
+                <div class="card-container">
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-inner">
+                                <strong class="info-title">인플루언서에게<br>제공되는<br>광고 수익과 혜택<strong>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-inner-left">
+                                <div class="info-wrap">
+                                    <em class="card-title">인플루언서 홈</em>
+                                    <p class="card-desc">취향을 자유롭게 표현하는 나만의 홈페이지</p>
+                                    <span class="card-link">자세히 알아보기 ⟶</span>
+                                </div>
+                                <div class="card-img">
+                                    <img src="testimage/test-card01-1.png" alt="카드1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-inner-right">
+                                <div class="info-wrap">
+                                    <em class="card-title">특별한 광고</em>
+                                    <p class="card-desc">더 커진 수익과 효과적인 헤드뷰 광고</p>
+                                    <span class="card-link">자세히 알아보기 ⟶</span>
+                                </div>
+                                <div class="card-img">
+                                    <img src="testimage/test-card01-2.png" alt="카드2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-inner-right bottom">
+                                <div class="info-wrap">
+                                    <em class="card-title">검색 참여</em>
+                                    <p class="card-desc">인플루언서의 콘텐츠를 더많이 보여주는 검색결과</p>
+                                    <span class="card-link">자세히 알아보기 ⟶</span>
+                                </div>
+                                <div class="card-img">
+                                    <img src="testimage/test-card01-3.png" alt="카드3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardType02">
+                <div class="card-container">
+                    <h2>오직 네이버 인플루언서만을 위한<br>성장 지원 프로그램</h2>
+                    <div class="card-wrap">
+                        <div class="card">
+                            <div class="card-inner">
+                                <img class="inner-cover" src="testimage/test-card02-1.png" alt="">
+                                <div class="info-wrap">
+                                    <em class="card-tile">슈퍼에드</em>
+                                    <p class="card-desc">네이버 배너를 통한<br>홍보 지원</p>
+                                    <span class="card-link">자세히 알아보기⟶</span>
+                                </div>
+                                <div class="card-img">
+                                    <img src="testimage/test-card02-inner01.png" alt="이미지1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card right">
+                            <div class="card-inner">
+                                <div class="info-wrap">
+                                    <em class="card-tile">엑스퍼트 프로그램</em>
+                                    <p class="card-desc">세금, 법률 등<br>컨설팅 비용 지원</p>
+                                    <span class="card-link">자세히 알아보기⟶</span>
+                                </div>
+                                <div class="card-img">
+                                    <img src="testimage/test-card02-inner02.png" alt="이미지2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bottom">
+                            <div class="card-inner">
+                                <img src="testimage/test-card02-3.png" alt="">
+                                <div class="info-wrap">
+                                    <em class="card-tile">크리에트 워크숍</em>
+                                    <p class="card-desc">어디에서도 볼 수 없었던<br>무료 강연과 교육</p>
+                                    <span class="card-link">자세히 알아보기⟶</span>
+                                </div>
+                                <div class="card-img">
+                                    <img src="testimage/test-card02-inner03.png" alt="이미지3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part04">
+                <div class="part04-container">
+                    <h2>인플루언서 검색에 대한 정보가 더 필요한가요?</h2>
+                    <div class="part04-wrap">
+                        <div class="button">
+                            <span>인플루언서 검색 지원 안내</span>
+                        </div>
+                        <div class="button right">
+                            <span>인플루언서 검색 소개페이지</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footerType">
+        <div class="footer-container">
+            <div class="footer-top">
+                <span class="top-mark">top↑</span>
+            </div>
+            <div class="footer-logout">
+                <span>로그아웃</span>
+            </div>
+            <div class="footer-copyRight">
+                <span class="copyRight">NAVER Copyright © NAVER Corp. All Rights Reserved.</span>
+                <span class="logo">NAVER</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Optional parameters 
+            //     slidesPerView: 'auto',
+            // spaceBetween: 30,
+            //     loop:true,
+            pagination: {
+                el: '.swiper-container .swiper-pagination',
+                clickable: true,
+            },
+
+            autoplay: {
+                delay: 5000,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const mainMenu1 = document.querySelectorAll(".main-nav > div");
+        console.log(mainMenu1);
+        mainMenu1.forEach((el, index) => {
+            el.addEventListener("mouseover", function () {
+                document.querySelectorAll(`.sub-nav`).forEach(el => {
+                    el.style.display="none";
+                });
+                document.querySelector(`.sub-nav.no${index}`).style.display="block"
+            })    
+        });
+        document.querySelector("header").addEventListener("mouseleave", function(){
+            document.querySelectorAll(`.sub-nav`).forEach(el => {
+                    el.style.display="none";
+                });
+        });
+
+        window.addEventListener('scroll', function(){
+            document.querySelector("header").style.background="#000";
+        });
+    </script>
+</body>
+
+</html>

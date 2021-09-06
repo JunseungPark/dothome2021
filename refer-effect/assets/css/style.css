@@ -666,7 +666,7 @@ figcaption {
 }
 
 .parallax .info {
-  position: absolute;
+  position: fixed;
   right: 10px;
   bottom: 10px;
   top: auto;
@@ -793,7 +793,7 @@ figcaption {
 }
 
 .paraCont .content-item .num {
-  font-family: ‘Lato’;
+  font-family: "Lato";
   font-weight: 100;
   font-size: 25vw;
   opacity: 0.07;
@@ -892,4 +892,22 @@ figcaption {
 
 .content-item:nth-child(9) .img {
   background-image: url(../img/bg9.jpg);
+}
+
+@media screen and (max-width: 800px) {
+  .paraInfo h1 {
+    font-size: 13px;
+  }
+  .paraInfo p {
+    font-size: 10px;
+  }
+  .paraNav {
+    padding: 10px 15px;
+  }
+  .paraNav li a {
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+  }
 }

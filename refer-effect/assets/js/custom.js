@@ -61,7 +61,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 //Code tab menu
 const codeTabBtn = $(".view-title ul li"); // 3개의 버튼을 변수에 할당
 const codeTabCont = $(".view-cont > div"); // 3개의 컨텐츠를 변수에 할당
-codeTabBtn.click(function(){    
+codeTabBtn.click(function(e){
+    e.preventDefault();
     let target = $(this);
     codeTabBtn.removeClass("active");
     target.addClass("active");

@@ -97,11 +97,13 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 @mixin flexCenter {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 @mixin content {
     content: '';
     position: absolute;
@@ -116,9 +118,10 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
 }
 
 // agent 
-.android main{
+.android main {
     display: none;
 }
+
 // bg
 .bg {
     position: relative;
@@ -126,14 +129,16 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
     &::before {
         @include content;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0,0,0,0.6);
+        background-color: rgba(0, 0, 0, 0.6);
         z-index: -1;
     }
 }
+
 // //bg01 
 // .bg01 {
 
@@ -191,6 +196,7 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
 
     &.slider {
         background: $gradient6;
+
         #contents {
             h1 {
                 background-image: linear-gradient(to top, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7627d 46%, #b8235a 59%);
@@ -255,6 +261,7 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
     position: absolute;
     left: 0px;
     top: 0px;
+
     &.right {
         left: auto;
         right: 0px;
@@ -263,7 +270,7 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
     &.bottom {
         right: 0px;
         bottom: 0px;
-        top:auto;
+        top: auto;
         left: auto;
     }
 
@@ -275,13 +282,16 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
         display: inline-block;
         margin-bottom: 10px;
     }
+
     p {
         font-weight: 300;
         font-size: 16px;
     }
+
     li {
         list-style: none;
         display: inline;
+
         a {
             display: inline-block;
             text-decoration: none;
@@ -322,55 +332,67 @@ $gradient6: linear-gradient(to bottom, #dbdcd7 0%, #dddcd7 24%, #e2c9cc 30%, #e7
 
 #modal {
     position: fixed;
-    left: 0; top: 0;
-    width:100%; height: 100%;
-    background: rgba(0,0,0,0.4);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
     transform: scale(0);
-    
+
     .modal-bg {
-      background: rgba(0,0,0,0.6);
-      height:100vh;
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      
-      .modal-cont {
-        h2 {
-          font-weight: 400;
-          font-size: 30px;
-          margin-bottom: 10px;
+        background: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-cont {
+            h2 {
+                font-weight: 400;
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-weight: 400;
+                line-height: 1.6;
+            }
+
+            button {
+                float: right;
+                border: 1px solid #000;
+                background: #000;
+                border-radius: 20px;
+                color: #fff;
+                padding: 5px 10px;
+                cursor: pointer;
+                font-family: 'NEXONLv2Gothic';
+                margin-top: 10px;
+            }
         }
-        p {
-          font-weight: 400;
-          line-height: 1.6;
-        }
-        button {
-          float: right;
-          border: 1px solid #000;
-          background: #000;
-          border-radius: 20px;
-          color: #fff;
-          padding:5px 10px;
-          cursor: pointer;
-          font-family: 'NEXONLv2Gothic';
-          margin-top: 10px;
-        }
-      }
     }
 }
-  
-  
+
+
 //modal
 #modal.show {
-transform: scaley(0.0005) scalex(1);
-animation: unfoldIn 1s ease forwards;
+    transform: scaley(0.0005) scalex(1);
+    animation: unfoldIn 1s ease forwards;
 }
 
 @keyframes unfoldIn {
-0% {transform:scaley(0.005) scalex(0);}
-50% {transform:scaley(0.005) scalex(1);}
-100% {transform:scaley(1) scalex(1);}
+    0% {
+        transform: scaley(0.005) scalex(0);
+    }
+
+    50% {
+        transform: scaley(0.005) scalex(1);
+    }
+
+    100% {
+        transform: scaley(1) scalex(1);
+    }
 }
 
 #modal.show.hide {
@@ -378,28 +400,47 @@ animation: unfoldIn 1s ease forwards;
 }
 
 @keyframes unfoldOut {
-0% {transform:scaley(1) scalex(1);}
-50% {transform:scaley(0.005) scalex(1);}
-100% {transform:scaley(0.005) scalex(0);}
+    0% {
+        transform: scaley(1) scalex(1);
+    }
+
+    50% {
+        transform: scaley(0.005) scalex(1);
+    }
+
+    100% {
+        transform: scaley(0.005) scalex(0);
+    }
 }
 
 #modal.show .modal-bg .modal-cont {
-transform : scale(0);
-animation: zoomIn 0.5s 0.8s ease forwards;
+    transform: scale(0);
+    animation: zoomIn 0.5s 0.8s ease forwards;
 }
+
 #modal.show.hide .modal-bg .modal-cont {
-transform : scale(0);
-animation: zoomOut 0.5s ease forwards;
+    transform: scale(0);
+    animation: zoomOut 0.5s ease forwards;
 }
 
 @keyframes zoomIn {
-0% { transform : scale(0);}
-100% { transform : scale(1);}
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes zoomOut {
-0% { transform : scale(1);}
-100% { transform : scale(0);}
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
 }
 
 
@@ -416,6 +457,7 @@ animation: zoomOut 0.5s ease forwards;
 
         .dot {
             padding: 12px 10px 10px 15px;
+
             span {
                 width: 12px;
                 height: 12px;
@@ -423,24 +465,30 @@ animation: zoomOut 0.5s ease forwards;
                 display: inline-block;
                 margin: 0 2px;
             }
+
             span:nth-child(1) {
                 background-color: #f56565;
             }
+
             span:nth-child(2) {
                 background-color: #f6e05e;
             }
+
             span:nth-child(3) {
                 background-color: #48bb78;
             }
         }
     }
+
     .view-title {
         font-family: 'NEXONLv2Gothic';
         border-bottom: 1px solid #f2f2f2;
         padding: 0 11px;
+
         li {
             display: inline-block;
             list-style: none;
+
             a {
                 text-decoration: none;
                 color: #cccccc;
@@ -455,15 +503,16 @@ animation: zoomOut 0.5s ease forwards;
             }
         }
     }
+
     .view-cont {
         height: 500px;
         overflow-y: scroll;
 
-        > div{
+        >div {
             display: none;
         }
 
-        > div:first-child {
+        >div:first-child {
             display: block;
         }
     }
@@ -478,10 +527,12 @@ $phone: "screen and (max-width : 800px)";
             font-size: 70px;
         }
     }
+
     #nav ul {
         display: flex;
         justify-content: space-between;
         gap: 8px;
+
         li {
             a {
                 width: 65px;
@@ -499,6 +550,7 @@ $phone: "screen and (max-width : 800px)";
             font-size: 13px;
             line-height: 1.4;
         }
+
         p {
             font-size: 10px;
         }
@@ -520,6 +572,7 @@ $phone: "screen and (max-width : 800px)";
                     font-size: 10px;
                     margin-bottom: 5px;
                 }
+
                 p {
                     line-height: 1.4;
                 }
@@ -529,10 +582,11 @@ $phone: "screen and (max-width : 800px)";
 
     .code-view {
         width: 70vw;
+
         .view-header {
             .dot {
                 padding: 10px 8px 8px 13px;
-                
+
                 span {
                     width: 9px;
                     height: 9px;
@@ -541,8 +595,10 @@ $phone: "screen and (max-width : 800px)";
             }
 
         }
+
         .view-title {
             padding: 0 7px;
+
             li {
                 a {
                     padding: 5px 5px 6px;
@@ -560,19 +616,24 @@ $phone: "screen and (max-width : 800px)";
     #tab-menu {
         width: 80%;
     }
+
     #tab-menu .tab-btn li a {
         padding: 13px 10px 10px 10px;
         font-size: 14px;
     }
-    .tab-cont > div h2 {
+
+    .tab-cont>div h2 {
         font-size: 16px;
     }
-    .tab-cont > div p {
+
+    .tab-cont>div p {
         font-size: 14px;
     }
+
     // menu01 -------------------
-    
+
 }
+
 // Media Query ------
 
 
@@ -587,7 +648,7 @@ $phone: "screen and (max-width : 800px)";
         position: fixed;
         right: 10px;
         bottom: 10px;
-        top:auto;
+        top: auto;
         left: auto;
     }
 
@@ -612,7 +673,7 @@ $phone: "screen and (max-width : 800px)";
     left: 20px;
     bottom: 20px;
     z-index: 1000;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     color: #fff;
     height: 40px;
     line-height: 40px;
@@ -626,7 +687,7 @@ $phone: "screen and (max-width : 800px)";
     position: fixed;
     left: 20px;
     bottom: 70px;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     color: #fff;
     padding: 20px;
     font-size: 12px;
@@ -641,23 +702,28 @@ $phone: "screen and (max-width : 800px)";
 
 .paraNav {
     position: fixed;
-    right: 20px; top: 20px;
+    right: 20px;
+    top: 20px;
     z-index: 1000;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     padding: 15px 20px;
     border-radius: 50px;
+
     li {
         display: inline-block;
         list-style: none;
+
         a {
             color: #fff;
             text-decoration: none;
             display: inline-block;
             padding: 5px;
-            width: 30px; height: 30px;
+            width: 30px;
+            height: 30px;
             text-align: center;
             line-height: 30px;
         }
+
         &.active a {
             background: #fff;
             color: #000;
@@ -668,6 +734,7 @@ $phone: "screen and (max-width : 800px)";
 
 .paraInfo {
     padding: 20px;
+
     h1 {
         font-weight: 500;
         font-size: 40px;
@@ -675,19 +742,23 @@ $phone: "screen and (max-width : 800px)";
         text-transform: uppercase;
         display: inline-block;
         margin-bottom: 10px;
+
         a {
             color: #fff;
             text-decoration: none;
         }
     }
+
     p {
         font-size: 14px;
         line-height: 1.8;
     }
 }
+
 .paraCont {
     width: 100%;
     overflow: hidden;
+
     .content-item {
         width: 1000px;
         max-width: 70vw;
@@ -696,26 +767,32 @@ $phone: "screen and (max-width : 800px)";
         padding-top: 10vw;
         text-align: right;
         position: relative;
+
         .num {
             font-family: "Lato";
             font-weight: 100;
             font-size: 25vw;
             opacity: 0.07;
             position: absolute;
-            right: -5vw; top: -10vw;
+            right: -5vw;
+            top: -10vw;
         }
+
         .title {
             padding-bottom: 10px;
             font-weight: 700;
         }
+
         .img-Wrap {
             width: 100%;
             padding-bottom: 56%;
             background: #000;
             position: relative;
+
             .img {
                 position: absolute;
-                left: 0; top: 0;
+                left: 0;
+                top: 0;
                 width: 100%;
                 height: 100%;
                 background-size: cover;
@@ -728,6 +805,7 @@ $phone: "screen and (max-width : 800px)";
                 }
             }
         }
+
         .desc {
             font-size: 6vw;
             line-height: 1.4;
@@ -737,13 +815,16 @@ $phone: "screen and (max-width : 800px)";
             z-index: 100;
             word-break: keep-all;
         }
-        &:nth-child(even){
+
+        &:nth-child(even) {
             margin-left: auto;
             text-align: left;
+
             .num {
                 right: auto;
                 left: -5vw;
             }
+
             .desc {
                 margin-right: auto;
                 margin-left: -3vw;
@@ -751,9 +832,10 @@ $phone: "screen and (max-width : 800px)";
         }
     }
 }
+
 @for $i from 1 through 9 {
     .content-item {
-        &:nth-child(#{$i}){
+        &:nth-child(#{$i}) {
             .img {
                 background-image: url(../img/bg#{$i}.jpg);
             }
@@ -763,19 +845,76 @@ $phone: "screen and (max-width : 800px)";
 
 @media #{$phone} {
     .paraInfo h1 {
-      font-size: 13px;
+        font-size: 13px;
     }
+
     .paraInfo p {
-      font-size: 10px;
+        font-size: 10px;
     }
-  
+
     .paraNav {
-      padding: 10px 15px;
+        padding: 10px 15px;
     }
+
     .paraNav li a {
-      font-size: 10px;
-      width: 10px;
-      height: 10px;
-      line-height: 10px;
+        font-size: 10px;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
     }
-  }
+}
+
+.paraFooter {
+    padding: 200px 0;
+
+    h1 {
+        font-size: 8vw;
+        line-height: 1.2;
+        padding: 10vw 8vw 0 8vw;
+        text-transform: uppercase;
+        margin-bottom: 3vw;
+    }
+
+    em {
+        display: block;
+        font-family: 'Lato';
+        font-weight: 100;
+        padding-left: 18vw;
+    }
+
+    .footerInfo {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+        padding: 15px 20px;
+        margin-bottom: 2px;
+
+        h2 {
+            padding-right: 20px;
+        }
+
+        li {
+            display: inline;
+            list-style: none;
+
+            a {
+                color: #fff;
+                border: 1px dashed #fff;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                border-radius: 50%;
+                line-height: 30px;
+                text-decoration: none;
+            }
+
+            &.active a {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+}

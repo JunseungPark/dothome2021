@@ -1,0 +1,288 @@
+
+body {
+    font-family: 'NanumSquare';
+}
+header {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    color: #000;
+    text-transform: uppercase;
+    background: #fff;
+    padding-bottom: 10px;
+}
+header .log{
+    position: absolute;
+    display: inline-block;
+    top:30px;
+    left:200px
+}
+header .log .log-img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+header .log .log-title{
+    font-family: 'GmarketSansBold';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1;
+    display: inline-block;
+}
+header .main-nav{
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    color: rgba(0,0,0,.6);
+    margin: 0 5px;
+    font-size: 18px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+header .login{
+    text-align: center;
+    width: 160px;
+    height: 30x;
+    font-size: 16px;
+    position: absolute;
+    top: 31px;
+    right: 200px;
+    display: block;
+    border: 1px solid #e2e2e2;
+    border-radius: 40px;
+    padding: 10px 5px 10px 5px;
+}
+header .sub-nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,.2);
+    transition: opacity .3s ease-in-out;
+    transform: translateY(0);
+}
+
+header .sub-nav .sub-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 61px;
+}
+
+header .sub-nav .sub-inner .sub-menu {
+    margin: 0 20px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+/* membership */
+.membership{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(240, 250, 247);
+}
+.membership .membership-container{
+    position: relative;
+    
+}
+.membership .membership-container .membershipIntro{
+    padding: 110px 0 10px;
+    width: 100%;
+}
+.membership .membership-container .membershipIntro .membershipIntro-wrap{
+    background-image: url(../testimage/test-img02-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    word-break: keep-all;
+    padding: 134px 0 114px;
+}
+.membership .membership-container .membershipIntro .membershipIntro-wrap .membershipIntro-title{
+    display: inline-block;
+    border-bottom: 4px solid hsla(0,0%,100%,.2);
+    font-weight: 700;
+    letter-spacing: -.24px;
+    color: hsla(0,0%,100%,.8);
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: 34px;
+}
+.membership .membership-container .membershipIntro .membershipIntro-wrap .membershipIntro-text{
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 700;
+    letter-spacing: -.93px;
+    color: #fff;
+}
+.membership .membership-container .membershipIntro .membershipIntro-wrap .membershipIntro-subtext{
+    margin-top: 18px;
+    font-size: 22px;
+    line-height: 36px;
+    color: hsla(0,0%,100%,.8);
+}
+
+.membership-content {
+    width: 100%;
+}
+.membership-content.two{
+    background: #fff;
+}
+
+.membership-content .membership-container{
+    width: 1024x;
+    margin: 0 auto;
+}
+.membership-content .membership-container .membership-content-wrap{
+    padding-top: 110px;
+    height: 761px;
+}
+.membership-content .membership-content-card{
+    display: flex;
+    margin: 0 auto;
+    width: 1024px;
+    justify-content: space-between;
+}
+.membership-content .membership-content-card .card-inner{}
+.membership-content .membership-content-card .card-inner .card-title{
+    font-size: 42px;
+    line-height: 53px;
+    font-weight: 700;
+    color: #222;
+}
+.membership-content .membership-content-card .card-inner .card-desc{
+    margin-top: 17px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: rgba(38,38,46,.5);
+}
+.membership-content .membership-content-card .card-inner .card-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 322px;
+    height: 62px;
+    border-radius: 31px;
+    background: #0cd796;
+    box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    overflow: visible;
+    border: none;
+}
+.membership-content .membership-content-card .card-inner .card-button.check{
+    float: left;
+    margin-right: 20px;
+    width: 222px;
+}
+.membership-content .membership-content-card .card-inner .card-button.more{
+    float: left;
+    width: 222px;
+    box-shadow: rgb(88 181 243 / 30%) 0px 10px 30px 0px;
+    background: rgb(75, 130, 247);
+}
+.membership-content .membership-content-card .card-img{
+    width: 500px;
+    height: 315px;
+}
+.membership-content .membership-content-guide {
+    margin: 60px auto 0;
+    width: 1024px;
+    border-radius: 15px;
+    padding: 44px 51px;
+    background: #fff;
+    box-shadow: 0 8px 10px 0 rgb(113 171 142 / 5%);
+    border: 1px solid #e6f2ec;
+}
+.membership-content .membership-content-guide .guide-row .guide-tab {
+    float: left;
+    color: #12ca8f;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-right: 30px;
+}
+.membership-content .membership-content-guide .guide-row p {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: rgba(38,38,46,.7);
+}
+
+.membership-content .membership-content-guide .guide-row.two{
+    margin-top: 20px;
+}
+.membership-content .membership-content-guide .guide-row.three{
+    margin-top: 20px;
+}
+
+.footerType {
+    padding-bottom: 50px;
+    background: #000;
+    text-align: center;
+}
+
+.footerType .footer-container{}
+.footerType .footer-container .footer-top{
+
+}
+
+.footerType .footer-container .footer-top .top-mark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    background: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    letter-spacing: .47px;
+    color: #666;
+}
+.footerType .footer-container .footer-logout{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    width: 80px;
+    height: 29px;
+    border-radius: 4px;
+    background: #323232;
+    font-size: 13px;
+    letter-spacing: -.5px;
+    color: #999;
+}
+.footerType .footer-container .footer-copyRight{
+    margin-top: 30px;
+}
+.footerType .footer-container .footer-copyRight .copyRight{
+    display: block;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -.3px;
+    color: hsla(0,0%,100%,.3);
+}
+.footerType .footer-container .footer-copyRight .logo{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold   ;
+    margin-top: 9px;
+    vertical-align: top;
+}

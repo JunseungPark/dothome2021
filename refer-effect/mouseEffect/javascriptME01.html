@@ -71,7 +71,7 @@
         .cursor.style4 {
             background-color: rgba(207, 169, 64, 0.342);
             color: rgb(180, 104, 4);
-            transform: matrix(100, 0, 100, 10, 0, -10);
+            transform: matrix(50, 0, 100, 10, 0, -10);
         }
         .cursor.style5 {
             background-color: rgba(64, 138, 207, 0.342);
@@ -133,14 +133,14 @@
 
     <div class="info right">
         <ul>
-            <li><a href="javascriptME01.html">1</a></li>
+            <li class="active"><a href="javascriptME01.html">1</a></li>
             <li><a href="javascriptME02.html">2</a></li>
             <li><a href="javascriptME03.html">3</a></li>
             <li><a href="javascriptME04.html">4</a></li>
             <li><a href="javascriptME05.html">5</a></li>
         </ul>
         <ul>
-            <li class="active"><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME01.html">1</a></li>
             <li><a href="jqueryME02.html">2</a></li>
             <li><a href="jqueryME03.html">3</a></li>
             <li><a href="jqueryME04.html">4</a></li>
@@ -186,183 +186,195 @@
                     </div>
                     <div class="view-cont">
                         <div>
-<pre><code class="language-html">&lt;body class="bg bg5"&gt;
+<pre><code class="language-html">&lt;body class="bg bg4 blue"&gt;
     &lt;!-- contents --&gt;
     &lt;main&gt;
-        &lt;div id="tab-menu"&gt;
-            &lt;div class="tab-btn"&gt;
-                &lt;ul&gt;
-                    &lt;li class="active"&gt;&lt;a href="#"&gt;책1&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;책2&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;책3&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;책4&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#"&gt;책5&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class="tab-cont"&gt;
-                &lt;div&gt;
-                    &lt;h2&gt;언어의 온도&lt;/h2&gt;
-                    &lt;p&gt;그들이 무심코 교환하는 말과 끄적이는 문장에 절절한 사연이 도사리고 있을 것 같기 때문이다. 『언어의 온도』는 저자가 일상에서 발견한 의미 &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;h2&gt;나미야 잡화점의 기적&lt;/h2&gt;
-                    &lt;p&gt;《나미야 잡화점의 기적》은 히가시노 게이고의 장편소설이다.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;h2&gt;말의 품격&lt;/h2&gt;
-                    &lt;p&gt;『말의 품격』은 《언어의 온도》로 많은 독자의 공감을 얻은 이기주 작가의 에세이집이다. &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;h2&gt;사피엔스&lt;/h2&gt;
-                    &lt;p&gt;인간의 역사와 미래에 대한 가장 논쟁적이고 대담한 대서사 문명의 배를 타고 진화의 바다를 항해한 인류는 이제 어디로 나아갈 것인가! &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;h2&gt;이기적 유전자&lt;/h2&gt;
-                    &lt;p&gt;《이기적 유전자》(The Selfish Gene)는 영국 진화생물학자 리처드 도킨스가 쓴 책이다. 이 책은 진화의 주체가 인간 개체나 종이 아니라 유전자이며 인간은 유전자 보존을 위해 맹목적으로 프로그램된 기계에 불과하다고 주장하여 생물학계의 논쟁을 불러일으켰다.&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;If you &lt;span class="style1"&gt;fear&lt;/span&gt; &lt;span class="style2"&gt;failure&lt;/span&gt;, you shall never&lt;/span&gt; &lt;span class="style3"&gt;succeed&lt;/span&gt;&lt;/p&gt;
+            &lt;h2&gt;&lt;span class="style4"&gt;실패&lt;/span&gt;를 &lt;span class="style5"&gt;두려워&lt;/span&gt;하면 결코 &lt;span class="style6"&gt;성공&lt;/span&gt;할 수 없다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;!-- &lt;article class="mouseCont"&gt;
+            &lt;p&gt;They are rich who have true friends&lt;/p&gt;
+            &lt;h2&gt;진정한 친구가 있는 사람이야말로 부자다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;Life is not a spectator sport&lt;/p&gt;
+            &lt;h2&gt;인생은 바라보기만 하는 스포츠가 아니다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;Never, never, never, never give up.&lt;/p&gt;
+            &lt;h2&gt;절대로 포기하지 말라 절대로&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;The road is always shorter when two people walk it.&lt;/p&gt;
+            &lt;h2&gt;누군가와 함께 하면 여정은 항상 더 짧다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;Of coure I'm crazy, but that doesn't mean I'm wrong&lt;/p&gt;
+            &lt;h2&gt;확실히 나는 미쳤다. 하지만 틀린 것은 아니다.&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;We are what we repeatedly do&lt;/p&gt;
+            &lt;h2&gt;현재의 우리는 우리가 반복적으로 하는 행동의 결과이다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;To thine own self be true&lt;/p&gt;
+            &lt;h2&gt;너 자신에게 성실하라&lt;/h2&gt;
+        &lt;/article&gt; --&gt;
     &lt;/main&gt;
     &lt;!-- contents --&gt;
 
     &lt;!-- info --&gt;
     &lt;div class="info"&gt;
-        &lt;h1&gt;javascript Menu Effect01&lt;/h1&gt;
-        &lt;p&gt;메뉴 이펙트 - 탭 메뉴&lt;/p&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;Javascript Menu Effect01&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;마우스 이펙트 - 마우스 따라다니기&lt;/p&gt;
     &lt;/div&gt;
 
     &lt;div class="info right"&gt;
         &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
         &lt;ul&gt;
-            &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
+    &lt;!-- //scroll --&gt;
+    &lt;div class="info left list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;clientX : &lt;span class="clientX"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;clientY : &lt;span class="clientY"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;offsetX : &lt;span class="offsetX"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;offsetY : &lt;span class="offsetY"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;screenX : &lt;span class="screenX"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;screenY : &lt;span class="screenY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
 
     &lt;div class="info bottom"&gt;
         &lt;button&gt;소스보기&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;!-- //info --&gt;
-    &lt;!-- modal --&gt;
-    &lt;div id="modal"&gt;
-        &lt;div class="modal-bg"&gt;
-            &lt;div class="modal-cont"&gt;
-                &lt;div class="code-view"&gt;
-                    &lt;div class="view-header"&gt;
-                        &lt;div class="dot" aria-hidden="true"&gt;
-                            &lt;span&gt;&lt;/span&gt;
-                            &lt;span&gt;&lt;/span&gt;
-                            &lt;span&gt;&lt;/span&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="view-title"&gt;
-                        &lt;ul&gt;
-                            &lt;li class="active"&gt;&lt;a href="#"&gt;Html&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
-                        &lt;/ul&gt;
-                    &lt;/div&gt;
-                    &lt;div class="view-cont"&gt;
-                        &lt;div&gt;
-&lt;pre&gt;&lt;code class="language-html"&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-                    &lt;/div&gt;
-                    &lt;div&gt;
-&lt;pre&gt;&lt;code class="language-css"&gt;
-&lt;/code&gt;&lt;/pre&gt;                        
-                    &lt;/div&gt;
-                    &lt;div&gt;
-&lt;pre&gt;&lt;code class="language-js"&gt;
-&lt;/code&gt;&lt;/pre&gt;                        
-                    &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;button&gt;닫기&lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">#tab-menu {
-    max-width: 600px;
-    background: rgba(173, 173, 173);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 5px;
-    overflow: hidden;
-    font-family: 'NEXONLv2Gothic';
-    color: #fff;
-}
-.tab-btn {}
-.tab-btn ul {
+<pre><code class="language-css">.mouseCont {
     display: flex;
-}
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
-}
-.tab-btn li.active a{
-    border-bottom: 3px solid #333;
-    color: #000;
-}
-.tab-btn li a {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     color: #fff;
-    text-decoration: none;
-    padding: 15px 18px;
-    display: block;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    cursor: none;
 }
-.tab-cont {
-    background: #fff;
-    padding: 20px;
-    color: #222;
+.mouseCont p{
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
 }
-.tab-cont > div {
-    display: none;
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
 }
-.tab-cont > div:first-child {
-    display: block;
+.mouseCont span {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #fff;
 }
-.tab-cont > div h2 {
-    margin-bottom: 10px;
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgb(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: 
+        background-color 0.2s,
+        border-color 0.2s,
+        border-radius 0.2s,
+        transform 0.6s;
 }
-.tab-cont > div p {
-    line-height: 1.6;
+
+.cursor.style1 {
+    background-color: rgba(192, 47, 47, 0.342);
+    color: rgb(180, 4, 4);
+}
+.cursor.style2 {
+    background-color: rgba(205, 207, 64, 0.342);
+    color: rgb(180, 168, 4);
+    transform: rotateY(720deg) scale(2);
+}
+.cursor.style3 {
+    background-color: rgba(64, 74, 207, 0.342);
+    color: rgb(42, 4, 180);
+    transform: translateY(-1024px) scale(10) translateX(-500px);
+}
+.cursor.style4 {
+    background-color: rgba(207, 169, 64, 0.342);
+    color: rgb(180, 104, 4);
+    transform: matrix(100, 0, 100, 10, 0, -10);
+}
+.cursor.style5 {
+    background-color: rgba(64, 138, 207, 0.342);
+    color: rgb(4, 101, 180);
+    transform: matrix(100, 0, 0, 100, 0, 0);
+}
+.cursor.style6 {
+    background-color: rgba(150, 64, 207, 0.342);
+    color: rgb(115, 4, 180);
+    transform: matrix(0, 5, 5, 0, 0, 0) rotateX(5000deg);
 }
 </code></pre>                        
                         </div>
                         <div>
-<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li"); // 5개의 버튼을 변수에 할당
-const tabCont = $(".tab-cont > div"); // 5개의 컨텐츠를 변수에 할당
+<pre><code class="language-javascript">//출력용
+window.addEventListener("mousemove", function(event){
+    document.querySelector(".clientX").innerText = event.clientX + "px"; // 브라우저 X좌표 기준
+    document.querySelector(".clientY").innerText = event.clientY + "px"; // 브라우저 Y좌표 기준
+    document.querySelector(".offsetX").innerText = event.offsetX + "px"; // 요소 X좌표 기준
+    document.querySelector(".offsetY").innerText = event.offsetY + "px"; // 요소 Y좌표 기준
+    document.querySelector(".pageX").innerText = event.pageX + "px"; // 페이지 X좌표 기준
+    document.querySelector(".pageY").innerText = event.pageY + "px"; // 페이지 Y좌표 기준
+    document.querySelector(".screenX").innerText = event.screenX + "px"; // 디바이스 X좌표 기준
+    document.querySelector(".screenY").innerText = event.screenY + "px"; // 디바이스 Y좌표 기준
+});
 
-// 1. 버튼을 클릭한 버튼한테 active추가
-// 2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
-// 3. 버튼의 인덱스 설정
-// 4. 1번째 버튼은 1번째 컨텐츠 연결
-// 5. 모든컨텐츠를 안보이게 설정
-// 6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
-tabBtn.click(function(){
-    let target = $(this);
-    tabBtn.removeClass("active");
-    target.addClass("active");
+//마우스 움직이기
+window.addEventListener("mousemove", function(event){
+    // document.querySelector(".cursor").style.left = event.clientX - 25 + "px";
+    // document.querySelector(".cursor").style.top = event.clientY  - 25 + "px";
 
-    let index = target.index();
-    tabCont.css("display", "none");
-    tabCont.eq(index).css("display", "block")
+    let x = event.clientX - 25 + "px";
+    let y = event.clientY - 25 + "px";
+    document.querySelector(".cursor").style.cssText = "left:" + x + "; top:" + y;
+
+});
+
+let spanBox = document.querySelectorAll(".mouseCont span");
+spanBox.forEach((ele, index) => {
+    console.log(ele);
+    ele.addEventListener("mouseover", function(){
+        document.querySelector(".cursor").classList.add(`style${index + 1}`);
+    })
+    ele.addEventListener("mouseout", function(){
+        document.querySelector(".cursor").classList.remove(`style${index + 1}`);
+    })
 });
 </code></pre>                        
                         </div>
@@ -378,6 +390,7 @@ tabBtn.click(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        modal();
         //출력용
         window.addEventListener("mousemove", function(event){
             document.querySelector(".clientX").innerText = event.clientX + "px"; // 브라우저 X좌표 기준

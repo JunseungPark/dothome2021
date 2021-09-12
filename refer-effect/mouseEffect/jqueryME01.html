@@ -295,74 +295,112 @@
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">#tab-menu {
-    max-width: 600px;
-    background: rgba(173, 173, 173);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 5px;
-    overflow: hidden;
-    font-family: 'NEXONLv2Gothic';
-    color: #fff;
-}
-.tab-btn {}
-.tab-btn ul {
+<pre><code class="language-css">.mouseCont {
     display: flex;
-}
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
-}
-.tab-btn li.active a{
-    border-bottom: 3px solid #333;
-    color: #000;
-}
-.tab-btn li a {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     color: #fff;
-    text-decoration: none;
-    padding: 15px 18px;
-    display: block;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    cursor: none;
 }
-.tab-cont {
-    background: #fff;
-    padding: 20px;
-    color: #222;
+.mouseCont p{
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
 }
-.tab-cont > div {
-    display: none;
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
 }
-.tab-cont > div:first-child {
-    display: block;
+.mouseCont span {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #fff;
 }
-.tab-cont > div h2 {
-    margin-bottom: 10px;
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgb(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: 
+        background-color 0.2s,
+        border-color 0.2s,
+        border-radius 0.2s,
+        transform 0.6s;
 }
-.tab-cont > div p {
-    line-height: 1.6;
+
+.cursor.style1 {
+    background-color: rgba(192, 47, 47, 0.342);
+    color: rgb(180, 4, 4);
+}
+.cursor.style2 {
+    background-color: rgba(205, 207, 64, 0.342);
+    color: rgb(180, 168, 4);
+    transform: rotateY(720deg) scale(2);
+}
+.cursor.style3 {
+    background-color: rgba(64, 74, 207, 0.342);
+    color: rgb(42, 4, 180);
+    transform: translateY(-1024px) scale(10) translateX(-500px);
+}
+.cursor.style4 {
+    background-color: rgba(207, 169, 64, 0.342);
+    color: rgb(180, 104, 4);
+    transform: matrix(100, 0, 100, 10, 0, -10);
+}
+.cursor.style5 {
+    background-color: rgba(64, 138, 207, 0.342);
+    color: rgb(4, 101, 180);
+    transform: matrix(100, 0, 0, 100, 0, 0);
+}
+.cursor.style6 {
+    background-color: rgba(150, 64, 207, 0.342);
+    color: rgb(115, 4, 180);
+    transform: matrix(0, 5, 5, 0, 0, 0) rotateX(5000deg);
 }
 </code></pre>                        
                         </div>
                         <div>
-<pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li"); // 5개의 버튼을 변수에 할당
-const tabCont = $(".tab-cont > div"); // 5개의 컨텐츠를 변수에 할당
+<pre><code class="language-javascript">// 출력용
+$(window).mousemove(function(event){
+    $(".clientX").text(event.clientX) + "px"; // 브라우저 X좌표 기준
+    $(".clientY").text(event.clientY) + "px"; // 브라우저 Y좌표 기준
+    $(".offsetX").text(event.offsetX) + "px"; // 요소 X좌표 기준
+    $(".offsetY").text(event.offsetY) + "px"; // 요소 Y좌표 기준
+    $(".pageX").text(event.pageX) + "px"; // 페이지 X좌표 기준
+    $(".pageY").text(event.pageY) + "px"; // 페이지 Y좌표 기준
+    $(".screenX").text(event.screenX) + "px"; // 디바이스 X좌표 기준
+    $(".screenY").text(event.screenY) + "px"; // 디바이스 Y좌표 기준
+});
 
-// 1. 버튼을 클릭한 버튼한테 active추가
-// 2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
-// 3. 버튼의 인덱스 설정
-// 4. 1번째 버튼은 1번째 컨텐츠 연결
-// 5. 모든컨텐츠를 안보이게 설정
-// 6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
-tabBtn.click(function(){
-    let target = $(this);
-    tabBtn.removeClass("active");
-    target.addClass("active");
+// 마우스 움직이기
+$(window).mousemove(function(event){
+    $(".cursor").css({left: event.clientX - 25, top: event.clientY - 25});
+});
 
-    let index = target.index();
-    tabCont.css("display", "none");
-    tabCont.eq(index).css("display", "block")
+// $(".mouseCont em").mouseover(function(){
+//     $(".cursor").addClass("active");
+// });
+
+// $(".mouseCont em").mouseout(function(){
+//     $(".cursor").remove("active");
+// });
+
+$(".mouseCont span").each((index, element)=> {
+    $(element).hover(function(){
+        $(".cursor").addClass(`style${index + 1}`);
+    }, function(){
+        $(".cursor").removeClass(`style${index + 1}`);
+    })
 });
 </code></pre>                        
                         </div>
@@ -378,6 +416,7 @@ tabBtn.click(function(){
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
+        modal();
         // 출력용
         $(window).mousemove(function(event){
             $(".clientX").text(event.clientX) + "px"; // 브라우저 X좌표 기준

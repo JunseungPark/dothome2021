@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <style>
+        .mouseCont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            font-family: 'NEXONLv1Gothic';
+            cursor: none;
+        }
+        .mouseCont p{
+            font-size: 2.5vw;
+            line-height: 2.3;
+            font-weight: 300;
+        }
+        .mouseCont h2 {
+            font-size: 3vw;
+            font-weight: normal;
+        }
+        .mouseCont em {
+            font-style: normal;
+            border-bottom: 0.2vw dashed #fff;
+            color: orange;
+        }
+        .cursor {
+            position: absolute;
+            left: 0; top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            z-index: 9999;
+            background-color: #fff;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s;
+            mix-blend-mode: difference;
+        }
+
+        .cursor.active {
+            transform: scale(20);
+        }
+
+        .info.left.list li.active {
+            text-decoration: underline;
+            color: orange;
+        }
+    </style>
+</head>
+
+<body class="bg bg6 blue">
+    <!-- contents -->
+    <main>
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+        <!-- <article class="mouseCont">
+            <p>If you <span class="style1">fear</span> <span class="style2">failure</span>, you shall never</span> <span class="style3">succeed</span></p>
+            <h2><span class="style4">실패</span>를 <span class="style5">두려워</span>하면 결코 <span class="style6">성공</span>할 수 없다</h2>
+        </article> -->
+        <!-- <article class="mouseCont">
+            <p>They are rich who have true friends</p>
+            <h2>진정한 친구가 있는 사람이야말로 부자다</h2>
+        </article>
+        <article class="mouseCont">
+            <p>Life is not a spectator sport</p>
+            <h2>인생은 바라보기만 하는 스포츠가 아니다</h2>
+        </article>
+        <article class="mouseCont">
+            <p>Never, never, never, never give up.</p>
+            <h2>절대로 포기하지 말라 절대로</h2>
+        </article>
+        <article class="mouseCont">
+            <p>The road is always shorter when two people walk it.</p>
+            <h2>누군가와 함께 하면 여정은 항상 더 짧다</h2>
+        </article> -->
+        <!-- <article class="mouseCont">
+            <p>Of coure I'm <em>crazy</em>, but that doesn't mean I'm wrong</p>
+            <h2>확실히 나는 <em>미쳤다</em>. 하지만 틀린 것은 아니다.</h2>
+        </article> -->
+        <article class="mouseCont">
+            <p>We are what we <em>repeatedly</em> do</p>
+            <h2>현재의 우리는 우리가 <em>반복적으로</em> 하는 행동의 결과이다</h2>
+        </article>
+        <!-- <article class="mouseCont">
+            <p>To thine own self be true</p>
+            <h2>너 자신에게 성실하라</h2>
+        </article> -->
+    </main>
+    <!-- contents -->
+
+    <!-- info -->
+    <div class="info">
+        <h1><a href="index.html">javascript Menu Effect03</a></h1>
+        <p>마우스 이펙트 - 브랜딩 이펙트</p>
+    </div>
+
+    <div class="info right">
+        <ul>
+            <li><a href="javascriptME01.html">1</a></li>
+            <li><a href="javascriptME02.html">2</a></li>
+            <li class="active"><a href="javascriptME03.html">3</a></li>
+            <li><a href="javascriptME04.html">4</a></li>
+            <li><a href="javascriptME05.html">5</a></li>
+        </ul>
+        <ul>
+            <li><a href="jqueryME01.html">1</a></li>
+            <li><a href="jqueryME02.html">2</a></li>
+            <li><a href="jqueryME03.html">3</a></li>
+            <li><a href="jqueryME04.html">4</a></li>
+            <li><a href="jqueryME05.html">5</a></li>
+        </ul>
+    </div>
+    <!-- //scroll -->
+    <div class="info left list">
+        <ul>
+            <li>multiply</li>
+            <li>screen</li>
+            <li>overlay</li>
+            <li>darken</li>
+            <li>lighten</li>
+            <li>color-dodge</li>
+            <li>color-burn</li>
+            <li>hard-light</li>
+            <li>soft-light</li>
+            <li class="active">difference</li>
+            <li>exclusion</li>
+            <li>hue</li>
+            <li>saturation</li>
+            <li>color</li>
+            <li>luminosity</li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <button>소스보기</button>
+    </div>
+    <!-- //info -->
+    <!-- modal -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">Html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div>
+<pre><code class="language-html">&lt;body class="bg bg6 blue"&gt;
+    &lt;!-- contents --&gt;
+    &lt;main&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+        &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+        &lt;!-- &lt;article class="mouseCont"&gt;
+            &lt;p&gt;If you &lt;span class="style1"&gt;fear&lt;/span&gt; &lt;span class="style2"&gt;failure&lt;/span&gt;, you shall never&lt;/span&gt; &lt;span class="style3"&gt;succeed&lt;/span&gt;&lt;/p&gt;
+            &lt;h2&gt;&lt;span class="style4"&gt;실패&lt;/span&gt;를 &lt;span class="style5"&gt;두려워&lt;/span&gt;하면 결코 &lt;span class="style6"&gt;성공&lt;/span&gt;할 수 없다&lt;/h2&gt;
+        &lt;/article&gt; --&gt;
+        &lt;!-- &lt;article class="mouseCont"&gt;
+            &lt;p&gt;They are rich who have true friends&lt;/p&gt;
+            &lt;h2&gt;진정한 친구가 있는 사람이야말로 부자다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;Life is not a spectator sport&lt;/p&gt;
+            &lt;h2&gt;인생은 바라보기만 하는 스포츠가 아니다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;Never, never, never, never give up.&lt;/p&gt;
+            &lt;h2&gt;절대로 포기하지 말라 절대로&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;The road is always shorter when two people walk it.&lt;/p&gt;
+            &lt;h2&gt;누군가와 함께 하면 여정은 항상 더 짧다&lt;/h2&gt;
+        &lt;/article&gt; --&gt;
+        &lt;!-- &lt;article class="mouseCont"&gt;
+            &lt;p&gt;Of coure I'm &lt;em&gt;crazy&lt;/em&gt;, but that doesn't mean I'm wrong&lt;/p&gt;
+            &lt;h2&gt;확실히 나는 &lt;em&gt;미쳤다&lt;/em&gt;. 하지만 틀린 것은 아니다.&lt;/h2&gt;
+        &lt;/article&gt; --&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;p&gt;We are what we &lt;em&gt;repeatedly&lt;/em&gt; do&lt;/p&gt;
+            &lt;h2&gt;현재의 우리는 우리가 &lt;em&gt;반복적으로&lt;/em&gt; 하는 행동의 결과이다&lt;/h2&gt;
+        &lt;/article&gt;
+        &lt;!-- &lt;article class="mouseCont"&gt;
+            &lt;p&gt;To thine own self be true&lt;/p&gt;
+            &lt;h2&gt;너 자신에게 성실하라&lt;/h2&gt;
+        &lt;/article&gt; --&gt;
+    &lt;/main&gt;
+    &lt;!-- contents --&gt;
+
+    &lt;!-- info --&gt;
+    &lt;div class="info"&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;jQuery Menu Effect03&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;마우스 이펙트 - 브랜딩 이펙트&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="info right"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li  class="active"&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- //scroll --&gt;
+    &lt;div class="info left list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;multiply&lt;/li&gt;
+            &lt;li&gt;screen&lt;/li&gt;
+            &lt;li&gt;overlay&lt;/li&gt;
+            &lt;li&gt;darken&lt;/li&gt;
+            &lt;li&gt;lighten&lt;/li&gt;
+            &lt;li&gt;color-dodge&lt;/li&gt;
+            &lt;li&gt;color-burn&lt;/li&gt;
+            &lt;li&gt;hard-light&lt;/li&gt;
+            &lt;li&gt;soft-light&lt;/li&gt;
+            &lt;li class="active"&gt;difference&lt;/li&gt;
+            &lt;li&gt;exclusion&lt;/li&gt;
+            &lt;li&gt;hue&lt;/li&gt;
+            &lt;li&gt;saturation&lt;/li&gt;
+            &lt;li&gt;color&lt;/li&gt;
+            &lt;li&gt;luminosity&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-css">.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    cursor: none;
+}
+.mouseCont p{
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+}
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #fff;
+    color: orange;
+}
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s;
+    mix-blend-mode: difference;
+}
+
+.cursor.active {
+    transform: scale(20);
+}
+
+.info.left.list li.active {
+    text-decoration: underline;
+    color: orange;
+}
+</code></pre>                        
+                        </div>
+                        <div>
+<pre><code class="language-javascript">const w = document.querySelector(".cursor").clientWidth / 2;
+const h = document.querySelector(".cursor").clientHeight / 2;
+document.addEventListener("mousemove", e => {
+    gsap.to(".cursor",  {duration: 0.4, left:event.pageX - w, top:event.pageY - h});
+})
+
+const cursor = document.querySelector(".cursor");
+const follower = document.querySelector(".cursor-follower");
+
+document.querySelectorAll(".mouseCont em").forEach(em => {
+    em.addEventListener("mouseenter", ()=>{
+        cursor.classList.add("active");
+    })
+    em.addEventListener("mouseleave", ()=>{
+        cursor.classList.remove("active");
+    })
+})
+
+document.querySelectorAll(".info.left.list li").forEach(em => {
+    em.addEventListener("click", function(){
+        document.querySelectorAll(".info.left.list li").forEach(em => {
+            em.classList.remove("active")
+        })
+        this.classList.add("active")
+        const text = this.innerText;
+        document.querySelector(".cursor").style.cssText = "mix-blend-mode:" + text;
+    }) 
+}); 
+</code></pre>                        
+                        </div>
+                    </div>
+                </div>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        modal();
+        const w = document.querySelector(".cursor").clientWidth / 2;
+        const h = document.querySelector(".cursor").clientHeight / 2;
+        document.addEventListener("mousemove", e => {
+            gsap.to(".cursor",  {duration: 0.4, left:event.pageX - w, top:event.pageY - h});
+        })
+
+        const cursor = document.querySelector(".cursor");
+        const follower = document.querySelector(".cursor-follower");
+
+        document.querySelectorAll(".mouseCont em").forEach(em => {
+            em.addEventListener("mouseenter", ()=>{
+                cursor.classList.add("active");
+            })
+            em.addEventListener("mouseleave", ()=>{
+                cursor.classList.remove("active");
+            })
+        })
+
+        document.querySelectorAll(".info.left.list li").forEach(em => {
+            em.addEventListener("click", function(){
+                document.querySelectorAll(".info.left.list li").forEach(em => {
+                    em.classList.remove("active")
+                })
+                this.classList.add("active")
+                const text = this.innerText;
+                document.querySelector(".cursor").style.cssText = "mix-blend-mode:" + text;
+            }) 
+        });
+    </script>
+</body> 
+</html>

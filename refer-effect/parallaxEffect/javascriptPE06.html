@@ -42,7 +42,7 @@
         } */
 
         /* 개별적으로 나타나기 */
-        .content-item .num {
+        /* .content-item .num {
             opacity: 0 !important;
             transition: all 1s 0.1s cubic-bezier(0, 0.66, 0.38, 1.01);
             transform: translateY(200px);
@@ -77,15 +77,15 @@
         .content-item.show .desc{
             transform: translateX(0);
             opacity: 1;
-        }
+        } */
     </style>
 </head>
 
 <body class="parallax">
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect05 -Javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 나타나기</p>
+        <h1><a href="index.html">Parallax Effect06 -Javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- /header -->
 
@@ -223,8 +223,8 @@
                 <li><a href="javascriptPE02.html">2</a></li>
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
-                <li class="active"><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+                <li class="active"><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
                 <li><a href="javascriptPE08.html">8</a></li>
             </ul>
@@ -280,7 +280,7 @@
 <pre><code class="language-css">
 </code></pre>                        
                     </div>
-                    <div class="javascript">
+                    <div class="jquery">
 <pre><code class="language-js">
 </code></pre>                        
                     </div>
@@ -296,7 +296,7 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        modal();
+        //modal();
         document.querySelectorAll(".paraNav ul li a").forEach((element) => {
             element.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -305,16 +305,18 @@
                 })
             });
         })
-        function scrollProgress() {
-            let scrollTop = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window.innerHeight / 2;
-            
-            document.querySelectorAll(".content-item").forEach((element, index) => {
-                scrollTop > element.offsetTop ? element.classList.add("show") : element.classList.remove("show");
-            });
-
+        const scrollProgress = function() {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
             document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
 
             document.querySelectorAll(".content-item").forEach((element, index) => {
+                let nowOffset = element.offsetTop;
+                let offset = (scrollTop - nowOffset) * 0.1;
+
+                console.log(offset);
+                element.querySelector(".img").style.transform = "translateX("+ offset +"px)";
+                element.querySelector(".desc").style.transform = "translateX("+ -offset +"px)";
+
                 if (scrollTop > element.offsetTop -2 ) {
                     document.querySelectorAll(".paraNav ul li ").forEach(el => {
                         el.classList.remove("active");
@@ -323,8 +325,8 @@
                 }
             });
         }
-        window.addEventListener("scroll", scrollProgress)
 
+        window.addEventListener("scroll", scrollProgress)
     </script>
 </body>
 </html> 

@@ -288,6 +288,33 @@
             line-height: 1.4;
             font-size: 16px;
         }
+        .question_arrow {
+            padding: 10px;
+            position: relative;
+        }
+        .question_arrow button{
+            font-family: 'DungGeunMo';
+            padding: 10px;
+            font-size: 20px;
+            border: 0;
+            border: 4px ridge #cacaca;
+        }
+        .question_arrow button:hover{
+            background: #A5E151;
+        }
+        .question_arrow .prev{
+            position: absolute;
+            left: 10px;
+        }
+        .question_arrow .next{
+            position: absolute;
+            right: 10px;
+        }
+        .question_arrow .count{
+            font-size: 30px;
+            text-align: center;
+            padding: 8px 0;
+        }
         @media (max-width: 1200px){
             .ham {display: block;}
             nav {
@@ -331,8 +358,8 @@
                 <li><a href="quiz01.html">주관식 한 문제</a></li>
                 <li><a href="quiz02.html">주관식 여러 문제</a></li>
                 <li><a href="quiz03.html">객관식 한 문제</a></li>
-                <li class="active"><a href="quiz04.html">객관식 여러 문재</a></li>
-                <li><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
+                <li><a href="quiz04.html">객관식 여러 문재</a></li>
+                <li class="active"><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
             </ul>
         </nav>
         <div class="ham">
@@ -341,12 +368,12 @@
     </header>
 
     <main id = "quiz">
-        <!-- <div class="quizWrap">
+        <div class="quizWrap">
             <h2>넨센스 퀴즈</h2>
             <div class="question_quiz">
                 <h3 class="question_title">
-                    <span class="question_title_num"></span>
-                    <span class="question_title_ask"></span>
+                    <span class="question_title_num">1</span>
+                    <span class="question_title_ask">dsadsadasassda</span>
                 </h3>
                 <div class="question_answer">
                     <div class="question_answer_selects">
@@ -369,134 +396,105 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+            <div class="question_arrow">
+                <button class="prev">이전문제</button>
+                <button class="next">다음문제</button>
+                <div class="count">1/5</div>
+            </div>     
+            <div class="question_quizConfirm">
+                <button class="question_answer_confirm">정답 확인하기</button>
+                <div class="question_answer_view"></div>
+                <div class="question_answer_ex"></div>
+            </div>
+        </div>
     </main>
-
-    <footer class="quizConfirm">
-        <button class="question_answer_confirm">정답 확인하기</button>
-        <div class="question_answer_view"></div>
-        <div class="question_answer_ex"></div>
-    </footer>
 </body>
 <script>
-    // 퀴즈
-    const quiz = document.querySelector("#quiz");
-    const quizWrap = document.querySelectorAll(".quizWrap");
-    const questionQuiz = document.querySelectorAll(".question_quiz");
-    const questionAnswerConfirm = document.querySelector(".question_answer_confirm");
-    const questionAnswerView = document.querySelector(".question_answer_view");
-    const questionAnswerEx = document.querySelector(".question_answer_ex");
+        // {
+        //     quizNum : 1,
+        //     quizAsk : "다음 중 디자인의 기본 요소들로 옳은 것은?",
+        //     quizChoice : {
+        //         1: "선, 색체, 공간, 수량", 
+        //         2: "점, 선, 면, 질감",
+        //         3: "시간, 수량, 구조, 공간", 
+        //         4: "면, 구조, 공간, 수량"
+        //     },
+        //     quizAnswer : 2,
+        //     quizEx : "디자인의 기본요소는 점, 선, 면, 질감으로 이루어져 있습니다."
+        // },
+        // {
+        //     quizNum : 2,
+        //     quizAsk : "다음 중 시각 디자인의 4대 매체가 아닌 것은?",
+        //     quizChoice : {
+        //         1: "포스터 디자인", 
+        //         2: "신문 광고",
+        //         3: "TV 광고", 
+        //         4: "텍스타일 디자인"
+        //     },
+        //     quizAnswer : 4,
+        //     quizEx : "시각 디자인의 4대 매체는 포스터 광고 디자인, 신문광고, 잡지광고, TV광고 디자인입니다."
+        // },
+        // {
+        //     quizNum : 3,
+        //     quizAsk : "다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨간 등대, 무성한 나뭇잎들 사이에서핀 꽃, 별이 총총한 밤하는의 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
+        //     quizChoice : {
+        //         1: "조화", 
+        //         2: "통일",
+        //         3: "점증", 
+        //         4: "강조"
+        //     },
+        //     quizAnswer : 4,
+        //     quizEx : "디자인의 기본요소는 점, 선, 면, 질감으로 이루어져 있습니다."
+        // }
 
 
-    //문제 정보
-    const quizInfo = [
-        {
-            quizNum : 1,
-            quizAsk : "다음 중 디자인의 기본 요소들로 옳은 것은?",
-            quizChoice : {
-                1: "선, 색체, 공간, 수량", 
-                2: "점, 선, 면, 질감",
-                3: "시간, 수량, 구조, 공간", 
-                4: "면, 구조, 공간, 수량"
-            },
-            quizAnswer : 2,
-            quizEx : "디자인의 기본요소는 점, 선, 면, 질감으로 이루어져 있습니다."
-        },
-        {
-            quizNum : 2,
-            quizAsk : "다음 중 시각 디자인의 4대 매체가 아닌 것은?",
-            quizChoice : {
-                1: "포스터 디자인", 
-                2: "신문 광고",
-                3: "TV 광고", 
-                4: "텍스타일 디자인"
-            },
-            quizAnswer : 4,
-            quizEx : "시각 디자인의 4대 매체는 포스터 광고 디자인, 신문광고, 잡지광고, TV광고 디자인입니다."
-        },
-        {
-            quizNum : 3,
-            quizAsk : "다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨간 등대, 무성한 나뭇잎들 사이에서핀 꽃, 별이 총총한 밤하는의 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
-            quizChoice : {
-                1: "조화", 
-                2: "통일",
-                3: "점증", 
-                4: "강조"
-            },
-            quizAnswer : 4,
-            quizEx : "디자인의 기본요소는 점, 선, 면, 질감으로 이루어져 있습니다."
-        }
+    const questions = [
+        new Question('다음 중 디자인의 기본 요소들로 옳은 것은?', ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"], '점, 선, 면, 질감'),
+        new Question('다음 중 시각 디자인의 4대 매체가 아닌 것은?', ["포스터 디자인", "신문 광고", "TV 광고", "텍스타일 디자인량"], '텍스타일 디자인량'),
+        new Question('다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨간 등대, 무성한 나뭇잎들 사이에서핀 꽃, 별이 총총한 밤하는의 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]', ["조화", "통일", "점증", "강조"], '강조'),
+        new Question('다음 중 디자인의 기본 요소들로 옳은 것은?123', ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"], '시간, 수량, 구조, 공간'),
+        new Question('다음 중 디자인의 기본 요소들로 옳은 것은?321',  ["선, 색체, 공간, 수량", "점, 선, 면, 질감", "시간, 수량, 구조, 공간", "면, 구조, 공간, 수량"], '점, 선, 면, 질감')
     ]
-    
-    //문제 출력
-    function updateQuiz() {
-        const output = [];
-
-        quizInfo.forEach((currentQuestion, questionNumber) => {
-            output.push(`
-                    <div class="quizWrap">
-                    <h2>웹디자인 기사능사 16년도 03회</h2>
-                    <div class="question_quiz">
-                        <h3 class="question_title">
-                            <span class="question_title_num">${currentQuestion.quizNum}</span>
-                            <span class="question_title_ask">${currentQuestion.quizAsk}</span>
-                        </h3>
-                        <div class="question_answer">
-                            <div class="question_answer_selects">
-                                <label>
-                                    <input class="select" type="radio" name="select${questionNumber}" value="1">
-                                    <span class="choice">${currentQuestion.quizChoice[1]}</span>
-                                </label>
-                                <label>
-                                    <input class="select" type="radio" name="select${questionNumber}" value="2">
-                                    <span class="choice">${currentQuestion.quizChoice[2]}</span>
-                                </label>
-                                <label>
-                                    <input class="select" type="radio" name="select${questionNumber}" value="3">
-                                    <span class="choice">${currentQuestion.quizChoice[3]}</span>
-                                </label>
-                                <label>
-                                    <input class="select" type="radio" name="select${questionNumber}" value="4">
-                                    <span class="choice">${currentQuestion.quizChoice[4]}</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `)
-        });
-        quiz.innerHTML = output.join(' ');
+    // 문서 객체
+    function Question(quizAsk, quizChoice, quizAnswer) {
+        this.quizAsk = quizAsk;
+        this.quizChoice = quizChoice;
+        this.quizAnswer = quizAnswer;
+        console.log(quizAsk);
     }
-    updateQuiz()
 
-    // 결과 확인하기
-    function showResult() {
-        const questionAnswerSelects = document.querySelectorAll(".question_answer_selects");
-        let nowScore = 0;
-        // 사용자가 클리한 정답
-        // 데이터안의 정답
-        quizInfo.forEach((currentQuestion, questionNumber) => {
-           const selectContainer = questionAnswerSelects[questionNumber];
-           const selectChecked = `input[name=select${questionNumber}]:checked`;
-           const selectChecked1 = selectContainer.querySelector(".select").checked ==true;
-           const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
-            // console.log(selectChecked1);
-
-            if(selectResult == currentQuestion.quizAnswer) {
-                nowScore++;
-                selectContainer.style.color = "red";
-            }else{
-                selectContainer.style.color = "blue";
-                const p = document.createElement("p")
-                selectContainer.appendChild(p).innerHTML = currentQuestion.quizEx;
-            }
-        });
-
-        questionAnswerView.innerHTML = `${quizInfo.length} 문제 중에 ${nowScore} 문제를 맞췄습니다.`
-        questionAnswerConfirm.style.display = "none";
+    function Quiz(questions) {
+        this.questions = questions;
+        this.questionsScore = 0;
+        this.questionNum = 0;
     }
-    questionAnswerConfirm.addEventListener("click", showResult);
-    document.querySelector(".ham").addEventListener("click", function () {
-        document.querySelector("nav").classList.toggle("show");
-    })
+
+    Quiz.prototype.updateQuiz = function() {
+            
+    }
+
+    Quiz.prototype.checkAnswer = function() {
+        
+    }
+
+    Quiz.prototype.buttonQuiz = function() {
+        
+    }
+
+    Quiz.prototype.progress = function() {
+        
+    }
+
+    Quiz.prototype.hammenu = function() {
+        document.querySelector(".ham").addEventListener("click", function () {
+            document.querySelector("nav").classList.toggle("show");
+        })
+    }
+
+    const quiz = new Quiz(questions);
+    quiz.updateQuiz();
+    quiz.checkAnswer();
+    quiz.buttonQuiz();
+    quiz.progress();
+    quiz.hammenu();
 </script>

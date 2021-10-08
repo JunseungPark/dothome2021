@@ -22,19 +22,39 @@
         }
         .paraNav li a {
             width: auto;
-            padding: 5px 20px;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
         }
         .paraNav li.active a {
             border-radius: 30px;
         }
+        /* .content-item .desc {
+            opacity: 0;
+            transform: translateY(100px) skewX(30deg);
+            transition: all 0.33s ease-in-out;
+        }
+        .content-item .desc.show {
+            opacity: 1;
+            transform: translateY(0) skewX(0);
+
+        } */
+
+        .content-item .desc span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 1vw;
+            transform: translateY(100px) rotate(90deg) scale(2);
+        }
+
     </style>
 </head>
 
 <body class="parallax">
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect04 -Javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 숨김메뉴2</p>
+        <h1><a href="index.html">Parallax Effect07 -jQuery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 텍스트</p>
     </header>
     <!-- /header -->
 
@@ -45,15 +65,15 @@
 
         <nav class="paraNav">
             <ul>
-                <li class="active"><a href="#section1">메뉴1</a></li>
-                <li><a href="#section2">메뉴2</a></li>
-                <li><a href="#section3">메뉴3</a></li>
-                <li><a href="#section4">메뉴4</a></li>
-                <li><a href="#section5">메뉴5</a></li>
-                <li><a href="#section6">메뉴6</a></li>
-                <li><a href="#section7">메뉴7</a></li>
-                <li><a href="#section8">메뉴8</a></li>
-                <li><a href="#section9">메뉴9</a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </nav>
         <!-- //nav -->
@@ -171,7 +191,7 @@
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
                 <li><a href="javascriptPE03.html">3</a></li>
-                <li class="active"><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
                 <li><a href="javascriptPE06.html">6</a></li>
                 <li><a href="javascriptPE07.html">7</a></li>
@@ -187,7 +207,7 @@
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
                 <li><a href="jqueryPE06.html">6</a></li>
-                <li><a href="jqueryPE07.html">7</a></li>
+                <li class="active"><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
             </ul>
         </div>
@@ -217,7 +237,7 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">jquery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -225,8 +245,8 @@
 <pre><code class="language-html">&lt;body class="parallax"&gt;
     &lt;!-- header --&gt;
     &lt;header class="paraInfo"&gt;
-        &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect04 -Javascript&lt;/a&gt;&lt;/h1&gt;
-        &lt;p&gt;패랠랙스 스크로링 효과 - 숨김메뉴&lt;/p&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect07 -jQuery&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;패랠랙스 스크로링 효과 - 리빌효과&lt;/p&gt;
     &lt;/header&gt;
     &lt;!-- /header --&gt;
 
@@ -237,15 +257,15 @@
 
         &lt;nav class="paraNav"&gt;
             &lt;ul&gt;
-                &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/nav&gt;
         &lt;!-- //nav --&gt;
@@ -254,100 +274,100 @@
             &lt;section id="section1" class="content-item"&gt;
                 &lt;span class="num"&gt;01&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;불가사의한 승리는 있지만 불가사의한 패배는 없다&lt;/p&gt;
+                &lt;p class="desc reveal" data-delay="500"&gt;&lt;span&gt;불가사의한 승리는 있지만 불가사의한 패배는 없다&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section1 --&gt;
             &lt;section id="section2" class="content-item"&gt;
                 &lt;span class="num"&gt;02&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-RTL"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;확실한 성공 공식을 줄 수는 없다.&lt;/p&gt;
+                &lt;p class="desc reveal reveal-RTL" data-delay="500"&gt;&lt;span&gt;확실한 성공 공식을 줄 수는 없다.&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section2 --&gt;
             &lt;section id="section3" class="content-item"&gt;
                 &lt;span class="num"&gt;03&lt;/span&gt;
                 &lt;h2 class="title"&gt;section3&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-TTB"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;나는 낙관주의자다. 그러나 비옷을 갖고 다니는 낙관주의자다.&lt;/p&gt;
+                &lt;p class="desc reveal reveal-TTB" data-delay="500"&gt;&lt;span&gt;나는 낙관주의자다. 그러나 비옷을 갖고 다니는 낙관주의자다.&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section3 --&gt;
             &lt;section id="section4" class="content-item"&gt;
                 &lt;span class="num"&gt;04&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-BTT"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;인생은 고릴라와 레슬링 하는 것과 비슷하다.&lt;/p&gt;
+                &lt;p class="desc reveal reveal-BTT" data-delay="500"&gt;&lt;span&gt;인생은 고릴라와 레슬링 하는 것과 비슷하다.&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section4 --&gt;
             &lt;section id="section5" class="content-item"&gt;
                 &lt;span class="num"&gt;05&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-two"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;'위기'는 하나는 위험을, 다른 하나는 기회를 의미한다. &lt;/p&gt;
+                &lt;p class="desc reveal reveal-two" data-delay="500"&gt;&lt;span&gt;'위기'는 하나는 위험을, 다른 하나는 기회를 의미한다. &lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section5 --&gt;
             &lt;section id="section6" class="content-item"&gt;
                 &lt;span class="num"&gt;06&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-two reveal-RTL"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;웃어라, 온 세상이 너와 함께 웃을 것이다.울어라, 너 혼자 울 것이다.&lt;/p&gt;
+                &lt;p class="desc reveal reveal-two reveal-RTL" data-delay="500"&gt;&lt;span&gt;웃어라, 온 세상이 너와 함께 웃을 것이다.울어라, 너 혼자 울 것이다.&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section6 --&gt;
             &lt;section id="section7" class="content-item"&gt;
                 &lt;span class="num"&gt;07&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-two reveal-TTB"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;사진이 안 좋은 건 현장에 충분히 접근하지 않았기 때문이다&lt;/p&gt;
+                &lt;p class="desc reveal reveal-two reveal-BTT" data-delay="500"&gt;&lt;span&gt;사진이 안 좋은 건 현장에 충분히 접근하지 않았기 때문이다&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section7 --&gt;
             &lt;section id="section8" class="content-item"&gt;
                 &lt;span class="num"&gt;08&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-two reveal-BTT"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;생각하는 대로 살지 않으면 사는 대로 생각하게 된다.&lt;/p&gt;
+                &lt;p class="desc reveal reveal-two reveal-RTL" data-delay="500"&gt;&lt;span&gt;생각하는 대로 살지 않으면 사는 대로 생각하게 된다.&lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section8 --&gt;
             &lt;section id="section9" class="content-item"&gt;
                 &lt;span class="num"&gt;09&lt;/span&gt;
                 &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
-                &lt;figure class="img-Wrap"&gt;
+                &lt;figure class="img-Wrap reveal reveal-two reveal-BTT"&gt;
                     &lt;div class="img"&gt;
 
                     &lt;/div&gt;
                 &lt;/figure&gt;
-                &lt;p class="desc"&gt;먼저 자신을 비웃어라. 다른 사람이 당신을 비웃기 전에 &lt;/p&gt;
+                &lt;p class="desc reveal reveal-two reveal-TTB" data-delay="500"&gt;&lt;span&gt;먼저 자신을 비웃어라. 다른 사람이 당신을 비웃기 전에 &lt;/span&gt;&lt;/p&gt;
             &lt;/section&gt;
             &lt;!--- //section9 --&gt;
         &lt;!-- //contents --&gt;
@@ -362,7 +382,7 @@
             &lt;ul&gt;
                 &lt;li&gt;&lt;a href="javascriptPE01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="javascriptPE02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
-                &lt;li class="active"&gt;&lt;a href="javascriptPE03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="javascriptPE03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="javascriptPE04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="javascriptPE05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="javascriptPE06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
@@ -380,16 +400,16 @@
                 &lt;li&gt;&lt;a href="jqueryPE05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="jqueryPE06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
                 &lt;li&gt;&lt;a href="jqueryPE07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="jqueryPE08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+                &lt;li class="active"&gt;&lt;a href="jqueryPE08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/footer&gt;
+    &lt;!-- footer --&gt;
 &lt;/body&gt;
 </code></pre>
                     </div>
                     <div class="css">
-<pre><code class="language-css">
-    // parallax
+<pre><code class="language-css">// parallax
 .parallax {
     background: #222;
     color: #fff;
@@ -680,59 +700,88 @@
 }
 .paraNav li a {
     width: auto;
-    padding: 5px 20px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
 }
 .paraNav li.active a {
     border-radius: 30px;
 }
+/* .content-item .desc {
+    opacity: 0;
+    transform: translateY(100px) skewX(30deg);
+    transition: all 0.33s ease-in-out;
+}
+.content-item .desc.show {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+
+} */
+
+.content-item .desc span {
+    opacity: 0;
+    display: inline-block;
+    min-width: 1vw;
+    transform: translateY(100px) rotate(90deg) scale(2);
+}
 </code></pre>                        
                     </div>
-                    <div class="Javascript">
-<pre><code class="language-js">document.querySelectorAll(".paraNav ul li a").forEach((element) => {
-    element.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(element.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        })
-    });
-})
+                    <div class="jquery">
+<pre><code class="language-js">// let text = $("#section1 .desc").text();
+    // let split = text.split('').join("<span></span>");
+    // split = "<span>" + split +"</span>";
+    // $("#section1 .desc").html(split);
 
-let nowScrollTop;
-let lastScrollTop = 0;
-
-function scrollProgress() {
-    nowScrollTop = true;
-    
-    setInterval(() => {
-        if (nowScrollTop) {
-            nowScrollTop = false;
-            hasScroll();
-        }
-    }, 500);
-}
-
-function hasScroll() {
-    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset
-    
-    if (scrollTop >= lastScrollTop) {
-        document.querySelector(".paraNav").classList.add("hide");
-    } else {
-        document.querySelector(".paraNav").classList.remove("hide");
-    }
-
-    lastScrollTop = scrollTop;
-
-    document.querySelectorAll(".content-item").forEach((item, index) => {
-        if (scrollTop > el.offsetTop -2 ) {
-            document.querySelectorAll(".paraNav ul li ").forEach(el => {
-                el.classList.remove("active");
-            })
-            document.querySelector(`.paraNav ul li:nth-child(${index + 1})`).classList.add("active")
-        }
+    $(".content-item .desc").each(function(){
+        let text = $(this).text();
+        let split = text.split('').join("</span><span aria-hidden='true'>");
+        split = "<span aria-hidden='true'>" + split + "</span>";
+        $(this).html(split).attr("aria-label",text);
     })
-}
 
-window.addEventListener("scroll", scrollProgress);
+    $(window).scroll(function () {
+        // for(let i = 1; i <= $(".content-item").length; i++) {
+        //     if( $(window).scrollTop() >= $("#section" + i).offset().top ){
+        //         $("#section" + i +" .desc span").each((index)=>{
+        //             setTimeout( ()=>{
+        //                 $("#section" + i +" .desc span").eq(index).addClass("show");
+        //             }, 50 * index)
+        //         });
+        //     }
+        // }
+        // $(".content-item").each(function () {
+        //     if($(window).scrollTop() > $(this).offset().top - $(window).height()/3) {
+        //         $(this).find(".desc span").each(function (index) {
+        //             setTimeout(() => {
+        //                 $(this).addClass("show");
+        //             }, 50 * index);
+        //         })
+        //     } else {
+        //         $(this).find(".desc span").each(function (index) {
+        //             setTimeout(() => {
+        //                 $(this).removeClass("show");
+        //             }, 50 * index);
+        //         })
+        //     }
+        // })
+
+
+        $(".content-item").each(function (index) {
+            if($(window).scrollTop() > $(this).offset().top - $(window).height()/3) {
+                gsap.to($(this).find(".desc span"), {
+                    duration: .5,
+                    opacity:1,
+                    stagger: 0.05,
+                    y: 0,
+                    ease: "power3.out",
+                    rotation: 0,
+                    scale: 1
+                });
+                $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            }
+            
+        })
+    })
 </code></pre>                        
                     </div>
                     </div>
@@ -744,55 +793,66 @@ window.addEventListener("scroll", scrollProgress);
     <!-- //modal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
         modal();
-        document.querySelectorAll(".paraNav ul li a").forEach((element) => {
-            element.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(element.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            });
+        // let text = $("#section1 .desc").text();
+        // let split = text.split('').join("<span></span>");
+        // split = "<span>" + split +"</span>";
+        // $("#section1 .desc").html(split);
+
+        $(".content-item .desc").each(function(){
+            let text = $(this).text();
+            let split = text.split('').join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label",text);
         })
 
-        let nowScrollTop;
-        let lastScrollTop = 0;
+        $(window).scroll(function () {
+            // for(let i = 1; i <= $(".content-item").length; i++) {
+            //     if( $(window).scrollTop() >= $("#section" + i).offset().top ){
+            //         $("#section" + i +" .desc span").each((index)=>{
+            //             setTimeout( ()=>{
+            //                 $("#section" + i +" .desc span").eq(index).addClass("show");
+            //             }, 50 * index)
+            //         });
+            //     }
+            // }
+            // $(".content-item").each(function () {
+            //     if($(window).scrollTop() > $(this).offset().top - $(window).height()/3) {
+            //         $(this).find(".desc span").each(function (index) {
+            //             setTimeout(() => {
+            //                 $(this).addClass("show");
+            //             }, 50 * index);
+            //         })
+            //     } else {
+            //         $(this).find(".desc span").each(function (index) {
+            //             setTimeout(() => {
+            //                 $(this).removeClass("show");
+            //             }, 50 * index);
+            //         })
+            //     }
+            // })
 
-        function scrollProgress() {
-            nowScrollTop = true;
-            
-            setInterval(() => {
-                if (nowScrollTop) {
-                    nowScrollTop = false;
-                    hasScroll();
+
+            $(".content-item").each(function (index) {
+                if($(window).scrollTop() > $(this).offset().top - $(window).height()/3) {
+                    gsap.to($(this).find(".desc span"), {
+                        duration: .5,
+                        opacity:1,
+                        stagger: 0.05,
+                        y: 0,
+                        ease: "power3.out",
+                        rotation: 0,
+                        scale: 1
+                    });
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
                 }
-            }, 500);
-        }
-
-        function hasScroll() {
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset
-            
-            if (scrollTop >= lastScrollTop) {
-                document.querySelector(".paraNav").classList.add("hide");
-            } else {
-                document.querySelector(".paraNav").classList.remove("hide");
-            }
-
-            lastScrollTop = scrollTop;
-
-            document.querySelectorAll(".content-item").forEach((item, index) => {
-                if (scrollTop > el.offsetTop -2 ) {
-                    document.querySelectorAll(".paraNav ul li ").forEach(el => {
-                        el.classList.remove("active");
-                    })
-                    document.querySelector(`.paraNav ul li:nth-child(${index + 1})`).classList.add("active")
-                }
+                
             })
-        }
-
-        window.addEventListener("scroll", scrollProgress);
+        })
     </script>
 </body>
 </html> 

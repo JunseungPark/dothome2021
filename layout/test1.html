@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트</title>
+
+    <!-- 나눔스퀘어 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            /* 블록 구조에서 가운데 정렬 */
+            font-family: 'NanumSquare';
+        }
+
+        .content {
+            width: 960px;
+            margin: 0 auto;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+        }
+        header .nav-wrap{
+            position: relative;
+        }
+        header .nav-wrap .nav-logo{
+            position: absolute;
+            top:30px;
+            left:0;
+        }
+        header .nav-wrap ul {
+            list-style: none
+        }
+        header .nav-wrap .nav-menu{
+            position: absolute;
+            top:60px;
+            right:0;
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+        }
+
+        header .nav-wrap .nav-menu li{
+            font-weight: 600;
+        }
+
+        main {}
+        .banner {
+            width: 100%;
+        }
+        .banner .banner-wrap{
+            overflow: hidden;
+        }
+        .banner .banner-wrap .banner-main{
+            background: url(img/lotte-banner01.jpg) no-repeat;
+            background-size: cover;
+            height: 350px;
+            margin-bottom: 20px;
+        }
+        .banner .banner-wrap .banner-tap{
+            width:43%;
+            height: 160px;
+            float: left;
+            border: 1px solid #eee;
+            margin-right: 20px;
+            padding: 20px;
+        }
+        .banner .banner-wrap .banner-tap.none{
+            display: none;
+        }
+        .banner .banner-wrap .banner-tap .tap-title{
+            position: relative;
+        }
+        .banner .banner-wrap .banner-tap .tap-title .title {
+
+        }
+        .banner .banner-wrap .banner-tap .tap-title .title .notice{
+            display: inline-block;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .banner .banner-wrap .banner-tap .tap-title .title .notice::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 95px;
+            width: 2px;
+            height: 15px;
+            background: #000;
+
+        }
+        .banner .banner-wrap .banner-tap .tap-title .title .news{
+            display: inline-block;
+            font-weight: 100;
+        }
+        .banner .banner-wrap .banner-tap .tap-title .puls{
+            display: inline-block;
+            position: absolute;
+            margin-right: 10px;
+            font-size: 12px;
+            font-weight: 100;
+            color: #969696;
+            right: 15px;
+            top: 3px;
+        }
+        .banner .banner-wrap .banner-tap .tap-title img{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .banner .banner-wrap .banner-tap .tap-title em{
+            font-style: normal;
+            font-weight: 900;
+        }
+        .banner .banner-wrap .banner-tap .tap-info {
+            color: #969696;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .banner .banner-wrap .banner-tap .tap-info .tap-info-wrap {
+            margin-bottom: 15px;
+        }
+        .banner .banner-wrap .banner-tap .tap-info .tap-info-wrap {}
+        .banner .banner-wrap .banner-tap .tap-info .tap-info-wrap .date{
+            float: right;
+        }
+        .banner .banner-wrap .banner-sub{
+            background: url(img/lotte-banner02.jpg) no-repeat;
+            background-size: cover;
+            width: 50%;
+            height: 200px;
+            float: left;
+        }
+        .contents {
+            width: 100%;
+            margin-top: 30px;
+        }
+        .contents .content-wrap{}
+        .contents .content-wrap .content-title{
+            font-size: 20px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .contents .content-wrap .content-card-wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+        .contents .content-wrap .content-card-wrap .content-card{}
+        .contents .content-wrap .content-card-wrap .content-card img{}
+        .contents .content-wrap .content-card-wrap .content-card .desc{
+            margin-top: 20px;
+            color: #474747;
+            height: 50px;
+        }
+        footer {
+            width: 100%;
+        }
+        .footer-wrap {
+            margin-top: 20px;
+            border-top: 1px solid #969696;
+            font-size: 13px;
+            color: #969696;
+        }
+        .footer-wrap .footer-info{
+            display: inline-block;
+            margin-top: 20px;
+            position: relative;
+        }
+        .footer-wrap .footer-info span {
+            margin-right: 8px;
+        }
+        .footer-wrap .footer-info .first::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 300px;
+            width: 1px;
+            height: 11px;
+            background: #dadada;
+        }
+        .footer-wrap .footer-number{
+            position: relative;
+        }
+        .footer-wrap .footer-number span {
+            margin-right: 8px;
+        }
+        .footer-wrap .footer-number .first::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 176px;
+            width: 1px;
+            height: 11px;
+            background: #dadada;
+        }
+        .footer-wrap .footer-number .second::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 376px;
+            width: 1px;
+            height: 11px;
+            background: #dadada;
+        }
+        .footer-wrap .footer-copy{
+            margin: 30px 0 50px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <header>
+                <div class="nav-wrap">
+                    <div class="nav-logo"><img src="img/lotte-logo.jpg" alt="이미지로고"></div>
+                    <ul class="nav-menu">
+                        <li>즐길거리</li>
+                        <li>요금/우대혜택</li>
+                        <li>참여프로그램</li>
+                        <li>이용가이드</li>
+                        <li>소통서비스</li>
+                    </ul>
+                </div>
+            </header>
+            <div class="banner">
+                <div class="banner-wrap">
+                    <div class="banner-main">
+                    </div>
+                    <div class="banner-tap notice-tap">
+                        <div class="tap-title">
+                            <P class="title"><span class="notice">롯데월드 소식</span><span class="news">뉴스ㆍ공지</span></P>
+                            <img src="img/lotte-plus.png" alt="">
+                            <span class="puls">더보기</span>
+                        </div>
+                        <div class="tap-info">
+                            <div class="tap-info-wrap">
+                                <span class="desc">그럴싸진관미라클</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                            <div class="tap-info-wrap">
+                                <span class="desc">드림스테이지'힘내 소중한 너'</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                            <div class="tap-info-wrap">
+                                <span class="desc">'힘내 소중한 너' 음원발매</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                            <div class="tap-info-wrap">
+                                <span class="desc">이용 요금 조정 안내</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-tap news-tap none">
+                        <div class="tap-title">
+                            <span class="title">롯데월드 소식 <em> | 뉴스ㆍ공지</em></span>
+                            <img src="img/lotte-plus.png" alt="">
+                            <span class="puls">더보기</span>
+                        </div>
+                        <div class="tap-info">
+                            <div class="tap-info-wrap">
+                                <span class="desc">뉴스내용</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                            <div class="tap-info-wrap">
+                                <span class="desc">뉴스내용'힘내 소중한 너'</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                            <div class="tap-info-wrap">
+                                <span class="desc">뉴스내용1</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                            <div class="tap-info-wrap">
+                                <span class="desc">뉴스내용2</span>
+                                <span class="date">2018.11.19</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-sub">
+                    </div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="content-wrap">
+                    <span class="content-title">특별한 경험</span>
+                    <div class="content-card-wrap">
+                        <div class="content-card">
+                            <img src="img/lotte-card01.jpg" alt="이미지카드">
+                            <div class="desc">연간회원안내</div>
+                        </div>
+                        <div class="content-card">
+                            <img src="img/lotte-card02.jpg" alt="이미지카드">
+                            <div class="desc">프리미엄투어</div>
+                        </div>
+                        <div class="content-card">
+                            <img src="img/lotte-card03.jpg" alt="이미지카드">
+                            <div class="desc">공연참여프로그램</div>
+                        </div>
+                        <div class="content-card">
+                            <img src="img/lotte-card04.jpg" alt="이미지카드">
+                            <div class="desc">단체프로그램</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer-wrap">
+                    <div class="footer-info">
+                        <span class="first">서울특별시 송파구 울림픽로240호텔롯데 롯데월드</span>
+                        <span>대표자 박동기</span>
+                    </div>
+                    <div class="footer-number">
+                        <span class="first">사업자등록번호:219-85-0014</span>
+                        <span class="second">통신판매업신고번호:송파5513호</span>
+                        <span>전화:1661-2000</span>
+                    </div>
+                    <div class="footer-copy">
+                        <span>COPYRIGHT2018LOTTEWORLD ALLRIGHTS RESERVED</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // document.querySelector(".news").addEventListener('click', function () {
+    //     document.querySelector(".banner-tap news-tap").classList.add("show");
+    // })
+    {
+        let news =document.querySelector(".news-tap");
+        let notice =document.querySelector(".notice-tap");
+        document.querySelector(".news").addEventListener("click", () => {
+            notice.classList.add("none");
+            news.classList.remove("none");
+        });
+
+        document.querySelector(".notice").addEventListener("click", () => {
+            notice.classList.remove("none");
+            news.classList.add("none");
+        });
+    }
+</script>

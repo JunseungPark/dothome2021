@@ -10,94 +10,132 @@
             margin: 0;
             padding: 0;
         }
-        body {
-            background-color: #ffebee ;
-        }
         .wrap {
             width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 0 auto; /* 블록 구조에서 가운데 정렬 */
             color: #fff;
-            font-weight: 200px;
-            font-size: 40px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
         }
-        header {
-            width: 1200px;
+        header {}
+        header .header-wrap{
+            width: 100%;
             height: 100px;
-            background-color: #d50000;
-            line-height: 100px;
-            text-transform: uppercase;
-        }
-        nav {
-            width: 1200px;
-            height: 100px;
-            background-color: #ff1744;
-            line-height: 100px;
-            text-transform: uppercase;
-        }
-        main {
             overflow: hidden;
         }
-        aside {
-            width: 400px;
-            height: 900px;
-            background-color: #c62828;
+        header .header-wrap .header-logo{
             float: left;
-            line-height: 900px;
-            text-transform: uppercase;
-        }
-        section {
-            width: 800px;
-            height: 500px;
-            background-color: #ef5350;
-            float: left;
-            line-height: 500px;
-            text-transform: uppercase;
-        }
-        article{
-            width: 800px;
-            height: 400px;
-            background-color: #e57373;
-            float: left;
-        }
-        .content2 {
-            width: 325px;
-            height: 300px;
-            background-color: #ef5350;
-            float: left;
-            margin: 50px 25px 50px 50px;
-            line-height: 300px;
-        }
-        .content3 {
-            width: 325px;
-            height: 300px;
-            background-color: #ef5350;
-            float: left;
-            margin: 50px 50px 50px 25px;
-            line-height: 300px;
-        }
-        footer {
-            width: 1200px;
+            width: 250px;
             height: 100px;
-            background-color: #b71c1c;
+            background-color: #CFC5E6;
             line-height: 100px;
-            text-transform: uppercase;
         }
+        header .header-wrap .header-menu{
+            float: left;
+            width: 950px;
+            height: 100px;
+            background-color: #AF9FD6;
+            line-height: 100px;
+        }
+
+        main {}
+        main section{
+            width: 100%;
+            height: 400px;
+        }
+        main section .img-slider{
+            width: 100%;
+            height: 400px;
+            background-color: #9078C8;
+            line-height: 400px;
+        }
+
+        main article{}
+        main article .content{
+            overflow: hidden;
+            width: 100%;
+            height: 245px;
+        }
+        main article .content .content1{
+            float: left;
+            width: 400px;
+            height: 245px;
+            background-color: #785BBC;
+            line-height: 245px;
+        }
+        main article .content .content2{
+            float: left;
+            width: 400px;
+            height: 245px;
+            background-color: #6041B1;
+            line-height: 245px;
+        }
+        main article .content .content3{
+            float: left;
+            width: 400px;
+            height: 245px;
+            background-color: #573BAA;
+            line-height: 245px;
+        }
+
+        footer {}
+        footer .footer-wrap{
+            overflow: hidden;
+            width: 100%;
+            height: 100px;
+        }
+        footer .footer-wrap .footer-logo{
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: #573BAA;
+            line-height: 100px;
+        }
+        footer .footer-wrap .footer-copy{
+            float: left;
+            width: 800px;
+            height: 100px;
+            background-color: #4C34A2;
+            line-height: 100px;
+        }
+        footer .footer-wrap .footer-sns{
+            float: left;
+            width: 200px;
+            height: 100px;
+            background-color: #402E9A;
+            line-height: 100px;
+        }
+
     </style>
 </head>
 <body>
     <div class="wrap">
-        <header>header</header>
-        <nav>nav</nav>
+        <header>
+            <div class="header-wrap">
+                <div class="header-logo">로고</div>
+                <div class="header-menu">메뉴</div>
+            </div>
+        </header>
         <main>
-            <aside>side</aside>
-            <section>content1</section>
+            <section>
+                <div class="img-slider">이미지 슬라이드</div>
+            </section>
             <article>
-                <div class="content2">cont1</div>
-                <div class="content3">cont2</div>
+                <div class="content">
+                    <div class="content1">공지사항</div>
+                    <div class="content2">갤러리</div>
+                    <div class="content3">팝업</div>
+                </div>
             </article>
         </main>
-        <footer>footer</footer>
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-logo">로고</div>
+                <div class="footer-copy">copyright</div>
+                <div class="footer-sns">SNS</div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

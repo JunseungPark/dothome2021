@@ -1,0 +1,274 @@
+body {
+    font-family: 'S-CoreDream';
+}
+
+header {
+    width: 100%;
+}
+header .header-wrap{
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100px;
+}
+header .header-wrap .header-logo {
+    position: absolute;
+    left: 10px;
+    top: 40px;
+}
+header .header-wrap .header-logo img{
+    width: 125px;
+    height: 50px;
+}
+header nav {
+    position: absolute;
+    bottom: 10px;
+    right: 0;  
+}
+header .header-wrap nav .nav-wrap{
+    display: flex;
+}
+header .header-wrap nav .nav-wrap > div{
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+main {}
+main .main-container{
+    margin: 0 auto;
+    width: 1000px;
+}
+main .main-container .main-container-wrap{}
+main .main-container .main-container-wrap .banner-wrap{}
+main .main-container .main-container-wrap .banner-wrap .img-wrap{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+}
+main .main-container .main-container-wrap .banner-wrap .img-wrap img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 400px;
+}
+
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap{
+    display: flex;
+    gap: 20px;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner{
+    position: relative;
+    width: 490px;
+    height: 140px;
+    background-color: #F2F2F2;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .text-wrap{
+    padding: 25px;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .text-wrap .banner-title{
+    font-size: 20px;
+    font-weight: 900;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .text-wrap .banner-sub-title{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .text-wrap .desc{
+    position: relative;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner.right .text-wrap .desc .cap{
+    width: 25x;
+    height: 30px;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .text-wrap .desc .cap{
+    width: 30px;
+    height: 30px;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .text-wrap .desc span{
+    position: absolute;
+    left: 10%;
+    top: 11px;
+    font-weight: 900;
+}
+main .main-container .main-container-wrap .banner-wrap .bottom-banner-wrap .bottom-banner .mini{
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+
+.main-contents-wrap{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.main-contents-wrap .content-tap{
+    font-size: 26px;
+}
+.main-contents-wrap .content-tap:first-child{
+    font-weight: 900;
+    position: relative;
+    margin-right: 10px
+}
+
+.main-contents-wrap .content-tap:first-child::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -5%;
+    width: 2px;
+    height: 24px;
+    background-color: #000;
+}
+.main-contents-wrap .content-tap1{ 
+    font-weight: 900;
+    font-size: 26px;
+    color: #E5E5E5;
+}
+.main-contents-wrap .contents-card-wrap{
+    margin-top: 30px; 
+    display: flex;
+    gap: 35px;
+}
+.main-contents-wrap .contents-card-wrap .card-box{}
+.main-contents-wrap .contents-card-wrap .card-box .card-img{
+    width: 312px;
+    height: 312px;
+}
+.main-contents-wrap .contents-card-wrap .card-box .text-wrap{
+    margin: 10px 0 10px 0;
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+}
+.main-contents-wrap .contents-card-wrap .card-box .text-wrap .title{}
+.main-contents-wrap .contents-card-wrap .card-box .text-wrap .price{
+
+}
+.main-contents-wrap .contents-card-wrap .card-box .text-wrap .price span{
+    margin-left: 5px;
+    display: inline-block;
+    color: #555;
+}
+.main-contents-wrap .contents-card-wrap .card-box .text-wrap .shop-img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+}
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+    background-color: #202020;
+}
+footer .footer-wrap{
+    margin: 0 auto;
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    color: #fff;
+}
+footer .footer-wrap .footer-left{
+    width: 50%;
+    padding: 30px 0 ;
+}
+footer .footer-wrap .footer-left img{
+    width: 170px;
+    height: 70px;
+}
+footer .footer-wrap .footer-right{
+    width: 50%;
+    padding: 30px 0 ;
+}
+footer .footer-wrap .footer-right .first-wrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+footer .footer-wrap .footer-right .first-wrap span{
+    position: relative;
+    font-size: 14px;
+    font-weight: 900;
+}
+footer .footer-wrap .footer-right .first-wrap .no1:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -25px;
+    width: 1px;
+    height: 12px;
+    background-color:#797979;
+}
+footer .footer-wrap .footer-right .first-wrap .no2:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -25px;
+    width: 1px;
+    height: 12px;
+    background-color:#797979;
+}
+footer .footer-wrap .footer-right .first-wrap .no3:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -25px;
+    width: 1px;
+    height: 12px;
+    background-color:#797979;
+}
+footer .footer-wrap .footer-right .second-wrap{
+    color: #797979;
+    margin-bottom: 10px;
+}
+footer .footer-wrap .footer-right .second-wrap span {
+    position: relative;
+    margin-right: 10px;
+}
+footer .footer-wrap .footer-right .second-wrap span:first-child::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -8px;
+    width: 1px;
+    height: 10px;
+    background-color:#797979;
+}
+footer .footer-wrap .footer-right .third-wrap{
+    color: #797979;
+    margin-bottom: 10px;
+}
+footer .footer-wrap .footer-right .third-wrap span {
+    position: relative;
+    margin-right: 10px;
+}
+footer .footer-wrap .footer-right .third-wrap span:first-child::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -8px;
+    width: 1px;
+    height: 10px;
+    background-color:#797979;
+}
+footer .footer-wrap .footer-right .fourth-wrap{
+    color: #797979;
+}
+footer .footer-wrap .footer-right .fourth-wrap span {
+    position: relative;
+    margin-right: 10px;
+}
+footer .footer-wrap .footer-right .fourth-wrap span:first-child::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -8px;
+    width: 1px;
+    height: 10px;
+    background-color:#797979;
+}

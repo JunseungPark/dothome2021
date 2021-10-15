@@ -17,6 +17,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            position: relative;
         }
         .slider-img {
             position: absolute;
@@ -33,7 +34,7 @@
         .slider-inner {
             overflow: hidden;
             position: relative;
-            width: 4000px;
+            /* width: 4000px; */
             height: 480px;
         }
         .slider-inner .slider {
@@ -95,6 +96,25 @@
         .slider:nth-child(5){
             z-index: 1;
         }
+        .slider-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+        }
+        .slider-dot .dot{
+            width: 20px;
+            height: 20px;
+            background: rgba(0,0,0,0.4);
+            display: inline-block;
+            border-radius: 50%;
+            transition: all 0.3s;
+            text-indent: -9999px;
+            margin: 3px;
+        }
+        .slider-dot .dot.active{
+            background: rgba(255,255,255,0.95);
+        }
     </style>
 </head>
 
@@ -116,6 +136,13 @@
                 <div class="prev"><a href="#">prev</a></div>
                 <div class="next"><a href="#">next</a></div>
             </div>
+            <div class="slider-dot">
+                <!-- <a href="#" class="dot active">1</a>
+                <a href="#" class="dot">2</a>
+                <a href="#" class="dot">3</a>
+                <a href="#" class="dot">4</a>
+                <a href="#" class="dot">5</a> -->
+            </div>
         </div>
     </main>
     <!-- //contents -->
@@ -123,7 +150,7 @@
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">javascript Menu Effect05</a></h1>
+        <h1><a href="index.html">jQuery Menu Effect06</a></h1>
         <p>이미지 슬라이드 - 버튼추가</p>
     </div>
 
@@ -133,7 +160,8 @@
             <li><a href="javascriptSE02.html">2</a></li>
             <li><a href="javascriptSE03.html">3</a></li>
             <li><a href="javascriptSE04.html">4</a></li>
-            <li class="active"><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE06.html">5</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -141,6 +169,8 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li class="active"><a href="jquerySE06.html">6</a></li>
+
         </ul>
     </div>
     <div class="info bottom">
@@ -163,7 +193,7 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">javascript</a></li>
+                            <li><a href="#">jquery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -302,42 +332,49 @@ setInterval(function () {
     <script src="../assets/js/highlight.min.js"></script>
     <script>
         modal();
-        const sliderWrap = document.querySelector(".slider-wrap");
-        const sliderImg = sliderWrap.querySelector(".slider-img");
-        const sliderInner = sliderImg.querySelector(".slider-inner");
-        const slider = sliderInner.querySelectorAll(".slider");
-        const sliderBtn = document.querySelector(".slider-btn");
-        const sliderBtnPrev = document.querySelector(".prev");
-        const sliderBtnNext = document.querySelector(".next");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+        const sliderDot = $(".slider-dot");
 
-        let currentIndex = 0;
-        let sliderWidth = slider[0].offsetWidth;
+        let sliderWidth = slider.width();
         let sliderCount = slider.length;
+        let sliderTotalWidth = sliderWidth * sliderCount
+        let currentIndex = 0;
+        let dotIndex = "";
+
+        sliderInner.css({width: sliderTotalWidth});
+        slider.css({width: sliderWidth});
+
+        //닷버튼
+        slider.each(function (index) {
+            dotIndex += "<a href='#'' class='dot'>"+index+"</a>";
+        })
+        sliderDot.html(dotIndex);
+        sliderDot.find("a").eq(currentIndex).addClass("active");
+
+        sliderDot.on("click", "a", function (e) {
+            e.preventDefault();
+            gotoSlider($(this).index());
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        })
+
         function gotoSlider(num) {
-            sliderInner.style.transition ="all 300ms"
-            sliderInner.style.transform = "translateX("+-sliderWidth * num+"px)";
+            sliderInner.animate({left : -sliderWidth * num}, 500, "easeInQuart")
+            currentIndex = num;
         }
-        
-        function movePrev(){
-            let PrevIndex = 0;
-            PrevIndex = ((currentIndex - 1) < 0) ? PrevIndex = sliderCount - 1 : currentIndex - 1;
 
-            gotoSlider(PrevIndex);
-            currentIndex = PrevIndex;
-        }
-        function moveNext() {
-            let nextIndex = 0;
-            nextIndex = (currentIndex + 1 ) % sliderCount;
-            if (currentIndex >= 4) {
-                currentIndex = 0;
-                nextIndex = 0;
+        sliderBtn.on("click", "div", function (e) {
+            e.preventDefault();
+            let nextIndex = (currentIndex +1) %  sliderCount;
+            let prevIndex = (currentIndex -1)  %  sliderCount;
+            if(currentIndex == 0) prevIndex = sliderCount -1;
+            if($(this).hasClass("prev")) {
+                gotoSlider(prevIndex)
+            } else {
+                gotoSlider(nextIndex)
             }
-            gotoSlider(nextIndex);
-            currentIndex++;
-        }
-        sliderBtnPrev.addEventListener("click", movePrev);
-        sliderBtnNext.addEventListener("click", moveNext);
-
+        })
     </script>
 </body>
 </html>

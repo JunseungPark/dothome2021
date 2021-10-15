@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- Image Type CSS -->
+    <link rel="stylesheet" href="css/testType07.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrap">
+            <div class="header-logo">
+                <img src="img/test/top-logo.jpg" alt="로고">
+            </div>
+            <nav>
+                <div class="nav-wrap">
+                    <div>COOKIT소개</div>
+                    <div>COOKIT메뉴</div>
+                    <div>리뷰</div>
+                    <div>이벤트</div>
+                    <div>MY쿡킷</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="main-container-wrap">
+                <div class="banner-wrap">
+                    <div class="img-wrap">
+                        <img class="slide" src="img/test/banner1.jpg" alt="배너">
+                        <img class="slide" src="img/test/banner1.jpg" alt="배너">
+                    </div>
+                    <div class="bottom-banner-wrap">
+                        <div class="bottom-banner left">
+                            <div class="text-wrap">
+                                <div class="banner-title">우리집도 COOKIT 배송이 되나요?</div>
+                                <div class="banner-sub-title">배송이 가능한지 알려드려요</div>
+                                <div class="desc">
+                                    <img class="cap" src="img/test/pointer.jpg" alt="포인터">
+                                    <span>배송지검색</span>
+                                </div>
+                            </div>
+                            <img class="mini" src="img/test/mini-img1.png" alt="이미지">
+                        </div>
+                        <div class="bottom-banner right">
+                            <div class="text-wrap">
+                                <div class="banner-title">7월 30일(화)에 받을 수 있어요</div>
+                                <div class="banner-sub-title">오전 7시까지 주문하시면 다음날 배송됩니다.</div>
+                                <div class="desc">
+                                    <img src="img/test/watch.jpg" alt="시계">
+                                    <span>63:28:32 남은시간</span>
+                                </div>
+                            </div>
+                            <img class="mini" src="img/test/mini-img2.jpg" alt="이미지">
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="main-contents-wrap">
+                <span class="content-tap">실시간베스트</span>
+                <span class="content-tap1">생생한 리뷰</span>
+                <div class="contents-card-wrap">
+                    <div class="card-box">
+                        <img class="card-img" src="img/test/content-img1.jpg" alt="이미지">
+                        <div class="text-wrap">
+                            <div class="title">평양식 어복쟁반</div>
+                            <div class="price">33,800원<span>/3인분</span></div>
+                            <img class="shop-img" src="img/test/shoppingcart.jpg" alt="이미지">
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <img class="card-img" src="img/test/content-img2.jpg" alt="이미지">
+                        <div class="text-wrap">
+                            <div class="title">평양식 어복쟁반</div>
+                            <div class="price">33,800원<span>/3인분</span></div>
+                            <img class="shop-img" src="img/test/shoppingcart.jpg" alt="이미지">
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <img class="card-img" src="img/test/content-img3.jpg" alt="이미지">
+                        <div class="text-wrap">
+                            <div class="title">평양식 어복쟁반</div>
+                            <div class="price">33,800원 <span>/3인분</span></div>
+                            <img class="shop-img" src="img/test/shoppingcart.jpg" alt="이미지">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-left">
+                <img src="img/test/buttom-logo.jpg" alt="이미지">
+            </div>
+            <div class="footer-right">
+                <div class="first-wrap">
+                    <span class="no1">이용약관</span>
+                    <span class="no2">개인정보처리 방침</span>
+                    <span class="no3">법적고지</span>
+                    <span class="no4">사업자정보 확인</span>
+                </div>
+                <div class="second-wrap">
+                    <span>시제이제일주당(주)</span>
+                    <span>대표자:신현재</span>
+                </div>
+                <div class="third-wrap">
+                    <span>주소:서울 중고 동호로 330 CJ제일제당 센터 (우)04560</span>
+                    <span>사업자등록번호:104-86-09535</span>
+                </div>
+                <div class="fourth-wrap">
+                    <span>통신판매업신고 중구 제 07767호</span>
+                    <span>개인정보보호책임자:류화정</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    let imgBox = document.querySelectorAll(".slide");
+
+    let currentIndex = 0;
+    let sliderCount = imgBox.length;
+
+    setInterval(() => {
+        let nextIndex = (currentIndex + 1) % sliderCount;
+
+        imgBox[currentIndex].style.transition = "all 300ms ease-in";
+        imgBox[currentIndex].style.opacity ="0";
+        imgBox[nextIndex].style.transition = "all 3000ms ease-in";
+        imgBox[nextIndex].style.opacity = "1";
+
+        currentIndex = nextIndex;
+    }, 3000);
+</script>

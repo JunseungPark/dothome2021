@@ -125,15 +125,156 @@
                     </div>
                     <div class="view-cont">
                         <div>
-<pre><code class="language-html">
+<pre><code class="language-html">&lt;body class="bg bg5 blue"&gt;
+    &lt;!-- contents --&gt;
+    &lt;main&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+        &lt;div class="contents"&gt;
+            &lt;div class="moveImage"&gt;
+                &lt;div class="textWrap"&gt;
+                    &lt;div class="line"&gt;
+                        &lt;div class="left"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanSlow"&gt;Of coure I'm crazy&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="right"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanSlow"&gt;Of coure I'm crazy&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="line"&gt;
+                        &lt;div class="left"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanFast"&gt;but that doesn't mean I'm wrong&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="right"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanFast"&gt;but that doesn't mean I'm wrong&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="line"&gt;
+                        &lt;div class="left"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanSlow"&gt;Pain Past&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="right"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanSlow"&gt;Pain Past&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="line"&gt;
+                        &lt;div class="left"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanFast"&gt;is pleasure.&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="right"&gt;
+                            &lt;div class="spanWrap"&gt;
+                                &lt;span class="spanFast"&gt;is pleasure.&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="imgWrap"&gt;
+                    &lt;img src="../assets/img/bg7.jpg" alt="이미지"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+    &lt;!-- contents --&gt;
+
+    &lt;!-- info --&gt;
+    &lt;div class="info"&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;jQuery Menu Effect07&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;마우스 이펙트 - 텍스트 효과&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="info right"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="javascriptME08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME06.html"&gt;6&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a href="jqueryME07.html"&gt;7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="jqueryME08.html"&gt;8&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- //scroll --&gt;
+    &lt;div class="info left list"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;standardX : &lt;span class="standardX"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;standardXY : &lt;span class="standardY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css"> 
+<pre><code class="language-css">.cursor {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: url(../assets/img/bg5.jpg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 5px solid #fff;
+    overflow: hidden;
+    z-index: -1;
+}
+.contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'NEXONLv1Gothic';
+    color: #fff;
+}
+.contents p {
+    max-width: 70vw;
+    font-size: 3vw;
+    text-align: justify;
+}
+.contents p:first-child {
+    font-size: 2vw;
+    line-height: 2;
+}
+.contents p em {
+    color: orange;
+    border-bottom: 2px dashed orange;
+    font-style: normal;
+} 
 </code></pre>                        
                         </div>
                         <div>
-<pre><code class="language-javascript">
+<pre><code class="language-javascript">$(window).mousemove(function (e) {
+    let x =  $(".cursor").width() /2;
+    let y =  $(".cursor").height() /2;
+    gsap.to(".cursor",  {duration: 0.5, left: e.pageX - x, top: e.pageY - y});
+})
 </code></pre>                        
                         </div>
                     </div>
@@ -156,6 +297,7 @@
             let y =  $(".cursor").height() /2;
             gsap.to(".cursor",  {duration: 0.5, left: e.pageX - x, top: e.pageY - y});
         })
+        
     </script>
 </body>
 </html>

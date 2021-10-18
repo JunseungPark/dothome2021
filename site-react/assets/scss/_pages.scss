@@ -99,10 +99,6 @@
         font-size: 10vw;
         .main-title {
             top: 50%;
-            overflow: hidden;
-            br {
-                display: block;
-            }
             div:nth-child(2) {
                 text-indent: 0;
             }
@@ -124,9 +120,6 @@
 
         .main-title {
             top: 60%;
-            br {
-                display: block;
-            }
             div:nth-child(2) {
                 text-indent: 0;
             }

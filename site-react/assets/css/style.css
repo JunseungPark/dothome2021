@@ -1110,10 +1110,6 @@ table {
   }
   #mainCont .main-title {
     top: 50%;
-    overflow: hidden;
-  }
-  #mainCont .main-title br {
-    display: block;
   }
   #mainCont .main-title div:nth-child(2) {
     text-indent: 0;
@@ -1133,9 +1129,6 @@ table {
   }
   #mainCont .main-title {
     top: 60%;
-  }
-  #mainCont .main-title br {
-    display: block;
   }
   #mainCont .main-title div:nth-child(2) {
     text-indent: 0;

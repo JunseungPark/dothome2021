@@ -1110,6 +1110,7 @@ table {
   }
   #mainCont .main-title {
     top: 50%;
+    overflow: hidden;
   }
   #mainCont .main-title br {
     display: block;

@@ -183,7 +183,7 @@
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">jQuery Menu Effect08</a></h1>
+        <h1><a href="index.html">javascript Menu Effect08</a></h1>
         <p>마우스 이펙트 - 브랜딩 이펙트</p>
     </div>
 
@@ -196,7 +196,7 @@
             <li><a href="javascriptME05.html">5</a></li>
             <li><a href="javascriptME06.html">6</a></li>
             <li><a href="javascriptME07.html">7</a></li>
-            <li><a href="javascriptME08.html">8</a></li>
+            <li class="active"><a href="javascriptME08.html">8</a></li>
         </ul>
         <ul>
             <li><a href="jqueryME01.html">1</a></li>
@@ -206,29 +206,10 @@
             <li><a href="jqueryME05.html">5</a></li>
             <li><a href="jqueryME06.html">6</a></li>
             <li><a href="jqueryME07.html">7</a></li>
-            <li class="active"><a href="jqueryME08.html">8</a></li>
+            <li><a href="jqueryME08.html">8</a></li>
         </ul>
     </div>
     <!-- //scroll -->
-    <div class="info left list">
-        <ul>
-            <li>multiply</li>
-            <li>screen</li>
-            <li>overlay</li>
-            <li>darken</li>
-            <li>lighten</li>
-            <li>color-dodge</li>
-            <li>color-burn</li>
-            <li>hard-light</li>
-            <li>soft-light</li>
-            <li class="active">difference</li>
-            <li>exclusion</li>
-            <li>hue</li>
-            <li>saturation</li>
-            <li>color</li>
-            <li>luminosity</li>
-        </ul>
-    </div>
 
     <div class="info bottom">
         <button>소스보기</button>
@@ -507,7 +488,7 @@
     <script>
         modal();
         
-        $(window).mousemove(function(e) {
+        function mouseMove(e) {
             
             const mouseX = e.clientX;
             const mouseY = e.clientY;
@@ -532,8 +513,9 @@
             })
 
             gsap.to(".cursor",  {duration: 0.3, left:mouseX, top:mouseY});
-        })
-            
+        }
+        
+        document.addEventListener("mousemove", mouseMove);
     </script>
 </body>
 </html>

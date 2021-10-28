@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2GothicLight.woff) format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2Gothic.woff) format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 500;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2GothicMedium.woff) format('woff');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NEXONLv2Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv2GothicBold.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicLowOTFLight.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTF.woff) format('woff');
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NEXONLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/NEXONGothic/NEXONLv1GothicOTFBold.woff) format('woff');
+            font-display: swap;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NEXONLv2Gothic';
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            height: 10000px;
+        }
+
+        iframe {
+            border: 0;
+        }
+
+        .scroll {
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            background: rgba(253, 220, 220, 0.3);
+            border-radius: 50%;
+            z-index: 10000;
+        }
+
+        #contents {}
+        #contents >div {
+            position: relative;
+        }
+
+        #section1 {
+            height: 7000px;
+        }
+
+        #section2 {
+            /* background: #000; */
+            height: 20000px;
+            z-index: 2000;
+        }
+
+        #section3 {
+            /* background: blue; */
+            height: 19000px;
+            z-index: 3000;
+        }
+
+        #section4 {
+            height: 20000px;
+            background: black;
+        }
+
+        #section5 {
+            height: 20000px;
+            background: red;
+        }
+
+        #section6 {}
+
+        #section7 {}
+
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        /* section */
+        .s1Text1 {
+            font-size: 8vw;
+            font-weight: 700;
+        }
+
+        .s1Text2 {
+            font-size: 8vw;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .s1Text3 {
+            width: 100vw;
+        }
+
+        .s1Text3 img {
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .s1Text4 {
+            width: 30vw;
+            height: 30vw;
+            background: #000;
+            border-radius: 50vw;
+        }
+
+        .s1Text4 span {
+            font-size: 4vw;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .s2Text1 {
+            /* color: orange; */
+            white-space: nowrap;
+            font-size: 5vw;
+            text-align: center;
+            font-weight: 700;
+            background: url(../assets/img/apple-text-bg.jpg) no-repeat;
+            background-size: cover;
+            color: transparent;
+            -webkit-background-clip: text;
+            text-transform: capitalize;
+        }
+
+        /* .s2Text2 {
+            top: 70%;
+            width: 70vw;
+            background: url(../assets/img/apple-pad-mokup.png) no-repeat;
+            background-size: 100%;
+            overflow: hidden;
+        }
+
+        .s2Text2 .img-wrap {
+            padding: 3.4%;
+            position: relative;
+            left: 0;
+            width: 100%;
+            height: 600px;
+        }
+
+
+        .s2Text2 .img-wrap > div {   
+            position: absolute;
+            left: 2vw;
+            top: 1vw;
+        }
+        .s2Text2 .img-wrap > div:nth-child(0) {
+            
+        }
+        .s2Text2 .img-wrap .img2 {
+            left: 10%;
+        }
+        .s2Text2 .img-wrap .img2 {
+            left: 20%;
+        }
+        .s2Text2 .img-wrap .img2 {
+            left: 30%;
+        } */
+
+        .s2Text2 {
+            width: 60vw;
+            height: 60vh;
+            background-image: url(../assets/img/apple-pad-mokup.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center top;
+            top: 70%;
+        }
+        .s2Text2 .img-wrap {
+            position: relative;
+            width: 94%; height: 100%;
+            margin: 3%;
+            border-radius: 1vw;
+            overflow: hidden;
+        }
+        .s2Text2 .img-wrap > div {
+            position: absolute;
+            border-radius: 1vw;
+            top: 0;
+            left: 100%;
+            width: 100%;
+        }
+        .s2Text2 .img-wrap > div a{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 10vw;
+            height: 10vw;
+            background: rgba(0, 0, 0, .8);
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 10vw;
+            font-size: 2vw;
+        }
+        .s2Text2 .img-wrap > img {
+
+        }
+        .s2Text2 .img-wrap > div:nth-child(1){
+            left: 0;
+        }
+
+        .s2Text3 > div{
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            width: 55vw;
+            opacity: 0;
+        }
+        .s2Text3 > div h2{
+            flex: 0 0 30%;
+            font-size: 1.7vw;
+            line-height: 1.3;
+        }
+        .s2Text3 > div p{
+            flex: 0 0 60%;
+            font-size: 1.1vw;
+            text-align: justify;
+        }
+        
+        /* .s2Text3 div {
+            display: flex;
+            justify-content: space-between;
+            top: 30%;
+            width: 100%;
+            color: #fff;
+        }
+        .s2Text3 div >div:nth-child(1) {
+            flex: 0 0 30%;
+            font-size: 1.7vw;
+            line-height: 1.3;
+        }
+
+        .s2Text3 div >div:nth-child(2) {
+            flex: 0 0 60%;
+            font-size: 1.1vw;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="scroll">000</div>
+    <div id="contents">
+        <section id="section1">
+            <div class="s1Text1 fixed" data-0="transform: translate(-50%,-0%); opacity:0;"
+                data-500="transform: translate(-50%,-50%); opacity:1;"
+                data-1000="transform: translate(-50%,-100%); opacity:0;">안녕하세요!</div>
+            <div class="s1Text2 fixed" data-1500="transform: translate(-50%,-0%); opacity:0;"
+                data-2000="transform: translate(-50%,-50%); opacity:1;"
+                data-2500="transform: translate(-50%,-50%); opacity:1; font-size: 8vw;"
+                data-3500="transform: translate(-50%,-50%); opacity:1; font-size: 0vw;">프론트앤드 개발자입니다.
+            </div>
+            <div class="s1Text3 fixed" data-3200="width:0vw" data-4200="width:100vw;"
+            data-10000="width:100vw; display:block;"
+            data-10001="width:100vw; display:none;">
+                <img src="../assets/img/appleImg1.jpg" alt="이미지" data-2500="transform: scale(0);"
+                    data-4400="transform: scale(2.5);">
+            </div>
+            <div class="s1Text4 fixed" data-3800="width:0vw; height:0vw;" data-4300="width:30vw; height:30vw;"
+                data-5500="width:30vw; height:30vw;" data-6500="width:250vw; height:250vw;"
+                data-25000="width:250vw; height:250vw;"
+                data-26000="width:0vw; height:0vw;">
+                <span data-3800="transform: translate(-50%, -50%) scale(0) rotate(-360deg);"
+                    data-4300="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                    data-5500="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                    data-6500="transform: translate(-50%, -50%) scale(0) rotate(0deg);">Hello!</span>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="s2Text1 fixed" data-7000="transform: translate(-50%,-0%) scale(1); top:50%; opacity:0;"
+                data-8000="transform: translate(-50%,-50%) scale(1); top:50%; opacity:1;"
+                data-9000="transform: translate(-50%,-50%) scale(0.8); top:15%; opacity:1;"
+                data-23500="transform: translate(-50%,-50%) scale(0.8); top:15%; opacity:1;"
+                data-24000="transform: translate(-50%,-50%) scale(1); top:50%; opacity:1;"
+                data-26000="transform: translate(-50%,-50%) scale(0); top:50%; opacity:1;">I've Been Working On Site
+            </div>
+
+            <div class="s2Text2 fixed" data-8000="transform: translate(-50%,-0%)scale(2.4); top:100%; opacity:0;"
+                data-9200="transform: translate(-50%,-50%) scale(1); top:70%; opacity:1;"
+                data-23000="transform: translate(-50%,-50%) scale(1); top:70%; opacity:1;"
+                data-24000="transform: translate(-50%,-50%) scale(2.4); top:200%; opacity:0;">
+                <div class="img-wrap"
+                data-26000 = "display:block";
+                data-26001 = "display:none";
+                >
+                    <div class="img1"
+                    data-11000 = "left: 0%"
+                    data-13000 = "left: -100%"
+                    >
+                        <img src="../assets/img/apple-site01.jpg" alt="이미지">
+                        <a href="#">VIEW</a>
+                    </div>
+                    <div class="img2"
+                    data-11000 = "left: 100%"
+                    data-13000 = "left: 0%"
+                    data-15000 = "left: 0%"
+                    data-16000 = "left: -100%">
+                        <img src="../assets/img/apple-site02.jpg" alt="이미지">
+                        <a href="#">VIEW</a>
+                    </div>
+                    <div class="img3"
+                    data-15000 = "left: 100%"
+                    data-16000 = "left: 0%"
+                    data-18000 = "left: 0%"
+                    data-19000 = "left: -100%">
+                        <img src="../assets/img/apple-site03.jpg" alt="이미지">
+                        <a href="#">VIEW</a>
+                    </div>
+                    <div class="img4"
+                    data-18000 = "left: 100%"
+                    data-19000 = "left: 0%">
+                        <img src="../assets/img/apple-site04.jpg" alt="이미지">
+                        <a href="#">VIEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="s2Text3">
+                <div class="t1 fixed"
+                data-8000="opacity:0; top:50%;"
+                data-9000="opacity:1; top:30%;"
+                data-10000="opacity:1; top:30%;"
+                data-11000="opacity:0; top:50%;"
+                >
+                    <h2>웹표준을 준수한<br>웹 표준 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도
+                        작업하였습니다.</p>
+                </div>
+                <div class="t2 fixed"
+                data-12000="opacity:0; top:50%;"
+                data-13000="opacity:1; top:30%;"
+                data-14000="opacity:1; top:30%;"
+                data-15000="opacity:0; top:50%;">
+                    <h2>웹표준을 준수한1<br>웹 표준 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도
+                        작업하였습니다.</p>
+                </div>
+                <div  class="t3 fixed"
+                data-16000="opacity:0; top:50%;"
+                data-17000="opacity:1; top:30%;"
+                data-18000="opacity:1; top:30%;"
+                data-19000="opacity:0; top:50%;">
+                    <h2>웹표준을 준수한2<br>웹 표준 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도
+                        작업하였습니다.</p>
+                </div>
+                <div  class="t4 fixed"
+                data-20000="opacity:0; top:50%;"
+                data-21000="opacity:1; top:30%;"
+                data-22000="opacity:1; top:30%;"
+                data-23000="opacity:0; top:50%;">
+                    <h2>웹표준을 준수한3<br>웹 표준 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도
+                        작업하였습니다.</p>
+                </div>
+            </div>
+
+        </section>
+        <style>
+            .s3Text1 {
+                font-size: 8vw;
+                font-weight: 100;
+                font-family: 'NEXONLv1Gothic';
+                text-transform: uppercase;
+                display: flex;
+                justify-content: center;
+            }
+            .s3Text1 span {
+                display: inline-block;
+            }
+            .s3Text1 .s1{
+                transform: translate(-20vw,-20vw);
+                position: relative;
+            }
+            .s3Text1 .s1 div:nth-child(3){
+                content: "";
+                position: absolute;
+                top: 4vw;
+                left: -7vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+            }
+            .s3Text1 .s1 div:nth-child(1){
+                content: "";
+                position: absolute;
+                bottom: -1vw;
+                left: -3vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(-50deg);
+            }
+            .s3Text1 .s1 div:nth-child(2){
+                content: "";
+                position: absolute;
+                top: -2vw;
+                left: -3vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(50deg);
+            }
+            .s3Text1 .s2{
+                transform: translate(-20vw,20vw);
+                position: relative;
+            }
+            .s3Text1 .s2 div:nth-child(1){
+                content: "";
+                position: absolute;
+                bottom: 5vw;
+                left: -1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(-50deg);
+            }
+            .s3Text1 .s2 div:nth-child(2){
+                content: "";
+                position: absolute;
+                top: -2vw;
+                left: -1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(50deg);
+            }
+            .s3Text1 .s3{
+                transform: translate(-10vw,-20vw);
+                position: relative;
+            }
+            .s3Text1 .s3 div:nth-child(1){
+                content: "";
+                position: absolute;
+                bottom: 8vw;
+                left: -1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(-50deg);
+            }
+            .s3Text1 .s3 div:nth-child(2){
+                content: "";
+                position: absolute;
+                top: -2vw;
+                left: -1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(50deg);
+            }
+            .s3Text1 .s4{
+                transform: translate(-10vw,-10vw);
+                position: relative;
+            }
+            .s3Text1 .s4 div:nth-child(1){
+                content: "";
+                position: absolute;
+                bottom: 8vw;
+                left: 1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(50deg);
+            }
+            .s3Text1 .s4 div:nth-child(2){
+                content: "";
+                position: absolute;
+                top: -2vw;
+                left: 1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(-50deg);
+            }
+            .s3Text1 .s5{
+                transform: translate(20vw,-20vw);
+                position: relative;
+            }
+            .s3Text1 .s5 div:nth-child(1){
+                content: "";
+                position: absolute;
+                bottom: 8vw;
+                left: 1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(50deg);
+            }
+            .s3Text1 .s5 div:nth-child(2){
+                content: "";
+                position: absolute;
+                top: -2vw;
+                left: 1vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(-50deg);
+            }
+            .s3Text1 .s6{
+                transform: translate(20vw, 20vw);
+                position: relative;
+            }
+            .s3Text1 .s6 div:nth-child(3){
+                content: "";
+                position: absolute;
+                top: 4vw;
+                left: 7vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+            }
+            .s3Text1 .s6 div:nth-child(1){
+                content: "";
+                position: absolute;
+                bottom: -1vw;
+                left: 3vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(50deg);
+            }
+            .s3Text1 .s6 div:nth-child(2){
+                content: "";
+                position: absolute;
+                top: -2vw;
+                left: 3vw;
+                width: 3vw;
+                height: 0.3vw;
+                background-color: #000;
+                transform: rotate(-50deg);
+            }
+
+            .s3Text2 {
+                perspective: 500px;
+            }
+            .s3Text2 iframe {
+                width: 60vw;
+                height: 60vh;
+                transform: translate3d(0, 0, 0);
+                transform-style: preserve-3d;
+            }
+            .s3Text2 .i1 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s3Text2 .i3 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s3Text2 .i2 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+        </style>
+        <section id="section3">
+            <div class="s3Text1 fixed"
+            data-35000 = "transform: translate(-15vw,-5vw);"
+            data-37000 = "transform: translate(-15vw,-26vw);"
+            data-42500 = "transform: translate(-15vw,-26vw);"
+            data-43500 = "transform: translate(-15vw,-50vw);"
+            >
+                <span class="s1"
+                data-26000 = "transform: translate(-70vw,-70vw); font-size:30vw;"
+                data-30000 = "transform: translate(0vw,0vw); font-size:8vw;"                
+                ><div
+                data-29900 = "opacity: 0;"
+                data-30000 = "opacity: 1; transform: rotate(-50deg) scale(1); left: -3vw; bottom:-1vw"
+                data-30800 = "opacity: 1; transform: rotate(-50deg) scale(1.2); left: -4vw; bottom:-3vw"
+                data-31000 = "opacity: 0;"></div><div
+                data-29900 = "opacity: 0;"
+                data-30000 = "opacity: 1; transform: rotate(50deg) scale(1); left: -3vw; top:-1vw"
+                data-30800 = "opacity: 1; transform: rotate(50deg) scale(1.2); left: -4vw; top:-3vw"
+                data-31000 = "opacity: 0;"></div><div
+                data-29900 = "opacity: 0;"
+                data-30000 = "opacity: 1; transform: scale(1); left: -7vw; top:4vw"
+                data-30800 = "opacity: 1; transform: scale(1.2); left: -9vw; top:4vw"
+                data-31000 = "opacity: 0;"></div>s</span><span class="s2"
+                data-26000 = "transform: translate(-40vw,40vw); font-size:30vw;"
+                data-29000 = "transform: translate(0vw,0vw); font-size:8vw;"
+                ><div
+                data-28900 = "opacity: 0;"
+                data-29000 = "opacity: 1; transform: rotate(-50deg) scale(1); left: -1vw; bottom:5vw"
+                data-29800 = "opacity: 1; transform: rotate(-50deg) scale(1.2); left: -2vw; bottom:-1vw"
+                data-30000 = "opacity: 0"
+                ></div>c<div
+                data-28900 = "opacity: 0;"
+                data-29000 = "opacity: 1; transform: rotate(50deg) scale(1); left: -1vw; top:-2vw"
+                data-29800 = "opacity: 1; transform: rotate(50deg) scale(1.2); left: -2vw; top:-3vw"
+                data-30000 = "opacity: 0"
+                ></div></span><span class="s3"
+                data-26000 = "transform: translate(-30vw,40vw); font-size:30vw;"
+                data-28500 = "transform: translate(0vw,0vw); font-size:8vw;"
+                ><div
+                data-28400 = "opacity: 0;"
+                data-28500 = "opacity: 1; transform: rotate(-50deg) scale(1); left: -1vw; bottom:7.5vw"
+                data-28800 = "opacity: 1; transform: rotate(-50deg) scale(1.2); left: -2vw; bottom:3vw"
+                data-29000 = "opacity: 0"
+                ></div>r<div
+                data-28400 = "opacity: 0"
+                data-28500 = "opacity: 1; transform: rotate(50deg) scale(1); left: -1vw; top:-2vw"
+                data-28800 = "opacity: 1; transform: rotate(50deg) scale(1.2); left: -2vw; top:-3vw"
+                data-29000 = "opacity: 0"
+                ></div></span><span class="s4"
+                data-26000 = "transform: translate(-30vw,-60vw); font-size:30vw;"
+                data-28500 = "transform: translate(0vw,0vw); font-size:8vw;"
+                ><div
+                data-28400 = "opacity: 0;"
+                data-28500 = "opacity: 1; transform: rotate(50deg) scale(1); left: 1vw; bottom:7.5vw"
+                data-28800 = "opacity: 1; transform: rotate(50deg) scale(1.2); left: 2vw; bottom:3vw"
+                data-29000 = "opacity: 0"
+                ></div>i<div
+                data-28400 = "opacity: 0;"
+                data-28500 = "opacity: 1; transform: rotate(-50deg) scale(1); left: 1vw; top:-2vw"
+                data-28800 = "opacity: 1; transform: rotate(-50deg) scale(1.2); left: 2vw; top:-3vw"
+                data-29000 = "opacity: 0"
+                ></div></span><span class="s5"
+                data-26000 = "transform: translate(40vw,-100vw); font-size:30vw;"
+                data-29000 = "transform: translate(0vw,0vw); font-size:8vw;"
+                ><div
+                data-28900 = "opacity: 0;"
+                data-29000 = "opacity: 1; transform: rotate(50deg) scale(1); left: 2vw; bottom:5vw"
+                data-29800 = "opacity: 1; transform: rotate(50deg) scale(1.2); left: 3vw; bottom:-1vw"
+                data-30000 = "opacity: 0;"
+                ></div>p<div
+                data-28900 = "opacity: 0;"
+                data-29000 = "opacity: 1; transform: rotate(-50deg) scale(1); left: 2vw; top:-2vw"
+                data-29800 = "opacity: 1; transform: rotate(-50deg) scale(1.2); left: 3vw; top:-3vw"
+                data-30000 = "opacity: 0;"
+                ></div></span><span class="s6"
+                data-26000 = "transform: translate(40vw,-40vw); font-size:30vw;"
+                data-30000 = "transform: translate(0vw,0vw); font-size:8vw;"
+                ><div
+                data-29900 = "opacity: 0;"
+                data-30000 = "opacity: 1; transform: rotate(50deg) scale(1); left: 3vw; bottom:-1vw"
+                data-30800 = "opacity: 1; transform: rotate(50deg) scale(1.2); left: 4vw; bottom:-3vw"
+                data-31000 = "opacity: 0;"></div><div
+                data-29900 = "opacity: 0;"
+                data-30000 = "opacity: 1; transform: rotate(-50deg) scale(1); left: 3vw; top:-2vw"
+                data-30800 = "opacity: 1; transform: rotate(-50deg) scale(1.2); left: 4vw; top:-3vw"
+                data-31000 = "opacity: 0;"></div><div
+                data-29900 = "opacity: 0;"
+                data-30000 = "opacity: 1; transform: scale(1); left: 7vw; top:4vw"
+                data-30800 = "opacity: 1; transform: scale(1.2); left: 9vw; top:4vw"
+                data-31000 = "opacity: 0;"></div>t</span>
+            </div>
+
+            <div class="s3Text2 fixed">
+                <iframe class="i1" src="../mouseEffect/javascriptME01.html"
+                data-38000="transform: translate3d(-50%, -50%, -10000px); opacity:0"
+                data-39000="transform: translate3d(-70%, -50%, 0px); opacity:1"
+                data-42000="transform: translate3d(-70%, -50%, 0px); opacity:1"
+                data-42500="transform: translate3d(-30%, -30%, 1000px); opacity:0"
+                ></iframe>
+                <iframe class="i2" src="../parallaxEffect/javascriptPE01.html"
+                data-39000="transform: translate3d(-50%, -80%, -10000px); opacity:0"
+                data-40000="transform: translate3d(-50%, -80%, 0px); opacity:1"
+                data-41500="transform: translate3d(-50%, -80%, 0px); opacity:1"
+                data-42500="transform: translate3d(-50%, -80%, 1000px); opacity:0"
+                ></iframe>
+                <iframe class="i3" src="../menuEffect/javascriptME01.html"
+                data-40000="transform: translate3d(-30%, -30%, -10000px); opacity:0"
+                data-41000="transform: translate3d(-30%, -30%, 0px); opacity:1"
+                data-41000="transform: translate3d(-30%, -30%, 0px); opacity:1"
+                data-41500="transform: translate3d(-30%, -30%, 1000px); opacity:0"
+                ></iframe>
+            </div>
+        </section>
+
+        <style>
+            .s4Text1 > div {
+                width: 10vw;
+                height: 10vw;
+                background: #000;
+                border-radius: 50%;
+            }
+            .s4Text1 .circle1 {
+                left: 30%;
+                top: 70%;
+                background: red;
+            }
+            .s4Text1 .circle2 {
+                left: 20%;
+                top: 20%;
+                background: orange;
+            }
+            .s4Text1 .circle3 {
+                left: 60%;
+                top: 60%;
+                background: yellow;
+            }
+            .s4Text1 .circle4 {
+                left: 60%;
+                top: 90%;
+                background: green;
+            }
+            .s4Text1 .circle5 {
+                left: 90%;
+                top: 20%;
+                background: blue;
+            }
+            .s4Text1 .circle6 {
+                left: 80%;
+                top: 30%;
+                background-image: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .s4Text2 {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-image: radial-gradient(ellipse at top, #080e21 0%, #1b2735 95%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            }
+
+            .s4Text2 .star {
+            width: 1px;
+            height: 1px;
+            background: transparent;
+            box-shadow: 1804px 814px #fff, 1846px 62px #fff, 775px 882px #fff, 1822px 691px #fff, 654px 562px #fff, 1482px 236px #fff, 51px 644px #fff, 957px 764px #fff, 1589px 814px #fff, 1886px 99px #fff, 1624px 710px #fff, 1312px 708px #fff, 1663px 996px #fff, 1405px 313px #fff, 975px 19px #fff, 1381px 519px #fff, 1179px 899px #fff, 526px 798px #fff, 789px 332px #fff, 937px 953px #fff, 293px 604px #fff, 522px 34px #fff, 1429px 990px #fff, 1846px 481px #fff, 1205px 600px #fff, 362px 794px #fff, 1920px 355px #fff, 889px 831px #fff, 1305px 684px #fff, 1400px 326px #fff, 370px 672px #fff, 670px 845px #fff, 1660px 188px #fff, 1787px 595px #fff, 1573px 684px #fff, 286px 251px #fff, 1563px 167px #fff, 1793px 429px #fff, 59px 783px #fff, 1310px 515px #fff, 418px 970px #fff, 1309px 904px #fff, 1036px 517px #fff, 1906px 535px #fff, 1564px 420px #fff, 1827px 963px #fff, 923px 393px #fff, 1884px 209px #fff, 1617px 484px #fff, 158px 736px #fff, 843px 299px #fff, 593px 199px #fff, 1848px 6px #fff, 304px 324px #fff, 1671px 178px #fff, 488px 766px #fff, 27px 165px #fff, 901px 347px #fff, 616px 203px #fff, 1893px 203px #fff, 364px 387px #fff, 382px 375px #fff, 1145px 808px #fff, 264px 550px #fff, 1798px 581px #fff, 561px 596px #fff, 1257px 418px #fff, 1397px 825px #fff, 638px 527px #fff, 1461px 781px #fff, 934px 909px #fff, 717px 255px #fff, 213px 739px #fff, 1537px 798px #fff, 449px 617px #fff, 403px 237px #fff, 1486px 298px #fff, 210px 424px #fff, 1407px 112px #fff, 1464px 903px #fff, 931px 552px #fff, 210px 464px #fff, 849px 394px #fff, 1808px 481px #fff, 348px 758px #fff, 310px 159px #fff, 371px 239px #fff, 997px 295px #fff, 1516px 393px #fff, 419px 437px #fff, 724px 163px #fff, 1167px 335px #fff, 771px 890px #fff, 896px 434px #fff, 58px 143px #fff, 1449px 189px #fff, 788px 434px #fff, 1094px 868px #fff, 1735px 362px #fff, 1117px 53px #fff, 1792px 355px #fff, 85px 628px #fff, 441px 716px #fff, 550px 814px #fff, 1684px 136px #fff, 731px 291px #fff, 61px 176px #fff, 1594px 32px #fff, 148px 70px #fff, 166px 482px #fff, 260px 26px #fff, 1734px 515px #fff, 773px 486px #fff, 849px 685px #fff, 232px 411px #fff, 1737px 840px #fff, 684px 256px #fff, 1874px 977px #fff, 685px 445px #fff, 1368px 988px #fff, 669px 871px #fff, 1800px 50px #fff, 1154px 729px #fff, 43px 222px #fff, 1165px 154px #fff, 1665px 222px #fff, 1874px 182px #fff, 881px 97px #fff, 1802px 738px #fff, 609px 737px #fff, 1642px 871px #fff, 285px 663px #fff, 511px 808px #fff, 1154px 987px #fff, 1686px 898px #fff, 346px 135px #fff, 1007px 362px #fff, 812px 53px #fff, 735px 587px #fff, 644px 67px #fff, 452px 590px #fff, 324px 919px #fff, 1314px 556px #fff, 1006px 498px #fff, 1302px 493px #fff, 712px 444px #fff, 187px 435px #fff, 1785px 420px #fff, 1618px 458px #fff, 1260px 924px #fff, 1705px 839px #fff, 514px 714px #fff, 325px 894px #fff, 802px 46px #fff, 1346px 430px #fff, 63px 486px #fff, 16px 401px #fff, 989px 849px #fff, 843px 552px #fff, 593px 697px #fff, 1866px 108px #fff, 102px 847px #fff, 936px 324px #fff, 1003px 163px #fff, 1594px 183px #fff, 1784px 752px #fff, 440px 354px #fff, 1405px 266px #fff, 1477px 449px #fff, 1501px 167px #fff, 1381px 571px #fff, 529px 185px #fff, 1108px 315px #fff, 1823px 199px #fff, 937px 295px #fff, 1668px 614px #fff, 1691px 688px #fff, 1446px 195px #fff, 1131px 801px #fff, 394px 146px #fff, 911px 404px #fff, 1240px 528px #fff, 1007px 203px #fff, 434px 715px #fff, 604px 335px #fff, 296px 562px #fff, 851px 743px #fff, 431px 254px #fff, 1771px 199px #fff, 331px 778px #fff, 506px 956px #fff, 1408px 436px #fff, 1900px 97px #fff, 174px 347px #fff, 1685px 223px #fff, 1786px 805px #fff, 477px 399px #fff, 1047px 304px #fff, 1237px 503px #fff, 1323px 238px #fff, 514px 797px #fff, 29px 723px #fff, 984px 440px #fff, 1630px 138px #fff, 1394px 766px #fff, 1902px 692px #fff, 55px 208px #fff, 1316px 941px #fff, 500px 694px #fff, 39px 743px #fff, 627px 356px #fff, 1372px 161px #fff, 5px 921px #fff, 1467px 556px #fff, 1727px 350px #fff, 764px 124px #fff, 40px 288px #fff, 1223px 326px #fff, 1299px 839px #fff, 991px 955px #fff, 872px 556px #fff, 847px 560px #fff, 1098px 951px #fff, 1018px 4px #fff, 1330px 667px #fff, 1037px 778px #fff, 1090px 119px #fff, 1406px 758px #fff, 232px 603px #fff, 853px 820px #fff, 1552px 934px #fff, 1478px 959px #fff, 643px 887px #fff, 564px 898px #fff, 193px 71px #fff, 333px 238px #fff, 18px 695px #fff, 23px 10px #fff, 464px 711px #fff, 1127px 125px #fff, 1449px 678px #fff, 236px 696px #fff, 660px 844px #fff, 1427px 367px #fff, 259px 315px #fff, 1763px 746px #fff, 1138px 175px #fff, 376px 648px #fff, 707px 768px #fff, 1355px 505px #fff, 1793px 930px #fff, 1175px 447px #fff, 1675px 264px #fff, 1369px 262px #fff, 486px 486px #fff, 43px 900px #fff, 1853px 520px #fff, 243px 620px #fff, 135px 744px #fff, 277px 192px #fff, 1462px 388px #fff, 1685px 35px #fff, 1899px 615px #fff, 669px 277px #fff, 426px 512px #fff, 293px 111px #fff, 1425px 926px #fff, 1811px 305px #fff, 14px 609px #fff, 1419px 292px #fff, 1262px 431px #fff, 1895px 142px #fff, 1804px 6px #fff, 907px 96px #fff, 121px 762px #fff, 957px 468px #fff, 156px 618px #fff, 1756px 704px #fff, 179px 638px #fff, 1567px 341px #fff, 449px 704px #fff, 1166px 240px #fff, 308px 610px #fff, 1001px 596px #fff, 1482px 659px #fff, 1176px 872px #fff, 1534px 107px #fff, 488px 52px #fff, 402px 927px #fff, 1859px 681px #fff, 1158px 478px #fff, 509px 534px #fff, 1613px 367px #fff, 1650px 139px #fff, 744px 3px #fff, 1000px 9px #fff, 796px 779px #fff, 1854px 108px #fff, 370px 173px #fff, 1423px 78px #fff;
+            }
+
+            .s4Text2 .meteor-1 {
+            position: absolute;
+            top: 155px;
+            left: 23%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 7.3s linear infinite;
+            }
+            .s4Text2 .meteor-1:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-2 {
+            position: absolute;
+            top: 296px;
+            left: 39%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 6s linear infinite;
+            }
+            .s4Text2 .meteor-2:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-3 {
+            position: absolute;
+            top: 217px;
+            left: 44%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 8.2s linear infinite;
+            }
+            .s4Text2 .meteor-3:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-4 {
+            position: absolute;
+            top: 143px;
+            left: 21%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 9.1s linear infinite;
+            }
+            .s4Text2 .meteor-4:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-5 {
+            position: absolute;
+            top: 280px;
+            left: 18%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 6.4s linear infinite;
+            }
+            .s4Text2 .meteor-5:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-6 {
+            position: absolute;
+            top: 169px;
+            left: 90%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 9.4s linear infinite;
+            }
+            .s4Text2 .meteor-6:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-7 {
+            position: absolute;
+            top: 53px;
+            left: 26%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 3.5s linear infinite;
+            }
+            .s4Text2 .meteor-7:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-8 {
+            position: absolute;
+            top: 254px;
+            left: 49%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 6.2s linear infinite;
+            }
+            .s4Text2 .meteor-8:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-9 {
+            position: absolute;
+            top: 51px;
+            left: 26%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 8.4s linear infinite;
+            }
+            .s4Text2 .meteor-9:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-10 {
+            position: absolute;
+            top: 132px;
+            left: 71%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 3.3s linear infinite;
+            }
+            .s4Text2 .meteor-10:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-11 {
+            position: absolute;
+            top: 69px;
+            left: 15%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 7.8s linear infinite;
+            }
+            .s4Text2 .meteor-11:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-12 {
+            position: absolute;
+            top: 253px;
+            left: 95%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 4.5s linear infinite;
+            }
+            .s4Text2 .meteor-12:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-13 {
+            position: absolute;
+            top: 80px;
+            left: 49%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 6s linear infinite;
+            }
+            .s4Text2 .meteor-13:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-14 {
+            position: absolute;
+            top: 97px;
+            left: 97%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 4.1s linear infinite;
+            }
+            .s4Text2 .meteor-14:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            .s4Text2 .meteor-15 {
+            position: absolute;
+            top: 204px;
+            left: 59%;
+            width: 300px;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            animation: meteor 8.2s linear infinite;
+            }
+            .s4Text2 .meteor-15:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 5px;
+            border-radius: 50%;
+            margin-top: -2px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 0 15px 3px #fff;
+            }
+
+            @keyframes meteor {
+            0% {
+                opacity: 1;
+                margin-top: -300px;
+                margin-right: -300px;
+            }
+            12% {
+                opacity: 0;
+            }
+            15% {
+                margin-top: 300px;
+                margin-left: -600px;
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+            }
+            .s4Text3{}
+            .s4Text3 > div
+            {
+                width:130px;
+                height:130px;
+                border-radius: 40%;
+                z-index:120;
+            }
+            .s4Text3 .weather-title
+            {   
+                position: fixed;
+                top: 1vw;
+                left: 4vw;
+                width: 50vw;
+                height: 1vw;
+                color: #fff;
+                font-size: 2vw;
+            }
+            .s4Text3 .hot{ 
+                position: absolute;
+                top:25%;
+                left:20%;
+                background:linear-gradient( to top right, rgba(255,87,34,1) 0%,
+                rgba(251,140,0 ,1) 100%);
+                box-shadow: 1px 1px 30px rgba(255,111,0 ,1);
+            }
+            .s4Text3 .sun
+            {
+                position: absolute;
+                top:-10%;
+                left:65%;
+                width:50px;
+                height: 50px;
+                border-radius: 100%;
+                background:linear-gradient( to bottom left, rgba(255,235,59,1) 0%,
+                rgba(249,168,37 ,1) 90%);
+                box-shadow: 1px 1px 30px rgba(255,160,0 ,1);
+                animation: inex 3s infinite linear ;
+                
+            }
+
+            .s4Text3 .sunx
+            {
+                position: absolute;
+                top:30%;
+                left:45%;
+                width:10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: #fff;
+                opacity:0.2;
+            }
+            .s4Text3 .cloudy
+            { position: absolute;
+                top:25%;
+                left:45%;
+                background:linear-gradient( to top right, rgba(63,81,181,1) 0%,
+                rgba(3,155,229 ,1) 40%);
+                box-shadow: 1px 1px 30px rgba(2,119,189 ,1);
+
+            }
+            .s4Text3 .cloud
+            {
+            position: absolute;
+                top:5%;
+                left:70%;
+                width:60px;
+                height: 20px;
+                border-radius:10px;
+                background-color: rgba(129,212,250 ,1);
+                box-shadow: 1px 1px 30px rgba(0,151,167 ,1);
+            animation: move 3s infinite linear ;
+
+            }
+            .s4Text3 .cloudx
+            {
+                position: absolute;
+                top:23%;
+                left:55%;
+                width:60px;
+                height: 20px;
+                border-radius:10px;
+                background-color: rgba(129,212,250 ,1);
+                animation: move 3s infinite linear ;
+
+            }
+            .s4Text3 .stormy
+            {
+                position: absolute;
+                top:25%;
+                left:70%;
+                background:linear-gradient( to top right,rgba(117,117,117 ,1) 0%,
+                rgba(33,33,33 ,1) 90%);
+                box-shadow: 1px 1px 30px rgba(33,33,33 ,1);
+            }
+            .s4Text3 .stormy li
+            {
+                position: absolute;
+                list-style: none;
+                width: 5px;
+                height: 5px;
+                border-radius: 100%;
+                background-color:#777;
+                box-shadow: 1px 1px 30px #555;
+                animation: fall 3s infinite linear ;
+            opacity:0;
+            }
+            .s4Text3 .stormy li:nth-child(1)
+            {
+                
+            top:0%;
+            left:100%;
+            }
+
+            .s4Text3 .stormy li:nth-child(2)
+            {
+            top:5%;
+            left:90%;
+            }
+
+            .s4Text3 .stormy li:nth-child(3)
+            {
+            top:-10%;
+            left:80%;
+            animation-delay: 2s;
+            }
+
+            .s4Text3 .stormy li:nth-child(4)
+            {
+            top:10%;
+            left:100%;
+            animation-delay: 2s;
+            }
+
+            .s4Text3 .stormy li:nth-child(5)
+            {
+            top:20%;
+            left:80%;
+            animation-delay: 0.5s;
+            }
+
+            .s4Text3 .stormy li:nth-child(6)
+            {
+            top:35%;
+            left:70%;
+            background-color: #bbb;
+            animation-delay: 0.5s;
+            }
+
+
+            .s4Text3 .stormy li:nth-child(7)
+            {
+            top:23%;
+            left:60%;
+            background-color: #bbb;
+            animation-delay: 0.8s;
+            }
+
+            .s4Text3 .stormy li:nth-child(8)
+            {
+            top:5%;
+            left:70%;
+            background-color: #bbb;
+            animation-delay: 0.8s;
+            }
+            .s4Text3 .snowe
+            {
+            position: absolute;
+                top:60%;
+                left:40%;
+                width:40px;
+                height: 40px;
+                border-radius:60px;
+                background-color: #ddd;
+                
+
+            }
+            .s4Text3 .snowex
+            {
+                position: absolute;
+                top:50%;
+                left:50%;
+                width:15px;
+                height: 15px;	
+                border-radius:15px;
+                background-color: #bbb;
+
+            }
+            .s4Text3 .stick
+            {
+                position: absolute;
+                top:60%;
+                left:40%;
+                width:3px;
+                height: 15px;	
+                transform: rotate(-45deg);
+                background-color: #333;
+            z-index: -10;
+            }
+            .s4Text3 .stick2
+            {
+                position: absolute;
+                top:60%;
+                left:70%;
+                width:3px;
+                height: 15px;	
+                transform: rotate(45deg);
+                background-color: #333;
+            z-index: -10;
+            }
+            .s4Text3 .breezy
+            {
+                position: absolute;
+                top:60%;
+                left:30%;
+                background:linear-gradient( to top right,rgba(156,204,101 ,1) 0%,
+                rgba(38,198,218 ,1) 50%);
+                box-shadow: 1px 1px 30px rgba(38,198,218 ,1);
+
+            }
+            .s4Text3 .cloudr
+            {
+            position: absolute;
+                top:5%;
+                left:60%;
+                width:60px;
+                height: 20px;
+                border-radius:10px;
+                background-color: rgba(96,125,139 ,1);
+                box-shadow: 1px 1px 30px rgba(84,110,122 ,1);
+            animation: flash 1.5s infinite linear;
+
+            }
+
+            .s4Text3 .breezy li
+            {
+                position: absolute;
+                list-style: none;
+                width: 2px;
+                height: 7px;
+                border-radius: 10%;
+                background-color:#eee;
+                opacity:0;
+                animation: fall 3s infinite linear ;
+                transform: rotate(25deg);
+            }
+            .s4Text3 .breezy li:nth-child(1)
+            {
+                
+            top:10%;
+            left:95%;
+            }
+
+            .s4Text3 .breezy li:nth-child(2)
+            {
+            top:5%;
+            left:83%;
+            animation-delay:0.3s;
+            }
+
+            .s4Text3 .breezy li:nth-child(3)
+            {
+            top:4%;
+            left:87%;
+            animation-delay:0.6s;
+            }
+
+            .s4Text3 .breezy li:nth-child(4)
+            {
+            top:15%;
+            left:70%;
+            animation-delay:1s;
+            }
+
+            .s4Text3 .breezy li:nth-child(5)
+            {
+            top:10%;
+            left:75%;
+            }
+
+            .s4Text3 .night
+            {
+                position: absolute;
+                top:60%;
+                left:60%;
+                background:linear-gradient( to bottom right,rgba(63,81,181,1) 0%,
+                rgba(171,71,188 ,1) 70%);
+                box-shadow: 1px 1px 30px rgba(81,45,168 ,1);
+
+            }
+            .s4Text3 .moon
+            {
+                position: absolute;
+                top:-10%;
+                left:65%;
+                width:70px;
+                height: 70px;
+                border-radius: 100%;
+                background:rgba(255,241,118 ,1);
+                box-shadow: 1px 1px 30px rgba(224,224,224 ,1);
+            }
+            .s4Text3 .spot1
+            {
+                position: absolute;
+                top:0%;
+                left:85%;
+                width:10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: #777;
+            }
+            .s4Text3 .spot2
+            {
+                position: absolute;
+                top:30%;
+                left:75%;
+                width:5px;
+                height: 5px;
+                border-radius: 100%;
+                background-color: #777;
+            }
+
+            .s4Text3 .night li
+            {
+                position: absolute;
+                list-style: none;
+                width: 3px;
+                height: 3px;
+                border-radius: 100%;
+                background-color:#fff;
+                
+                
+                transform: rotate(45deg);
+            }
+            .s4Text3 .night li:nth-child(1)
+            {
+                
+            top:30%;
+            left:65%;
+            }
+
+            .s4Text3 .night li:nth-child(2)
+            {
+            top:35%;
+            left:53%;
+            }
+
+            .s4Text3 .night li:nth-child(3)
+            {
+
+            opacity: 0;
+            top:20%;
+            left:75%;
+            width:2px;
+            height: 2px;
+            animation: meteor-star 1.5s infinite linear;
+            animation-delay: 0.6s;
+
+            }
+
+            .s4Text3 .night li:nth-child(4)
+            {
+            top:5%;
+            left:50%;
+            }
+
+            .s4Text3 .night li:nth-child(5)
+            {
+                opacity: 0;
+            top:20%;
+            left:55%;
+            width:1px;
+            height: 15px;
+            animation: meteor-star 1.5s infinite linear;
+            }
+
+            @keyframes inex {
+
+
+                50% {
+                opacity: 0.4;
+
+                }
+                60%
+                {
+                    opacity: 1;
+                }
+            }
+            @keyframes move {
+
+
+                50% {
+                transform: translateX(-10px);
+
+                }
+            }
+            @keyframes fall {
+            10%
+            {
+                opacity:0.8;
+            }
+
+                50% {
+                    opacity:1;
+                transform: translate(-10px,30px);
+
+                }
+                100%
+                {
+                    transform: translate(-25px,70px);
+
+                    
+                }
+            }
+            @keyframes flash
+            {
+                48%
+                {
+                    background-color: rgba(96,125,139 ,1);
+                }
+                50%
+                {
+                    background-color: #fff;
+                }
+                55%
+                {
+                    background-color: rgba(96,125,139 ,1);
+                }
+                57%
+                {
+                    background-color: #fff;	
+                }
+            }
+            @keyframes meteor-star
+            {
+
+                10%
+                {opacity: 1;
+                }
+                80%	
+                {
+                left:10%;
+                top:75%;
+                opacity: 0;
+                }
+            }
+            .land{
+                width: 100%;
+            }
+            .s4Text5 .circle1 {
+                left: 30%;
+                top: 70%;
+                width: 10vw;
+                height: 10vw;
+                background: #000;
+                border-radius: 50%;
+            }
+        </style>
+        <section id="section4">
+            <div class="s4Text1"
+            data-43999="display:none";
+            data-44000="display:block";
+            data-47000="display:block";
+            data-47001="display:none";
+        >
+                <div class="circle1 fixed"
+                data-44000="width:0vw; height:0vw;"
+                data-47000="width:200vw; height:200vw;"
+                ></div>
+                <div class="circle2 fixed"
+                data-44050="width:0vw; height:0vw;"
+                data-47000="width:200vw; height:200vw;"
+                ></div>
+                <div class="circle3 fixed"
+                data-44100="width:0vw; height:0vw;"
+                data-47000="width:200vw; height:200vw;"
+                ></div>
+                <div class="circle4 fixed"
+                data-44150="width:0vw; height:0vw;"
+                data-47000="width:200vw; height:200vw;"
+                ></div>
+                <div class="circle5 fixed"
+                data-44200="width:0vw; height:0vw;"
+                data-47000="width:200vw; height:200vw;"
+                ></div>
+                <div class="circle6 fixed"
+                data-44250="width:0vw; height:0vw;"
+                data-47000="width:200vw; height:200vw;"
+                ></div>
+            </div>
+            <div class="s4Text2 fixed"
+            data-47001="display:none;  opacity:0"
+            data-47002="display:block; opacity:1"
+            >
+                <div class="star"></div>
+                    <div class="meteor-1"></div>
+                    <div class="meteor-2"></div>
+                    <div class="meteor-3"></div>
+                    <div class="meteor-4"></div>
+                    <div class="meteor-5"></div>
+                    <div class="meteor-6"></div>
+                    <div class="meteor-7"></div>
+                    <div class="meteor-8"></div>
+                    <div class="meteor-9"></div>
+                    <div class="meteor-10"></div>
+                    <div class="meteor-11"></div>
+                    <div class="meteor-12"></div>
+                    <div class="meteor-13"></div>
+                    <div class="meteor-14"></div>
+                    <div class="meteor-15"></div>
+            </div>
+            <div class="s4Text3 fixed"
+            data-47010="display:none;  opacity:0"
+            data-47011="display:block; opacity:1"
+            data-55000="display:block; opacity:1; transform: rotate(0deg) scale(1);"
+            data-60000="display:block; opacity:1; transform: rotate(720deg) scale(0);"
+            data-62000="display:block; opacity:1; transform: rotate(720deg) scale(0);"
+            data-67000="display:block; opacity:1; transform: rotate(-720deg) scale(5);"
+            data-69000="display:block"
+            data-69001="display:none"
+            >
+                <h1 class="weather-title"
+                data-47500 = "transform: translate(-15vw,-50vw) scale(1);"
+                data-48500 = "transform: translate(-10vw,-20vw) scale(1);"
+                data-53000 = "transform: translate(-10vw,-20vw) scale(1);"
+                data-54000 = "transform: translate(-15vw,-1000vw) scale(1);"
+                > 
+                Animation</h1>
+                <div class="hot"
+                data-47500 = "transform: translate(-15vw,-50vw) scale(1);"
+                data-48500 = "transform: translate(-35vw,-10vw) scale(1);"
+                data-53000 = "transform: translate(-35vw,-10vw) scale(1);"
+                data-54000 = "transform: translate(-23vw,-10vw) scale(1);"
+                >
+                
+                    <span class="sun"></span>
+                    <span class="sunx"></span>
+                </div>
+                <div class="cloudy"
+                data-48500 = "transform: translate(-15vw,-50vw) scale(1);"
+                data-49500 = "transform: translate(-4vw,-10vw) scale(1);"
+                data-53000 = "transform: translate(-4vw,-10vw) scale(1);"
+                data-54000 = "transform: translate(-4vw,-20vw) scale(1);"
+                >
+                    <span class="cloud"></span>
+                    <span class="cloudx"></span>
+                </div>
+                <div class="stormy"
+                data-49500 = "transform: translate(-15vw,-50vw) scale(1);"
+                data-50500 = "transform: translate(25vw,-10vw) scale(1);"
+                data-53000 = "transform: translate(25vw,-10vw) scale(1);"
+                data-54000 = "transform: translate(15w,-10vw) scale(1);">
+                    <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    </ul>
+                    <span class="snowe"></span>
+                    <span class="snowex"></span>
+                    <span class="stick"></span>
+                    <span class="stick2"></span>
+                </div>
+                <div class="breezy"
+                data-49500 = "transform: translate(-15vw,-50vw) scale(1);"
+                data-50500 = "transform: translate(-22vw, 10vw) scale(1);"
+                data-53000 = "transform: translate(-22vw,10vw) scale(1);"
+                data-54000 = "transform: translate(-15w,7vw) scale(1);"
+                >
+                    <ul>
+                
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>	
+                    </ul>
+                    <span class="cloudr"></span>
+                
+                
+                </div>
+                <div class="night"
+                data-49500 = "transform: translate(-15vw,-50vw) scale(1);"
+                data-50500 = "transform: translate(13vw, 10vw) scale(1);"
+                data-53000 = "transform: translate(13vw,10vw) scale(1);"
+                data-54000 = "transform: translate(8w,7vw) scale(1);"
+                >
+                    <span class="moon"></span>
+                    <span class="spot1"></span>
+                    <span class="spot2"></span>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>	
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="s4Text4 fixed"
+            data-50000="display:none;  opacity:0"
+            data-50001="display:block; opacity:1">
+                <div>
+                    <div class="land"
+                    data-50000 = "transform: translate(0vw,100vw)"
+                    data-53000 = "transform: translate(0vw,19vw)"
+                    >
+                        <svg id="scene" x="0px" y="0px" width="1600px" height="315px">
+                          <path id="ground" d="M0,316.4209c0,0,157.7119-35.416,469-56c7.3833-0.4883,23.7876-3.5488,31.3335-4.0166
+                                      c3.7681-0.2334,19.4302,0.9424,28.3335,0.3506c17.1494-1.1396,30.9072-4.2734,38.333-4.6836
+                                      c7.5972-0.4189,18.4058,0.3799,27.6665-0.9834c5.7075-0.8408,10.1318-4.042,14.9248-4.2705
+                                      c7.8369-0.373,24.5693,3.6084,34.4087,4.2705c11.0586,0.7432,15.2656-1.8135,24.3335-2.1523c10.0576-0.376,20.4629,1.3867,28.6665,0
+                                      c3.5957-0.6074,4.4194,0.4209,7.7227-0.7715c1.4927-0.5391,5.8179-3.5693,6.9438-4.2432c3.8335,0.667,6.1426-1.0732,9.917-1.167
+                                      c2.2739-0.0566,3.9673-0.9072,6.249-0.9609c2.2725-0.0537,5.5547-1.2383,7.8345-1.2881c2.25-0.0498,3.498,1.0352,5.7554,0.9883
+                                      c2.9648-0.0615,7.9341,0.3164,10.9111,0.2607c2.2461-0.042,2.4976-0.5195,4.7505-0.5586c2.9663-0.0518,2.1045-0.5615,5.0825-0.6074
+                                      c1.5811-0.0244,6.9976,0.4131,8.582,0.3896c0.8887-0.0127,2.6113,0.373,3.5015,0.3604c1.5527-0.0215,2.2739-0.4404,3.8296-0.4609
+                                      c1.416-0.0186,2.0854-0.8555,3.5039-0.873c1.0835-0.0127,2.9155,0.7939,4.0005,0.7813c1.1104-0.0127,3.5542,0.4805,4.666,0.4688
+                                      c1.3047-0.0137,1.2773-0.5332,2.584-0.5459c1.415-0.0137,1.165-0.4414,2.5825-0.4541c0.916-0.0078,3.499,0.3984,4.416,0.3906
+                                      c1.499-0.0127,1.833,0.6221,3.3345,0.6104c1.3296-0.0098,3.8267-0.666,5.1587-0.6748c1.3335-0.0088,2.8389-0.6514,4.1743-0.6592
+                                      c1.3335-0.0078,2.4971,0.6191,3.8325,0.6123c2.5518-0.0127,7.3579,0.3965,9.9175,0.3877c5.3169-0.0176,5.5796-0.4063,10.9297-0.4063
+                                      c1.8379,0,6.7031,1.3184,8.3203,1.2402c2.1055-0.1016,3.7139-1.6572,5.5283-1.7969c3.9541-0.3037,7.3262-0.5732,10.5986-0.2598
+                                      c6.248,0.5977,12.1973-0.8125,21.207-0.7539c1.7266,0.0107,15.7813,3.085,17.5,3.0977c3.4014,0.0254,6.6191-1.3398,9.9971-1.3066
+                                      c4.1221,0.041,8.2275,1.2529,12.3369,1.3066c2.0752,0.0273,4.1543-1.1084,6.2314-1.0771c3.3662,0.0498,4.5547,1.0166,7.9346,1.0771
+                                      c2.1104,0.0381,6.4063-0.834,8.5264-0.792c2.7021,0.0537,4.4766-1.6729,7.2002-1.6113c2.9277,0.0654,7.6465,3.1641,10.6074,3.2393
+                                      c4.8359,0.123,8.8809-0.9854,13.832-0.8359c2.5029,0.0752,11.8818,2.0498,14.375,2.1289c1.8398,0.0586,2.499-1.2188,4.334-1.1582
+                                      c2.1689,0.0713,4.5049,1.209,6.666,1.2832c2.6699,0.0908,4.3398-0.916,6.998-0.8203c3.3379,0.1201,6.0566,1.3193,9.377,1.4453
+                                      c4.001,0.1514,4.7764-1.1602,8.75-1c3.1836,0.1289,16.834,1.9912,20,2.125c4.0059,0.1699,4.0029-0.9004,7.9814-0.7227
+                                      c6.8594,0.3076,7.9102,1.7656,14.6855,2.0977c8.916,0.4365,23.5254-0.2432,32.293,0.2344
+                                      c6.7168,0.3662,13.3896,0.7432,20.0186,1.1318C1458.8545,268.4941,1680,316.4209,1680,316.4209H0z" />
+                          <path id="stone1" d="M680.3335,250.7549c7.3335,0.333,13.6665-1.2549,6-6.4609s-14.333-7.1221-18.6665,0.8359
+                                      S680.3335,250.7549,680.3335,250.7549z" />
+                          <path id="stone2" d="M750.5,243.1709c3.25,0,2.5-3.707-1.75-4.2285s-5,3.7285-3,4.2285S750.5,243.1709,750.5,243.1709z" />
+                          <path id="stone3" d="M988.4893,243.8242c2.8857,0.3467,4.8438,1.2627,3.0107-2.0703s-7.3955,1.3555-5.2031,1.7129
+                                      S988.4893,243.8242,988.4893,243.8242z" />
+                          <path id="stone4" d="M697,248.9355c2.0142-0.2021,2.1665-2.0156,1-2.1816s-9.1543,1.8398-5.9937,2.6699S697,248.9355,697,248.9355z" />
+                          <g id="greens" transform="translate(850, 180)">
+                            <g>
+                              <path d="M36.3877,59.4268C33.0576,18.9482,6.4658,4.522,6.4658,4.522s22.4834,16.1426,24.4414,54.2251
+                              C32.8657,96.8311,36.3877,59.4268,36.3877,59.4268z" />
+                              <path d="M41.8496,83.1641C31.1572,43.98,2.3711,34.6738,2.3711,34.6738s25.063,11.7471,33.9668,48.8271
+                              C45.2441,120.5791,41.8496,83.1641,41.8496,83.1641z" />
+                              <path d="M31.3955,60.7207C23.7139,25.7979,2.5381,16.9541,2.5381,16.9541s18.4165,10.9277,24.7925,43.9502
+                              C33.7061,93.9258,31.3955,60.7207,31.3955,60.7207z" />
+                              <path d="M40.4517,62.0068C47.9473,21.6187,25.4009,0.1914,25.4009,0.1914s18.0098,21.9634,9.7896,59.6357
+                              C26.9722,97.499,40.4517,62.0068,40.4517,62.0068z" />
+                              <path d="M41.9414,69.4316c13.0313-38.9565-6.3218-63.3062-6.3218-63.3062s14.7856,24.251,1.4141,60.4185
+                              C23.6621,102.709,41.9414,69.4316,41.9414,69.4316z" />
+                              <path d="M29.4976,87.9092c27.4097-30.5938,19.2993-60.6226,19.2993-60.6226s3.958,28.1255-22.6606,56.0249
+                              C-0.4775,111.2109,29.4976,87.9092,29.4976,87.9092z" />
+                              <animateTransform attributeName="transform" type="skewX" values="0;10;0" begin="0s" dur="5.5s" fill="freeze" repeatCount="indefinite" />
+                              <animateMotion type="translate" values="0,0;-10,0;0,0" begin="0s" dur="5.5s" fill="freeze" repeatCount="indefinite" />
+                            </g>
+                            <g>
+                              <path d="M34.9995,60.4189C56.0713,30.6665,46.1133,5.4014,46.1133,5.4014S52.2559,29.4746,31.6235,56.79
+                              C10.9917,84.1035,34.9995,60.4189,34.9995,60.4189z" />
+                              <path d="M36.3047,64.5391c28.4629-23.4443,25.3262-51.189,25.3262-51.189s-0.293,25.4971-27.6851,46.6538
+                              C6.5552,81.1631,36.3047,64.5391,36.3047,64.5391z" />
+                              <path d="M33.0449,70.502c31.4424-19.2637,32.1875-47.1748,32.1875-47.1748s-3.8291,25.208-33.897,42.3584
+                              C1.271,82.833,33.0449,70.502,33.0449,70.502z" />
+                              <path d="M13.8237,76.0244c36.5039-5.2158,48.2563-30.543,48.2563-30.543S48.5693,67.1045,14.168,70.9248
+                              C-20.2324,74.749,13.8237,76.0244,13.8237,76.0244z" />
+                              <animateTransform attributeName="transform" type="skewX" values="0;15;0" begin="0s" dur="5s" fill="freeze" repeatCount="indefinite" />
+                              <animateMotion type="translate" values="0,0;-15,0;0,0" begin="0s" dur="5s" fill="freeze" repeatCount="indefinite" />
+                            </g>
+                          </g>
+                          <g id="sign" transform="translate(700, 180)">
+                            <polygon points="21.2168,1.1143 20.6665,1.5459 19.7593,1.4473 19.229,1.4209 18.9707,1.6274 18.6665,1.9004 17.6865,1.9219
+                          37.3516,87.8877 40.8828,87.0791 	" />
+                            <polygon points="45.4111,9.5537 2.4258,18.7158 1.563,18.498 1.4585,17.2114 0.8291,15.583 0.9165,14.3364 0.0908,12.6548
+                          0.2085,12.0864 -0.1924,11.5308 -0.3296,9.271 43.3408,-0.0376 43.4766,0.5015 43.334,0.9629 43.6533,1.2046 43.8232,1.8784
+                          43.8965,2.7754 44.2217,3.459 44.625,5.0576 45.041,7.5459 45.2637,7.5962 45.6191,9.0073 	" />
+                            <polygon points="47.0078,20.8545 4.2368,29.5503 3.5933,28.5903 3.3965,26.9746 2.4683,24.5137 2.8398,24.1372 2.2676,23.7847
+                          1.9834,22.7563 2.2417,22.3394 1.7388,21.8706 1.2627,20.1426 44.8281,11.2852 45.082,12.4014 45.0723,12.9517 45.3281,13.481
+                          45.752,15.3369 46.0273,17.7524 46.4219,18.2803 	" />
+                            <polygon points="47.666,31.168 4.7803,39.4023 4.251,37.4004 4.4429,36.1895 3.6465,35.1123 3.0142,32.7178 3.2754,32.1025
+                          2.7461,31.7046 2.2676,29.8945 45.9268,21.5107 46.0762,22.2007 45.9512,22.8423 46.2783,23.1372 46.6777,24.9795 46.5234,25.4795
+                          47.3027,27.8667 47.8086,30.2017 	" />
+                          </g>
+                          <g id="boy_1_">
+                            <g id="boy">
+                              <path d="M800.7324,167.6929c0,0-7.9688-6.5039-9.7197-8.041c-1.751-1.5366-7.9331-6.5039-8.7197-13.0435
+                              c-0.7861-6.5396,6.0752-15.188,17.7969-16.1885c11.7207-1.0005,12.9727,1.0366,14.1514,2.7163
+                              c1.1787,1.6792,5.7178,11.1494,5.0752,18.6538c-0.6445,7.5049-5.6826,10.1133-9.7559,13.3652
+                              C805.4863,168.4072,800.7324,167.6929,800.7324,167.6929z" />
+                              <path d="M810.7031,169.2109c-1.0723-1.3037-1.3574-2.9556-1.1426-4.0645c0.2139-1.1084-8.041,0.1128-8.8281,2.542
+                              c1.6445,1.6787,0.751,3.146-0.5,4.1108c-1.25,0.9648-1.6797,1.502-1.9297,1.8237c0.0361,0.5361,0,0.9653,0,0.9653
+                              s-1.4297,1.7153-2.2871,6.5396s-0.6787,6.79-0.9648,8.3267c-0.2852,1.5366-1.4648,5.9678-1.751,10.292s0,4.5742,0,4.5742
+                              s1.251,1.7153,1.1436,4.0742s-1.2705,5.6099-1.2705,5.6099s0.2344,1.8945,1.8779,2.252c1.6445,0.3574,2.3594-0.6436,2.3594-0.6436
+                              s1.0713,1.3223,1.75,4.0742c0.6797,2.752,0.6436,6.79,1.8945,7.9688c1.251,1.1797,1.6074,0.3223,1.6074,0.3223
+                              s0.4648,3.3975-0.9277,6.6855c-1.3945,3.2881-4.1465,6.7568-4.1465,6.7568h11.0781c0,0,1.5723-3.5234-7.1113-2.2363
+                              c3.252-4.0742,3.8955-6.1934,4.0391-11.125c1.8223,0.5,4.252,0.6738,4.9316-0.3271c0.5352,1.3223,2.4297,2.1787,3.3584,1.7139
+                              c-0.2139,3.7168-1.0713,12.1846-1.0713,12.1846l9.0049,0.2852c0,0-0.751-3.2168-6.29-1.4307
+                              c1.001-6.7891,1.3584-11.5068,1.3584-11.5068s1.3584,0.1074,1.8584-0.3926c0.5-0.501,0.6787-5.3252-0.4648-9.9346
+                              c-1.1436-4.6104-0.5-4.4678-0.5-4.4678s1.75-0.8213,1.5-2.8584s-0.8574-3.6807-1.5352-5.5391
+                              c0.4639-0.1074,1-0.7861-0.6797-2.7158c-0.2148-2.5015-0.9648-6.3242-0.6436-7.6465s0.2148-2.8232-0.1787-4.3599
+                              c0-2.4302,0.7148-13.1509-1.25-17.0103c-1.9658-3.8594-2.5371-3.5737-2.5371-3.5737S812.5977,169.0142,810.7031,169.2109z" />
+                            </g>
+                            <g transform="translate(783, 122)">
+                              <g>
+                                <path d="M35.3506,17.9644c2.9834-3.71,5.9824-15.2095-3.1846-18.3765c2.668,3.833,1.168,5.6665,1.168,5.6665
+                      S32,1.2549,28.666-0.4121c1.5,3.1665,0,5,0,5S20.5,8.9209,24.5,13.2544S35.3506,17.9644,35.3506,17.9644z" />
+                                <animateTransform attributeName="transform" type="skewX" values="0;30;0" begin="0s" dur="4s" fill="freeze" repeatCount="indefinite" />
+                                <animateMotion type="translate" values="0,0;-10,0;0,0" begin="0s" dur="4s" fill="freeze" repeatCount="indefinite" />
+                              </g>
+                              <g>
+                                <path d="M27.125,6.2334c-1.8125-0.625-2.0625-1.9375-4.375-2.25c1,0.8125,1.125,1.6875,1.125,1.6875S21.5,4.3584,19.0625,3.9834
+                      c1.3125,0.75,2,1.875,2,1.875s-3.25-0.75-5.875-0.75c1.125,0.3125,1.125,0.6875,1.125,0.6875S10.75,5.8584,8.6875,7.4834
+                      c1,0.125,0.9375,0.6714,0.9375,0.6714s-4.25,1.5786-5.375,3.7661c0.875-0.4375-0.8125,1.8125-0.8125,1.8125s0.75,1.375-0.3125,1.125
+                      S0.5,14.1084,0.5,12.5459c-0.5,2.1875,0.6924,2.5767,1.4375,3.3125c-0.0625,1-0.9375,2.6494-1.25,2.106s0.8594,0.4282,0.0547,2.4731
+                      c-0.8047,2.0459-1.1533,3.7432-0.5103,6.5195s2.7056,4.5264,3.5181,6.2139s0.5-1.6875,0.5-1.6875L27.125,6.2334z" />
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                </div>
+            </div>
+            <!-- <div class="s4Text5 fixed"
+            data-69000="display:block"
+            data-69001="display:none"
+            >
+                <div class="circle1 fixed"
+                data-66000="width:0vw; height:0vw;"
+                data-68000="width:200vw; height:200vw;"
+                ></div>
+            </div> -->
+            <style>
+                .s4Text5{
+                }
+                .s4Text5 .contact{
+                    width: 100%;
+                    text-align: center;
+                    margin: 0 auto;
+                    color: #fff;
+                    font-size: 1vw;
+                    font-family: 'NEXONLv2Gothic';
+                }
+                .s4Text5 .contact .contact-form{
+                }
+                .s4Text5 .contact .contact-form .contact-title{
+                    width: 100%;
+                    font-size: 3vw;
+                    margin-bottom: 2vw;
+                }
+                .s4Text5 .contact .contact-form > input{
+                    width: 100%;
+                    height: 2vw;
+                    margin: 1vw 0;
+                    padding: 1vw;
+                }
+                .s4Text5 .contact .contact-form input:nth-child(4) {
+                    height: 20vw;
+                }
+                .s4Text5 .contact .contact-form button{
+                    width: 30%;
+                    font-size: 1vw;
+                    height: 2vw;
+                    margin-bottom: 2vw;
+                    font-family: 'NEXONLv2Gothic';
+                    text-transform: uppercase;
+                    color: #000;
+                }
+                .s4Text5 .contact .cotact-info > div{
+                    margin-bottom: 1vw;
+                }
+            </style>
+            <div class="s4Text5 fixed"
+            data-69002="display:none transform: scale(0.5); opacity: 0"
+            data-69003="display:none transform: scale(0.5); opacity: 0"
+            data-70000="display:block transform: scale(1); opacity: 1"
+            >
+                <div class="contact">
+                    <div class="contact-form">
+                        <div class="contact-title">CONTACT ME</div>
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="Your Email">
+                        <input type="text" placeholder="">
+                        <button class="send-btn">
+                            send
+                        </button>
+                    </div>
+                    <div class="cotact-info">
+                        <div>dpfwl8745@gmail.com</div>
+                        <div>010-9999-9999</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section5">
+
+        </section>
+    </div>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+    window.addEventListener("scroll", () => {
+        let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+        document.querySelector(".scroll").innerHTML = scrollTop;
+    })
+</script>

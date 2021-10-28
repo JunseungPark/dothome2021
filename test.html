@@ -33,7 +33,11 @@ const reqType = {
 async function fetchExam() {
   try {
       // const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/bootstrap-static/`, requestOptions);
-      const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/entry/1/`, requestOptions);
+      const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/element-summary/4/`, requestOptions);
+      // const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/bootstrap-static/element-summary/59966`, requestOptions);
+      // const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/entry/1/`, requestOptions);
+      // const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/fixtures/?event=1`, requestOptions);
+      // const response = await fetch(`${proxyURL}https://fantasy.premierleague.com/api/fixtures/?event=1`, requestOptions);
       const exam = await response.json();
       return exam;
   } catch (error) {
@@ -44,10 +48,45 @@ async function fetchExam() {
 async function renderExam() {
     const exam = await fetchExam();
     console.log(exam);
-    document.write(exam);
+    // document.write(exam.elements[0].team);
+
+    // dataP(exam)
 }
 
 renderExam();
+
+function dataP(data1) {
+  let data = data1.elements;
+  for (let result of data) {
+      if(result.team == 1) {
+        // document.write(result.id);
+        // document.write("<br>");
+        // document.write(result.web_name);
+        // document.write("<br>");
+        // document.write(result.first_name);
+        // document.write("<br>");
+        // document.write(result.assists);
+        // document.write("<br>");
+        // document.write(result.creativity);
+        // document.write("<br>");
+        // document.write(result.goals_scored);
+        // document.write("<br>");
+        // document.write(result.goals_conceded);
+        // document.write(result.influence);
+        // document.write(result.points_per_game);
+        // document.write(result.red_cards);
+        // document.write(result.saves);
+        // document.write(result.yellow_cards);
+        // document.write(result.total_points);
+      }
+      // document.write("<br>");
+  };
+  // 랜덤숫자뽑기
+  function randomNum(min, max){ 
+    var randNum = Math.floor(Math.random()*(max-min+1)) + min; 
+    return randNum;
+  }
+} 
 
 </script>
 </html>

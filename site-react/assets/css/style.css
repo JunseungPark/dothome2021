@@ -1141,3 +1141,131 @@ table {
     height: 350px;
   }
 }
+
+#aboutCont {
+  width: 1400px;
+  font-family: "saol";
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+#aboutCont .about__title {
+  width: 560px;
+  height: 300px;
+  font-size: 165px;
+  line-height: 1;
+}
+
+#aboutCont .about__cont {
+  width: 100%;
+  margin-top: 450px;
+}
+
+#aboutCont .about__cont .cont {
+  margin-bottom: 350px;
+}
+
+#aboutCont .about__cont .cont img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 60%;
+          flex: 0 60%;
+  width: 100%;
+  height: 670px;
+  margin: 0 35px 70px 0;
+}
+
+#aboutCont .about__cont .cont .cont__textWrap {
+  width: 68%;
+  height: 150px;
+  font-size: 19px;
+  font-family: "Chosunilbo_myungjo";
+  line-height: 1.5;
+  letter-spacing: -3%;
+  text-align: justify;
+}
+
+#aboutCont .about__cont .cont .cont__textWrap .cont__title {
+  margin-bottom: 30px;
+}
+
+#aboutCont .about__cont .cont2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#aboutCont .about__cont .cont2 img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 63%;
+          flex: 0 63%;
+  width: 100%;
+  height: 1280px;
+  margin-right: 30px;
+}
+
+#aboutCont .about__cont .cont3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#aboutCont .about__cont .cont3 img {
+  width: 55%;
+  height: 550px;
+  margin-left: 100px;
+}
+
+@media (max-width: 1400px) {
+  #aboutCont {
+    width: 1000px;
+  }
+  #aboutCont .about__cont .cont2 {
+    display: block;
+  }
+  #aboutCont .about__cont .cont3 {
+    display: block;
+    height: 700px;
+    position: relative;
+  }
+  #aboutCont .about__cont .cont3 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    z-index: -50;
+  }
+  #aboutCont .about__cont .cont3 .cont__textWrap {
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  #aboutCont {
+    width: 800px;
+  }
+  #aboutCont .about__cont .cont img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutCont {
+    width: 500px;
+  }
+  #aboutCont .about__title {
+    font-size: 100px;
+  }
+  #aboutCont .about__cont {
+    margin-top: 20px;
+  }
+  #aboutCont .about__cont .cont img {
+    width: 100%;
+    height: 100%;
+  }
+  #aboutCont .about__cont .cont .cont__textWrap {
+    font-size: 17px;
+  }
+}

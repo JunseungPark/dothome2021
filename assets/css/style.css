@@ -335,7 +335,9 @@
 	cursor: pointer;
 	height: 100%;
 }
-
+.image-wrap.figma{
+	background: #e7b564bb;
+}
 .image-wrap img {
 	width: 55%;
     padding-top: 70px;

@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'ON-IGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eleven@1.0/ON-IGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'ON-IGothic';
+}
+
+
+main {}
+main .main-container{
+    margin: 0 auto;
+    width: 1000px;
+    display: flex
+}
+
+main .main-container .side-wrap{
+    margin: 100px 100px 0 0;
+}
+main .main-container .side-wrap .accordion{
+    margin-top: 100px;
+    font-size: 15px;
+}
+main .main-container .side-wrap .accordion .item{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+main .main-container .side-wrap .accordion .item h2{
+    margin-bottom: 15px;
+}
+main .main-container .side-wrap .accordion .item > div{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.3s;
+}
+main .main-container .side-wrap .accordion .item > div::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -13px;
+    width: 250px;
+    height: 1px;
+    background: #d1d1d1;
+}
+main .main-container .side-wrap .accordion .item .none {
+    display: none;
+}
+main .main-container .center-wrap{
+    margin-top: 100px;
+    width: 100%;
+    font-weight: bold;
+}
+main .main-container .center-wrap .main-banner-wrap{
+    width: 740px;
+    height: 400px;
+    overflow: hidden;
+}
+main .main-container .center-wrap .main-banner-wrap .img-inner{
+    width: 740px;
+    height: 810px;
+    position: relative;
+    overflow: hidden;
+}
+main .main-container .center-wrap .main-banner-wrap img{
+    width: 740px;
+    vertical-align: bottom;
+}
+main .main-container .center-wrap .main-banner-wrap img:nth-child(2){
+    display: block;
+    height: 410px;
+}
+main .main-container .center-wrap .main-contents-wrap{
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab-title{
+    font-size: 25px;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab-title span{
+    cursor: pointer;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab-title span:nth-child(1){
+    margin-right: 40px;
+    position: relative;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab-title span:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    right:-13%;
+    top: 14%;
+    height: 23px;
+    background: #000;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab-title span:nth-child(2){
+    color: #D2D2D2;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab{
+    display: flex;
+    margin-top: 50px;
+    gap: 30px;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab.tab1{
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab.tab2{
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab.tab1.none{
+    display: none;
+}
+
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab.tab2.none{
+    display: none;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab .content{}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab .content img{
+    width: 120px;
+}
+main .main-container .center-wrap .main-contents-wrap .tab-wrap .tab .content-desc{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+main .main-container .center-wrap .main-contents-wrap .sub-wrap{
+    margin-top: 100px;
+    background: #F7F7F7;
+    display: flex;
+    margin-bottom: 100px;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content{
+    background:#fff;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 170px;
+    height: 280px;
+    position: relative;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content .sub-content-title{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content .plus{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content .sub-img{
+    width: 100px;
+    margin-bottom: 40px;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content .sub-content-desc{
+    text-align: left;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content .sub-content-desc ul{
+    list-style:circle;
+}
+main .main-container .center-wrap .main-contents-wrap .sub-wrap .sub-content .sub-content-desc ul li{
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    margin-bottom: 10px;
+}
+
+footer{
+    width: 1080px;
+    margin : 0 auto 100px auto;
+    background: #EDF2F8;
+    overflow: hidden;
+    height: 150px;
+}
+footer .footer-wrap{
+}
+footer .footer-wrap .logo{
+    margin-right: 20px;
+    float: left;
+}
+footer .footer-wrap .logo img{
+    margin: 10px 0 0 10px;
+    width: 100px;
+}
+footer .footer-wrap .footer-desc{
+    margin: 50px 10px;
+    float: left;
+}
+footer .footer-wrap .footer-desc span{
+    display: block;
+}
+footer .footer-wrap .mess{
+    float: right;
+    margin: 45px 20px;
+}
+footer .footer-wrap .mess img{
+    width: 250px;
+}
+
+
